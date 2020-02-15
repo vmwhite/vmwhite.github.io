@@ -323,7 +323,10 @@ button:focus {
     }
     #top_part tr td{
         width:100%;
-        text-align:center;
+        text-align:center
+	background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/Charleston_Single.jpg") center center;
+    	background-size:cover;
+    	background-repeat:no-repeat;;
     }
     #about {
         width:92% !important;
