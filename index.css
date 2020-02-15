@@ -320,7 +320,7 @@ button:focus {
     }
     #top_part {
         border:0px;
-	background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/Charleston_Single.jpg") center center;
+	background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/Charleston_Single_Cropped.jpg") center center;
     	background-size:cover;
     	background-repeat:no-repeat;
     }
