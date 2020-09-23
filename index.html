@@ -7,6 +7,10 @@
     <title>Veronica M. White</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--- Added External Text Files-->
+    <script> 
+        $(function(){$("#bio").load("descriptions/bio.html"); });
+    </script> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <link rel="stylesheet" href="index.css">
@@ -59,18 +63,9 @@
         </tr>
     </table>
     <div id="bio">
-     <!---   $.ajax({
-        async:false,
-        url: 'descriptions/bio.txt',
-        dataType: 'text',
-        success: function(data) 
-        {
-        $('element').append(data);
-            }
-        }); --->
-	<!--- See descriptions/bio.html to edit, cant get this to cahge text style --->
+	<!--- See descriptions/bio.html to edit, cant get this to cahge text style
         <object width="1000" height="200" data="descriptions/bio.html" type="text\html"><a href="/descriptions/bio.html">No Support?</a>
-        </object>	
+        </object>	-->
     </div>
     <div id="work">
         <h1>work</h1>
