@@ -112,12 +112,22 @@
                         </div>
                     </td>
                     <td>
-                         <form action="form.php" method="post" name="contact_form">
-                            <label for="name"><input type="text" placeholder="name" required></label>
-                            <label for="email"><input type="email" placeholder="email" required></label><br>
-                            <label for="message"><textarea placeholder="your message" required rows="5"></textarea></label><br>
+                        <form method="post" name="gform" id=
+                         "gform" action="https://docs.google.com/forms/d/1-tZaeAODgeae_YSt9aPI18DiYVn8wIdfrUmk5sILVNg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                            <label for="name"><input type="text" placeholder="name*" required name="entry.518131613" id="entry.518131613"></label>
+                            <label for="email"><input type="email" placeholder="email*" required name="entry.464969750" id="entry.464969750"></label><br>
+                            <label for="message"><textarea placeholder="your message" required rows="5" name="entry.1052828356" id="entry.1052828356"></textarea></label><br>
                             <button class="btn_one">send</button>
-                         </form>
+                        </form>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                        <script src="assets/js/jquery.min.js"></script>
+                        <script type="text/javascript">var submitted=false;</script>
+                        <script type="text/javascript">
+                            $('#gform').on('submit', function(e) {
+                            $('#gform *').fadeOut(2);
+                            $('#gform').prepend('Submission sent. Thank you for your message, I will get back to you shortly.');
+                            });
+                        </script>
                     </td>
                 </tr>
             </table>
