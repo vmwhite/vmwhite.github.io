@@ -331,11 +331,17 @@ button:focus {
   }
   
   /* Clear floats after the columns */
-  .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
+.success {
+    color:rgba(255, 44, 90, 0.8);
+    text-align: center;
+    font-weight: bold;
+    font-size:14px;
+}
 @media screen and (max-width: 1000px){
       /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
       .column {
@@ -431,9 +437,4 @@ button:focus {
     #navigation a {
         color:#000;
     }
-}.success {
-    color:rgba(255, 44, 90, 0.8);
-    text-align: center;
-    font-weight: bold;
-    font-size:14px;
 }

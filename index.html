@@ -26,7 +26,7 @@
         <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
         <div id="img_here"></div>
     </div>
-    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <header id="header" class="animated slideInDown" style="animation-delay:1s;">
         <table>
             <tr>
                 <td id="logo">Veronica M. White</td>
@@ -49,11 +49,10 @@
                 <h2>Research Assistant</h2>
                 <h3>National Institute of Justice 
                     <br> Office of Justice Programs, Dept. of Justice</h3>
-                <!---<button class="btn_one">Contact Me</button><br> --->
                 <table>
                     <tr>
-                        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="socialbig" href="https://www.linkedin.com/in/veronicamwhite/"><i class="fab fa-linkedin"></i></a></td>
-                        <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="socialbig" href="https://scholar.google.com/citations?user=E-D8maUAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-1.5x"></i></svg></a></td>
+                        <td><a class="socialbig" href="https://www.linkedin.com/in/veronicamwhite/"><i class="fab fa-linkedin"></i></a></td>
+                        <td><a class="socialbig" href="https://scholar.google.com/citations?user=E-D8maUAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-1.5x"></i></svg></a></td>
 			<!--- Commenting out Other Social media Buttons for now
                         <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-orcid"></i></a></td>
                         <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-overleaf"></i></a></td>
@@ -113,7 +112,7 @@
                         </div>
                     </td>
                     <td>
-                         <form action="form.php" method="POST" name="contact_form">
+                         <form action="form.php" method="post" name="contact_form">
                             <label for="name"><input type="text" placeholder="name" required></label>
                             <label for="email"><input type="email" placeholder="email" required></label><br>
                             <label for="message"><textarea placeholder="your message" required rows="5"></textarea></label><br>
@@ -123,11 +122,6 @@
                 </tr>
             </table>
     </div>
-    <script language=”JavaScript”>
-        var frmvalidator = new Validator("contact_form"); 
-        frmvalidator.addValidation("name","req","Please provide your name"); 
-        frmvalidator.addValidation("email","req","Please provide your email"); 
-        frmvalidator.addValidation("email”,”email”, “Please enter a valid email address"); </script>
     <div id="footer">
         <div class="row">
             <div class="column">
