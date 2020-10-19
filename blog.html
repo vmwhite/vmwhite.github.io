@@ -1,0 +1,80 @@
+<!-- http://127.0.0.1:8887/ for local display-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Veronica M. White</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <!--- Added External Text Files-->
+    <script> 
+        $(function(){$("#bio").load("descriptions/bio.html"); });
+    </script> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="blog.css">
+   
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" >
+        <table>
+            <tr>
+                <td id="logo">Veronica M. White</td>
+                <td id="navigation">
+                    <a href="index.html">home</a>
+                    <a href="blog.html">blog</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft">
+                <h1>Content in progress</h1>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox"></td>
+        </tr>
+    </table>
+    <!-- <div id="bio"> -->
+	<!--- See descriptions/bio.html to edit, cant get this to cahge text style
+        <object width="1000" height="200" data="descriptions/bio.html" type="text\html"><a href="/descriptions/bio.html">No Support?</a>
+        </object>	-->
+    <!-- </div> -->
+    
+    <div id="footer">
+        <div class="row">
+            <div class="column">
+                <h2>Contact</h2>
+                <tr><td><i class="fas fa-at"></i> &nbsp; vmwhite@wisc.edu</td> </tr> <br>
+                <tr><td><i class="fas fa-phone"></i> &nbsp; +1 847 769 3264</td></tr>
+            </div>
+            <div class="column">
+              <h2>Address</h2>
+                <tr><td><i class="fas fa-map-marker-alt"></i>
+                    Mechanical Engineering,<br>
+                    1513 University Ave,<br>
+                    Madison, WI 53706
+                </td></tr>
+            </div>
+            <div class="column">
+                <h2>Follow</h2>
+                <tr><td><a class="social" href="https://www.linkedin.com/in/veronicamwhite/"><i class="fab fa-linkedin"></i></a>
+                <a class="social" href="https://scholar.google.com/citations?user=E-D8maUAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-1.5x"></i></a>
+                </td></tr>
+            </div>
+          </div>
+        <!-- Website template by: <br> <a href="https://imfunniee.github.io">imfunniee</a> -->
+    </div>
+
+</body>
+</html>
