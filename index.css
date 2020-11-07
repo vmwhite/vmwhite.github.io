@@ -42,7 +42,7 @@ header {
     font-weight:bold;
     background:transparent;
     color:#fff;
-    transition:0.1s ease-in-out;
+    /* transition:0.1s ease-in-out; */
     z-index:2;
 }
 header table {
@@ -96,7 +96,7 @@ header table {
     padding:5px 10px;
     border-bottom:2px solid transparent;
     margin-left:4vw;
-    transition:0.4s ease-in-out;
+    /* transition:0.4s ease-in-out; */
 }
 #navigation a:hover{
     border-bottom:2px solid #fff;
