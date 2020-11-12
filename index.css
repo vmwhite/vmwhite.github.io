@@ -103,7 +103,7 @@ header table {
 }
 #top_part {
     width:100%;
-    border:2vh solid #fff;
+    border:0vh solid #fff;
 }
 #top_part tr td{
     width:60%;
@@ -195,7 +195,7 @@ header table {
 #work h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:6%;
+    width:7%;
 }
 #photos {
     width:100%;
@@ -214,6 +214,23 @@ header table {
     transform: scale(1.1);
     cursor: pointer;
 }
+
+#photos a{
+    margin:0px 20px;
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+    text-align: center;
+}  
+/* #photos img:hover .captions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px; 
+    background: rgba(255,255,255,.8);
+    color: red;
+  } */
+  
 #bio {
     width:92vw;
     padding:6vh 4vw;
@@ -222,7 +239,7 @@ header table {
 #bio h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:8%;
+    width:5%;
 }
 #contact {
     width:92vw;
@@ -231,7 +248,7 @@ header table {
 #contact h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:10%;
+    width:11%;
 }
 #contact table {
     width:100%;
@@ -354,7 +371,7 @@ button:focus {
     column-gap:0%;
     }
     #photos img {
-        margin:2% 0px;
+        margin:5% 0px;
     }
     #photos img:hover {
         transform: scale(1);
@@ -379,7 +396,7 @@ button:focus {
         padding-top:50vh !important;
         text-align:center;
         padding:0px 4%;
-	color: white;
+	    color: white;
     }
     #about table {
         width:100%;
@@ -422,17 +439,19 @@ button:focus {
     #contact h1 {
         width:33%;
     }
+    /* padding on next two changes header thickness */
     header {
         width:96vw;
         background:#fff;
-        padding:4vh 2vw;
+        padding:2vh 2vw;
         position:absolute;
     }
-    #header table tr td {
+    
+    #header table tr td { 
         width:100%;
         display:block;
         text-align:center;
-        padding:15px 0px;
+        padding:2px 0px;
     }
     #navigation a {
         color:#000;
