@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Veronica 
+author: Veronica White
 title: Needing a Little Christmas
 tags: misc
 published: true

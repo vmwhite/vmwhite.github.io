@@ -2,7 +2,7 @@
 layout: post
 author: Veronica White
 title: Why everyone could use VBA and how to teach yourself for free!
-tags: VBA 
+tags: VBA; skill 
 # need both visible 1 and published false to not publish post
 published: true
 # visible: 1
