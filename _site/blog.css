@@ -15,7 +15,8 @@ h2 {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: white;
+    /* background: white; */
+    background:  rgb(13, 0, 3);
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -26,8 +27,10 @@ h2 {
     animation: rotate 0.56s infinite linear;
     width:50px;
     height:50px;
-    border:12px solid rgb(255, 44, 90);
-    border-bottom:12px solid #fff;
+    /* border:12px solid rgb(255, 44, 90);
+    border-bottom:12px solid #fff; */
+    border:12px solid rgb(255, 77, 118);
+    border-bottom:12px solid #33000b;
     border-radius:50%;
     margin:0;
 }
@@ -101,6 +104,7 @@ header table {
 #navigation a:hover{
     border-bottom:2px solid #fff;
 }
+
 
 #top_part {
     width:100%;
@@ -479,3 +483,29 @@ button:focus {
     border-bottom:4px solid rgb(255, 44, 90);
     width:200px;
 }
+/* Adding for blog padding for individual posts */
+#PostTitle {
+    width:100vw;
+    padding:15vh 4vw;
+    font-weight:bold;
+    width: 90%;
+}
+#PostTitle h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(255, 44, 90);
+    width: 100%
+}
+
+.postlink{
+    columns: #000000;
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+    transition:0.4s ease-in-out;
+}
+.postlink:hover{
+    border-bottom:2px solid rgb(255, 44, 90);
+}
+
+.postlink:visited , .postlink:link {
+    color: #000000;
+  }
