@@ -433,6 +433,7 @@ button:focus {
     }
     #LatestPost {
         width:100%;
+
     }
     header {
         width:96vw;
@@ -473,6 +474,7 @@ button:focus {
 }
 /* Adding for blog padding for posts */
 #LatestPosts {
+
     width:100vw;
     padding:6vh 4vw;
     font-weight:bold;
@@ -482,25 +484,15 @@ button:focus {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
     width:200px;
+ 
 }
-/* Adding for blog padding for individual posts */
-#PostTitle {
-    width:100vw;
-    padding:15vh 4vw;
-    font-weight:bold;
-    width: 90%;
-}
-#PostTitle h1 {
-    padding:5px 0px;
-    border-bottom:4px solid rgb(255, 44, 90);
-    width: 100%
-}
-
+/* Style for Post Headers */
 .postlink{
     columns: #000000;
     text-decoration:none;
     border-bottom:2px solid transparent;
     transition:0.4s ease-in-out;
+     
 }
 .postlink:hover{
     border-bottom:2px solid rgb(255, 44, 90);
@@ -509,3 +501,12 @@ button:focus {
 .postlink:visited , .postlink:link {
     color: #000000;
   }
+  /* Style fro end of post */
+#post{
+    margin: 10vw 10vw 0vw 0vw;
+    /* add back negative margin value */
+    padding: 0.25rem 44.5vw;
+    /* seperator */
+    border-bottom: 3px solid rgba(255, 44, 90,0.5);
+    width:90w; 
+}
