@@ -8,6 +8,7 @@ body {
     overflow-x:hidden;
     scroll-behavior: smooth;
 }
+/* #strong {font-weight:bold;} */
 h2 {
     margin-bottom: -6px;
     }
@@ -510,3 +511,18 @@ button:focus {
     border-bottom: 3px solid rgba(255, 44, 90,0.5);
     width:90w; 
 }
+/* Adding for blog padding for individual post */
+#PostTitle {
+    width:100vw;
+    padding:6vh 4vw;
+    font-weight:bold;
+    width: 90%;
+}
+#PostTitle h1 {
+    padding:50px 0px;
+    border-bottom:4px solid rgb(255, 44, 90);
+    width:100%;
+ 
+}
+/* allow bold font, not working... */
+/* strong {font-weight:bolder;} */

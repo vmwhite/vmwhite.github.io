@@ -14,6 +14,9 @@ How have I used VBA in the past? In my first internship at Lennox International,
 
 Below is a list of resources to help you start or enhance your VBA knowledge. I will continue to add to the following list as I come across other great free VBA resources, feel free to send me a message to help this list grow! 
  
+Step-by-step instructions:
+-[Setting up VBA for the first time](https://www.guru99.com/creating-your-first-visual-basic-for-applications-vba-in-excel.html)
+
 Here are a list of free courses to work through:
 - [codewithvba.com has three free courses (Beginning, Intermediate, and Advanced)](https://www.codewithvba.com/lessons/). This is a great refresher regardless of your experience level.
 - [Excel Easy has 16 chapters](https://www.excel-easy.com/vba.html) that go through various VBA topics.
