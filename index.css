@@ -4,7 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     padding:0px;
     margin:0px;
-    max-width:100vw;
+    max-width:100%;
     overflow-x:hidden;
     scroll-behavior: smooth;
 }
@@ -17,7 +17,7 @@ body {
   }
  /* loading page */
 #loading {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: fixed;
     /* background: white; */
@@ -44,7 +44,7 @@ body {
     100% {transform: rotate(360deg);}
 }
 header {
-    width:92vw;
+    width:92%;
     padding:6vh 4vw;
     position:fixed;
     font-weight:bold;
@@ -63,7 +63,7 @@ header table {
     width:80%;
 }
 #magnify {
-    width:100vw;
+    width:100%;
     height:100vh;
     background:rgba(0, 0, 0, 0.92);
     position:fixed;
@@ -215,7 +215,7 @@ header table {
     background-repeat:no-repeat;
 }
 #work {
-    width:92vw;
+    width:92%;
     padding:6vh 4vw;
     font-weight:bold;
 }
@@ -259,7 +259,7 @@ header table {
   } */
   
 #bio {
-    width:92vw;
+    width:92%;
     padding:6vh 4vw;
     font-weight:bold;
 }
@@ -269,7 +269,7 @@ header table {
     width:5%;
 }
 #contact {
-    width:92vw;
+    width:92%;
     padding:6vh 4vw;
 }
 #contact h1 {
@@ -390,7 +390,9 @@ button:focus {
 @media screen and (max-width: 1000px){
       /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
       .column {
-        width: 92%;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
       }
     }
 @media screen and (max-width: 1000px){
@@ -399,7 +401,7 @@ button:focus {
     column-gap:0%;
     }
     #photos img {
-        margin:5% 0px;
+        margin:0% 0px;
     }
     #photos img:hover {
         transform: scale(1);
@@ -407,9 +409,10 @@ button:focus {
     }
     #rightImage {
         display:none;
+        width: 100% !important;
     }
     #top_part {
-        border:0px;
+        border:0%;
 	background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/Professional_cropped.jpg") center center;
     	background-size:cover;
     	background-repeat:no-repeat;
@@ -424,10 +427,13 @@ button:focus {
         font-size: 30px;
         font-size: 2.5vw;
         padding-top:50vh !important;
+        display:block;
         /* padding-bottom:15vh !important; */
         text-align:center;
-        padding:0px 4%;
+        padding: 0%;
+        /* padding:0px 10%; */
 	    color: white;
+        margin: 0%;
     }
     #about table {
         width:100%;
@@ -462,7 +468,7 @@ button:focus {
         width:90%;
     }
     #work h1 {
-        width:19%;
+        width:30%;
     }
     #bio h1 {
         width:25%;
