@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+a {
+    word-wrap: break-word;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     padding:0px;
@@ -356,6 +360,7 @@ button:focus {
       /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
       .column {
         width: 100%;
+        padding: 0%;
       }
     }
 @media screen and (max-width: 1000px){
@@ -504,12 +509,12 @@ button:focus {
   }
   /* Style fro end of post */
 #post{
-    margin: 10vw 10vw 0vw 0vw;
+    /* margin: 10vw 10vw 0vw 0vw; */
     /* add back negative margin value */
-    padding: 0.25rem 44.5vw;
+    padding: 0.25rem 44.5%;
     /* seperator */
     border-bottom: 3px solid rgba(255, 44, 90,0.5);
-    width:90w; 
+    width:90%; 
 }
 /* Adding for blog padding for individual post */
 #PostTitle {
