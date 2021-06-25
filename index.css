@@ -440,6 +440,9 @@ button:focus {
         width:100%;
         margin-top:6vh;
     }
+    #about h1 {
+        font-size: 10vw;
+    }
     #about table tr td {
         text-align:center;
     }
