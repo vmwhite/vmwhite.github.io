@@ -11,7 +11,7 @@ body {
 /* working dark mode..... */
 .dark-mode {
     background-color: rgb(13, 0, 3);
-    color: white;
+    color: #DCD6D5;
 
     /* color: #ff6687; */
   }
@@ -128,6 +128,7 @@ header table {
 #about h1 {
     font-size:45px;
     word-wrap:break-word;
+    color:rgb(255, 44, 90);
 }
 #about table {
     width:70%;
@@ -246,9 +247,9 @@ header table {
     margin:0px 20px;
     display:inline-block;
     text-decoration:none;
-    color:black;
     text-align: center;
 }  
+
 /* #photos img:hover .captions {
     position: absolute;
     bottom: 0;

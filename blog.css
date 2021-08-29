@@ -3,7 +3,13 @@
 a {
     word-wrap: break-word;
 }
-
+a:link{
+    color: blue;
+}
+.dark-mode {
+    /*  trying to change link color for dark mode */
+    color: lightskyblue;
+} 
 body {
     font-family: 'Poppins', sans-serif;
     padding:0px;
@@ -12,6 +18,12 @@ body {
     overflow-x:hidden;
     scroll-behavior: smooth;
 }
+.dark-mode {
+    background-color: rgb(13, 0, 3);
+    color: #DCD6D5;
+    /* color: #ff6687; */
+  }
+ 
 /* #strong {font-weight:bold;} */
 h2 {
     margin-bottom: -6px;
