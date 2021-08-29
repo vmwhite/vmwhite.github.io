@@ -155,7 +155,7 @@ header table {
     background:rgb(255, 44, 90);
     box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
-.social {
+.themetoggle {
     color:rgb(255, 44, 90);
     font-size:33px;
     padding:12px 20px;
@@ -165,9 +165,10 @@ header table {
     font-weight:bold;
     margin:0px 0px;
 }
-.social:hover { 
+.themetoggle:hover { 
     cursor: pointer;
     color:#fff;
+    border-bottom: 2px solid transparent !important;
     background:rgb(255, 44, 90);
     box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
