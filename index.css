@@ -215,6 +215,12 @@ header table {
     background-size:cover;
     background-repeat:no-repeat;
 }
+#areas {
+    width:92%;
+    padding:0vh 4vw;
+    font-weight:bold;
+    text-align: center;
+}
 #work {
     width:92%;
     padding:6vh 4vw;
@@ -223,7 +229,14 @@ header table {
 #work h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:7%;
+    width:28%; 
+    /* for when it was just "work"
+    padding:5px 0px;
+    border-bottom:4px solid rgb(255, 44, 90);
+    width:7%; */
+}
+#work h2 {
+    text-align: center;
 }
 #photos {
     width:100%;
@@ -473,7 +486,8 @@ button:focus {
         width:90%;
     }
     #work h1 {
-        width:30%;
+        width:75%
+        /* width:30%; */
     }
     #bio h1 {
         width:25%;
