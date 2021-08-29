@@ -2,14 +2,13 @@
 
 a {
     word-wrap: break-word;
-}
-a:link{
     color: blue;
 }
-.dark-mode {
-    /*  trying to change link color for dark mode */
-    color: lightskyblue;
-} 
+
+body.dark-mode a {
+    color: #c280bf;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     padding:0px;
@@ -68,9 +67,7 @@ header {
 header table {
     width:100%;
 }
-#logo {
-    width:20%;
-}
+
 #navigation {
     width:80%;
 }
@@ -105,7 +102,7 @@ header table {
 }
 #logo {
     font-size:24px;
-    color:rgb(255, 44, 90);
+    color: transparent;
 }
 #navigation {
     text-align:right;
@@ -154,6 +151,23 @@ header table {
 #about table tr td {
     width:20% !important;
     text-align:center;
+}
+.themetoggle {
+    color:rgb(255, 44, 90);
+    font-size:33px;
+    padding:12px 20px;
+    border-radius:50%;
+    background:transparent;
+    transition:0.4s ease-in-out;
+    font-weight:bold;
+    margin:0px 0px;
+}
+.themetoggle:hover { 
+    cursor: pointer;
+    color:#fff;
+    border-bottom: 2px solid transparent !important;
+    background:rgb(255, 44, 90);
+    box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
 .social {
     color:rgb(255, 44, 90);
@@ -505,20 +519,32 @@ button:focus {
  
 }
 /* Style for Post Headers */
-.postlink{
+body.light-mode .postlink{
     columns: #000000;
     text-decoration:none;
     border-bottom:2px solid transparent;
     transition:0.4s ease-in-out;
      
 }
+body.light-mode .postlink:visited , body.light-mode .postlink:link {
+    color: #000000;
+  }
+
+body.dark-mode .postlink{
+    columns: #fff;
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+    transition:0.4s ease-in-out;
+}
+
+body.dark-mode .postlink:visited , body.dark-mode .postlink:link {
+    color: #fff;
+  }
+
 .postlink:hover{
     border-bottom:2px solid rgb(255, 44, 90);
 }
 
-.postlink:visited , .postlink:link {
-    color: #000000;
-  }
   /* Style fro end of post */
 #post{
     /* margin: 10vw 10vw 0vw 0vw; */

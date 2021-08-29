@@ -56,9 +56,7 @@ header {
 header table {
     width:100%;
 }
-#logo {
-    width:20%;
-}
+
 #navigation {
     width:80%;
 }
@@ -92,8 +90,9 @@ header table {
     margin:0px auto;
 }
 #logo {
-    font-size:24px;
-    color:rgb(255, 44, 90);
+    font-size:26px;
+    /* color:rgb(255, 44, 90); */
+    color: transparent;
 }
 #navigation {
     text-align:right;
@@ -156,6 +155,23 @@ header table {
     background:rgb(255, 44, 90);
     box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
+.themetoggle {
+    color:rgb(255, 44, 90);
+    font-size:33px;
+    padding:12px 20px;
+    border-radius:50%;
+    background:transparent;
+    transition:0.4s ease-in-out;
+    font-weight:bold;
+    margin:0px 0px;
+}
+.themetoggle:hover { 
+    cursor: pointer;
+    color:#fff;
+    border-bottom: 2px solid transparent !important;
+    background:rgb(255, 44, 90);
+    box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
+}
 .social {
     color:rgb(255, 44, 90);
     font-size:33px;
@@ -169,6 +185,7 @@ header table {
 .social:hover { 
     cursor: pointer;
     color:#fff;
+    border-bottom: 2px solid transparent;
     background:rgb(255, 44, 90);
     box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
@@ -326,6 +343,19 @@ header table {
     color:#000;
     font-weight:bold;
 }
+body.dark-mode #contact form input {
+    color:white;
+    width:96%;
+    margin:20px 1%;
+    background:transparent;
+    border:0px;
+    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    padding:8px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    transition:0.4s ease-in-out;
+    font-weight:bold;
+}
 #contact form textarea {
     width:96%;
     margin:20px 1%;
@@ -339,6 +369,21 @@ header table {
     resize:none;
     transition:0.4s ease-in-out;
     color:#000;
+    font-weight:bold;
+}
+body.dark-mode #contact form textarea {
+    width:96%;
+    margin:20px 1%;
+    padding:8px 10px;
+    border:0px;
+    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    padding:8px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    background:transparent;
+    resize:none;
+    transition:0.4s ease-in-out;
+    color:#fff;
     font-weight:bold;
 }
 #contact form input:focus {
@@ -368,6 +413,9 @@ header table {
 }
 ::placeholder {
     color:#000;
+}
+body.dark-mode ::placeholder {
+    color:#fff;
 }
 button:focus {
     outline:none;
