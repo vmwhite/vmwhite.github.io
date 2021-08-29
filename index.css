@@ -147,7 +147,8 @@ header table {
     font-weight:bold;
     margin:25px 8px;
     text-align: center;
-    width: 350px
+    /* width: 350px */
+    width: 50px
 }
 .resume:hover { 
     cursor: pointer;
@@ -224,6 +225,11 @@ header table {
     cursor:pointer;
     color:#fff;
     background:rgb(255, 44, 90);
+}
+.dark-mode .btn_one{
+    background: #DCD6D5;
+    color:rgb(13, 0, 3);
+    border:3px solid rgb(13, 0, 3);
 }
 #rightImage {
     width:100%;
@@ -344,7 +350,7 @@ header table {
     font-weight:bold;
 }
 body.dark-mode #contact form input {
-    color:white;
+    color:#DCD6D5;
     width:96%;
     margin:20px 1%;
     background:transparent;
@@ -383,7 +389,7 @@ body.dark-mode #contact form textarea {
     background:transparent;
     resize:none;
     transition:0.4s ease-in-out;
-    color:#fff;
+    color:#DCD6D5;
     font-weight:bold;
 }
 #contact form input:focus {
@@ -415,7 +421,7 @@ body.dark-mode #contact form textarea {
     color:#000;
 }
 body.dark-mode ::placeholder {
-    color:#fff;
+    color:#DCD6D5;
 }
 button:focus {
     outline:none;
