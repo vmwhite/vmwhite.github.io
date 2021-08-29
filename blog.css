@@ -2,14 +2,13 @@
 
 a {
     word-wrap: break-word;
-}
-a:link{
     color: blue;
 }
-.dark-mode {
-    /*  trying to change link color for dark mode */
-    color: lightskyblue;
-} 
+
+body.dark-mode a {
+    color: lightblue;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     padding:0px;
