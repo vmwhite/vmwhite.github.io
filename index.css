@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+
 body {
     font-family: 'Poppins', sans-serif;
     padding:0px;
@@ -110,10 +111,10 @@ header table {
 }
 #top_part {
     width:100%;
-    padding-left:15vh solid #fff;
+    /* padding-left:15vh solid #fff; */
 }
 #top_part tr td{
-    width:60%;
+    width:50%;
 }
 #about {
     width:84% !important;
@@ -234,10 +235,22 @@ header table {
 #rightImage {
     width:100%;
     height:95vh;
-    background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/Professional.jpg") center center;
+    background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/background.jpg") center center;
     background-size:cover;
     background-repeat:no-repeat;
 }
+#profilePic{
+    width:200px;
+    height:200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+#profilePic2 {
+    display: none;
+}
+
 #areas {
     width:92%;
     padding:0vh 4vw;
@@ -331,7 +344,7 @@ header table {
     font-weight:bold;
 }
 #inner_table tr td{
-    padding:10px 20px !important;
+    padding:10px 20px;
 }
 #contact form {
     width:100%;
@@ -488,9 +501,17 @@ button:focus {
         display:none;
         width: 100% !important;
     }
+    #profilePic2 {
+        width:200px;
+        height:200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
     #top_part {
-        border:0%;
-	background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/Professional_cropped.jpg") center center;
+        width:100%;
+	background:linear-gradient(0deg,rgba(255, 44, 90, 0.25),rgba(2255, 44, 90, 0.25)),url("images/background.jpg") center center;
     	background-size:cover;
     	background-repeat:no-repeat;
     }
@@ -500,10 +521,10 @@ button:focus {
     }
     #about {
         width:100% !important;
-        height:75vh;
+        height:95vh;
         font-size: 30px;
         font-size: 2.5vw;
-        padding-top:50vh !important;
+        padding-top:15vh !important;
         display:block;
         /* padding-bottom:15vh !important; */
         text-align:center;
@@ -523,7 +544,7 @@ button:focus {
         text-align:center;
     }
     .btn_one {
-    padding:6px 30px;
+    /* padding:6px 30px; */
     width:60%;
     margin:4vh auto;
     box-shadow:0px 10px 20px rgba(255, 44, 90, 0.8);
@@ -538,9 +559,9 @@ button:focus {
         width:100%;
         display:block;
     }
-    #inner_table tr td{
+    /* #inner_table tr td{
         padding:50px 0px !important;
-    }
+    } */
     #contact form input {
         width:90%;
     }
@@ -562,7 +583,12 @@ button:focus {
         width:96vw;
         background:#fff;
         padding:2vh 2vw;
-        position:absolute;
+        position:relative;
+    }
+
+    .dark-mode header {
+        background-color: rgb(13, 0, 3);
+        color: #DCD6D5;
     }
     
     #header table tr td { 
@@ -573,5 +599,17 @@ button:focus {
     }
     #navigation a {
         color:#000;
+    }
+
+    .dark-mode #navigation a {
+        color: #DCD6D5;
+    }
+
+    .socialbig {
+        padding:0px 0px;
+    }
+
+    #inner_table tr td {
+        padding: 0px 0px;
     }
 }
