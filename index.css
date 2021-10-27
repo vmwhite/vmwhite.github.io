@@ -241,7 +241,7 @@ header table {
 }
 #profilePic{
     width:200px;
-    height:200px;
+    height:auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
