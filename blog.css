@@ -468,16 +468,23 @@ button:focus {
 
     }
     header {
-        width:96vw;
+        /* width:96vw; */
         background:#fff;
-        padding:4vh 2vw;
+        /* padding:4vh 2vw; */
         position:absolute;
     }
     #header table tr td {
         width:100%;
         display:block;
         text-align:center;
-        padding:5px 0px;
+        /* padding:5px 0px; */
+    }
+    .dark-mode header {
+        background-color: rgb(13, 0, 3);
+        color: #DCD6D5;
+    }
+    .dark-mode #navigation a {
+        color: #DCD6D5;
     }
     #navigation a {
         color:#000;
