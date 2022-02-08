@@ -48,7 +48,7 @@ Each test can be implemented using various software such as Excel, R, SPSS, and 
 footnotes:<br/>
 <a name="f1"><sup>a</sup></a>: If the sample size is small (e.g., n < 30), use a t-test. <br/>
 <a name="f2"><sup>b</sup></a>: The Mann-Whitney U test is the same as conducting the Wilcoxon Sum of ranks test, see [[8]](#r8) <br/>
-<a name="f2"><sup>b</sup></a>: See [[9]](#r9) for a disscussion on using a chi squred vs fisher test https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/ <br/>
+<a name="f2"><sup>c</sup></a>: See [[9]](#r9) for a disscussion on using a chi squred vs fisher test https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/ <br/>
 
 ### References
 <a name="r1">[1]</a> R. L. Wasserstein and N. A. Lazar, “The ASA Statement on p-Values: Context, Process, and Purpose,” The American Statistician, vol. 70, no. 2, pp. 129–133, Apr. 2016, doi: [10.1080/00031305.2016.1154108](10.1080/00031305.2016.1154108). <br/>
