@@ -79,7 +79,9 @@ $(document).ready(function(){
        } 
       });
   });
-  
+
+//   To change darkmode based on os/system dark mode presets
+//   https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#aa-using-a-body-class
   function themeToggle() {
     var body = document.body
     var newClass = body.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
@@ -106,7 +108,7 @@ $(document).ready(function(){
                 $("#header").css("box-shadow","0px 0px 20px rgba(0,0,0,0.09)");
                 $("#header").css("padding","4vh 4vw");
                 $("#logo").css("color", "rgb(255,44,90)");
-                // $("#navigation a").css("color","#fff"); attempt to make header labels same at the rest
+                $("#navigation a").css("color","#fff"); //attempt to make header labels same at the rest
                 $("#navigation a").hover(function(){
                     $(this).css("border-bottom","2px solid rgb(255, 44, 90)");
                 },function(){
