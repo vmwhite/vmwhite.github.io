@@ -8,7 +8,7 @@ published: true
 visible: 0
 ---
 
-Collaborative work with organizations often involves analyzing whatever data is available. These analyses can often lead to satistical testing to help understand and communicate what the data tells you about the organization’s processes. With so many statistical tests and methods out there, it’s essential to choose the right one(s) for your study.
+Collaborative work with organizations often involves analyzing whatever data is available. These analyses can often lead to statistical testing to help understand and communicate what the data tells you about the organization’s processes. With so many statistical tests and methods out there, it’s essential to choose the right one(s) for your study.
 
 Before you start, consider how these frequentist statistics (i.e., statistical methods that estimate p-values) play a role in your study. The American Statistician Association has written two statements that highlight the concerns, considerations, and alternative/supplementary approaches when conducting scientific studies that utilize frequentist statistics (see [[1]](#r1), [[2]](#r2)). 
 
