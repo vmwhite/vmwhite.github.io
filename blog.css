@@ -510,7 +510,7 @@ button:focus {
     header {
         /* width:96vw; */
         background:#fff;
-        /* padding:4vh 2vw; */
+        padding:2vh 2vw;
         position:absolute;
     }
     #header table tr td {
