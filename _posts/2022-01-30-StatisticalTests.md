@@ -3,11 +3,11 @@ layout: post
 author: Veronica White
 title: Which Statistical Test should I use? An Overview
 tags: statistics skill 
-updated: 2/25/22
 # need both visible 1 and published false to not publish post
 published: true
 visible: 0
 ---
+*updated: 2/25/22*
 
 Collaborative work with organizations often involves analyzing whatever data is available. These analyses can often lead to statistical testing to help understand and communicate what the data tells you about the organization’s processes or programs. With so many statistical tests and methods out there, it’s essential to choose the right one(s) for your study.
 
