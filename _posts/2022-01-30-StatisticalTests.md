@@ -35,13 +35,13 @@ Each test can be implemented using various software such as SAS, R, SPSS, and ST
 
 | **<u>Purpose of Test</u>**                                      | **Continuous and normal data** | **Continuous, non-normal data OR non-continuous, discrete or ordinal data** | **Non-continuous, categorical data**                    |
 |:----------------------------------------------------------------|:--------------------------------------:|:------------------------------------------------:|:---------------------------------------------------------------:|
-| **Compare 1 mean with a population value**     |One sample z-test/t-test<sup>[a](#f1)</sup>|      One sample z-test/ t-test <sup>[a](#f1)</sup>               |              One sample z-test/ exact binomial test           |
+| **Compare 1 mean with a population value**                        |One sample z-test/t-test<sup>[a](#f1)</sup>|      one-sample median </sup>               |              exact binomial test           |
 |-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------|-----------------------------------------------------------------|
 | **Compare 2 independent groups**                                | Independent samples z-test/ t-test<sup>[a](#f1)</sup> | Mann-Whitney U/ Wilcoxon Sum of ranks<sup>[b](#f2)</sup>  | Chi-squared test or Fisher’s exact test<sup>[c](#f3)</sup> |
 |-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------|-----------------------------------------------------------------|
 | **Compare 2 paired groups**                                     |              Paired t-test             |       Wilcoxon signed ranks test/ sign test  | McNemar’s test                             |
 |-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------|-----------------------------------------------------------------|
-| **Compare 3 or more independent groups**                        | One-way Analysis of Variance      |                Kruskal Wallis test               |           Chi-squared test or ordinal chi-squared test          |    
+| **Compare 3 or more independent groups**                        | One-way Analysis of Variance      |                Kruskal Wallis test               |           Chi-squared test          |    
 |-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------|-----------------------------------------------------------------|
 | **Compare 3 or more paired groups**                             | Repeated measures Analysis of variance |                   Friedman test                  |                            Cochrane Q                           |
 |-----------------------------------------------------------------|----------------------------------------|--------------------------------------------------|-----------------------------------------------------------------|
@@ -49,7 +49,7 @@ Each test can be implemented using various software such as SAS, R, SPSS, and ST
 footnotes:<br/>
 <a name="f1"><sup>a</sup></a>: If the sample size is small (e.g., n < 30), use a t-test. <br/>
 <a name="f2"><sup>b</sup></a>: The Mann-Whitney U test is the same as conducting the Wilcoxon Sum of ranks test, see [[8]](#r8) <br/>
-<a name="f2"><sup>c</sup></a>: See [[9]](#r9) for a disscussion on using a chi squred vs fisher test [https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/](https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/) <br/>
+<a name="f3"><sup>c</sup></a>: See [[9]](#r9) for a disscussion on using a chi squred vs fisher test [https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/](https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/) <br/>
 
 ### References
 <a name="r1">[1]</a> R. L. Wasserstein and N. A. Lazar, “The ASA Statement on p-Values: Context, Process, and Purpose,” The American Statistician, vol. 70, no. 2, pp. 129–133, Apr. 2016, doi: [10.1080/00031305.2016.1154108](10.1080/00031305.2016.1154108). <br/>
