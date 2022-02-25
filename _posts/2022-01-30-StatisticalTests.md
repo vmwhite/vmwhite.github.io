@@ -3,6 +3,7 @@ layout: post
 author: Veronica White
 title: Which Statistical Test should I use? An Overview
 tags: statistics skill 
+updated: 2/25/22
 # need both visible 1 and published false to not publish post
 published: true
 visible: 0
@@ -26,7 +27,7 @@ Suppose you have decided to go ahead and use frequentist statistics and, more sp
 
 Now that both the test’s purpose and data are well defined, you are ready to choose a test—table 1 summarizes when to use various hypothesis tests. Additional information on choosing a statistical test and on the various statistical tests can be found in ([[6]](#r6),[[7]](#r7)). 
 
-Each test can be implemented using various software such as Excel, R, SPSS, and STATA. My personal favorite is R. [[10]](#r10)provides a guide for implementing the various tests. Are we all done? Not quite, re-read [[2]](#r2) and read [[11]](#r11) for interpretation and best practices of reporting p-values.
+Each test can be implemented using various software such as SAS, R, SPSS, and STATA. See [[10]](#r10) for examples of implementing the various tests in your desired software. Are we all done? Not quite, re-read [[2]](#r2) and read [[11]](#r11) for interpretation and best practices of reporting p-values.
 
 #### **<u>Table 1</u>**: Summary of Hypothesis testing, Purpose of test vs. Characteristics of Outcome Variables. (Adapted from [[6]](#r6))
 
@@ -48,20 +49,21 @@ Each test can be implemented using various software such as Excel, R, SPSS, and 
 footnotes:<br/>
 <a name="f1"><sup>a</sup></a>: If the sample size is small (e.g., n < 30), use a t-test. <br/>
 <a name="f2"><sup>b</sup></a>: The Mann-Whitney U test is the same as conducting the Wilcoxon Sum of ranks test, see [[8]](#r8) <br/>
-<a name="f2"><sup>c</sup></a>: See [[9]](#r9) for a disscussion on using a chi squred vs fisher test https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/ <br/>
+<a name="f2"><sup>c</sup></a>: See [[9]](#r9) for a disscussion on using a chi squred vs fisher test [https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/](https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/) <br/>
 
 ### References
 <a name="r1">[1]</a> R. L. Wasserstein and N. A. Lazar, “The ASA Statement on p-Values: Context, Process, and Purpose,” The American Statistician, vol. 70, no. 2, pp. 129–133, Apr. 2016, doi: [10.1080/00031305.2016.1154108](10.1080/00031305.2016.1154108). <br/>
 <a name="r2">[2]</a> R. L. Wasserstein, A. L. Schirm, and N. A. Lazar, “Moving to a World Beyond ‘p < 0.05,’” The American Statistician, vol. 73, no. sup1, pp. 1–19, Mar. 2019, doi: [10.1080/00031305.2019.1583913](10.1080/00031305.2019.1583913).<br/>
-<a name="r3">[3]</a> “Types of Statistical Data: Numerical, Categorical, and Ordinal,” dummies. https://www.dummies.com/article/academics-the-arts/math/statistics/types-of-statistical-data-numerical-categorical-and-ordinal-169735 (accessed Feb. 07, 2022).<br/>
+<a name="r3">[3]</a> “Types of Statistical Data: Numerical, Categorical, and Ordinal,” dummies. [https://www.dummies.com/article/academics-the-arts/math/statistics/types-of-statistical-data-numerical-categorical-and-ordinal-169735](https://www.dummies.com/article/academics-the-arts/math/statistics/types-of-statistical-data-numerical-categorical-and-ordinal-169735) (accessed Feb. 07, 2022).<br/>
 <!-- <a name="r3">[3]</a> J.-B. du Prel, B. Röhrig, G. Hommel, and M. Blettner, “Choosing Statistical Tests,” Dtsch Arztebl Int, vol. 107, no. 19, pp. 343–348, May 2010, doi: 10.3238/arztebl.2010.0343. -->
-<a name="r4">[4]</a>  “Which statistical test should you use? | XLSTAT Support Center.” https://help.xlstat.com/s/article/which-statistical-test-should-you-use?language=en_US (accessed Feb. 07, 2022). <br/>
-<a name="r5">[5]</a>“Parametric and Non-parametric tests for comparing two or more groups | Health Knowledge.” https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1b-statistical-methods/parametric-nonparametric-tests (accessed Feb. 07, 2022). <br/>
+<a name="r4">[4]</a>  “Which statistical test should you use? | XLSTAT Support Center.” [https://help.xlstat.com/s/article/which-statistical-test-should-you-use?language=en_US](https://help.xlstat.com/s/article/which-statistical-test-should-you-use?language=en_US) (accessed Feb. 07, 2022). <br/>
+<a name="r5">[5]</a>“Parametric and Non-parametric tests for comparing two or more groups | Health Knowledge.” [https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1b-statistical-methods/parametric-nonparametric-tests](https://www.healthknowledge.org.uk/public-health-textbook/research-methods/1b-statistical-methods/parametric-nonparametric-tests) (accessed Feb. 07, 2022). <br/>
 <a name="r6">[6]</a> Wills, A. Research Methods and Statistics. Online Course Acessed 2/2/2022.](http://www.bristol.ac.uk/medical-school/media/rms/red/which_test.html) <br/>
 <a name="r7">[7]</a>A. Ghasemi, and S. Zahediasl. "Normality tests for statistical analysis: a guide for non-statisticians." International journal of endocrinology and metabolism 10, no. 2 (2012): 486. doi: [10.5812/ijem.3505](10.5812/ijem.3505) <br/>
-<a name="r8">[8]</a> “Mann–Whitney U test,” Wikipedia. Jan. 31, 2022. Accessed: Feb. 07, 2022. [Online]. Available: https://en.wikipedia.org/w/index.php?title=Mann%E2%80%93Whitney_U_test&oldid=1069150075 <br/>
-<a name="r9">[9]</a> “Testing Independence: Chi-Squared vs Fisher’s Exact Test,” Oct. 17, 2018. https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/ (accessed Feb. 07, 2022). <br/>
-<a name="r10">[10]</a> TJ Murphy. biostats538@gmail.com Department of Pharmacology and Chemical Biology, School of Medicine, Emory University, Atlanta, GA, JABSTB: Statistical Design and Analysis of Experiments with R. Accessed: Feb. 01, 2022. [Online]. Available: https://tjmurphy.github.io/jabstb/index.html <br/>
+<a name="r8">[8]</a> “Mann–Whitney U test,” Wikipedia. Jan. 31, 2022. Accessed: Feb. 07, 2022. [Online]. Available: [https://en.wikipedia.org/w/index.php?title=Mann%E2%80%93Whitney_U_test&oldid=1069150075](https://en.wikipedia.org/w/index.php?title=Mann%E2%80%93Whitney_U_test&oldid=1069150075) <br/>
+<a name="r9">[9]</a> “Testing Independence: Chi-Squared vs Fisher’s Exact Test,” Oct. 17, 2018. [https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/](https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/) (accessed Feb. 07, 2022). <br/>
+<a name="r10">[10]</a> [1]“Choosing the Correct Statistical Test in SAS, Stata, SPSS and R.” [https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/](https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/) (accessed Feb. 25, 2022). <br/>
+<!-- <a name="r10">[10]</a> TJ Murphy. biostats538@gmail.com Department of Pharmacology and Chemical Biology, School of Medicine, Emory University, Atlanta, GA, JABSTB: Statistical Design and Analysis of Experiments with R. Accessed: Feb. 01, 2022. [Online]. Available: https://tjmurphy.github.io/jabstb/index.html <br/> -->
 <a name="r11">[11]</a> J. Storopoli. "Bayesian Statistics with Julia and Turing". *p-values*. 2021. [https://storopoli.io/Bayesian-Julia/pages/2_bayes_stats/#p-values](https://storopoli.io/Bayesian-Julia/pages/2_bayes_stats/#p-values) 
 <!-- chi squred ved fisher test https://www.datascienceblog.net/post/statistical_test/contingency_table_tests/  -->
 
