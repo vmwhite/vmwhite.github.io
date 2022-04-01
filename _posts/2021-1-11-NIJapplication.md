@@ -2,7 +2,7 @@
 layout: post
 author: Veronica White
 title: National Institute of Justice Research Assistantship Program Application Tips
-tags: NIJ_RAP 
+tags: NIJ_RAP, Criminal Justice 
 # need both visible 1 and published false to not publish post
 published: true
 # visible: 1
