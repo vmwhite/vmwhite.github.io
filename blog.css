@@ -94,8 +94,8 @@ h2 {
     100% {transform: rotate(360deg);}
 }
 header {
-    width:92vw;
-    padding:6vh 4vw;
+    width:92%;
+    padding:2% 4%;
     position:fixed;
     font-weight:bold;
     background:transparent;
@@ -140,24 +140,29 @@ header table {
     margin:0px auto;
 }
 #logo {
-    font-size:24px;
+    font-size:2rem;
+    /* color:rgb(255, 44, 90); */
     color: transparent;
+    display: inline-block;
+    font-size: 2.5rem;
 }
 #navigation {
     text-align:right;
+    font-size: 1.5rem;
 }
 #navigation a {
-    color:inherit;
+    color: #fff;
     text-decoration:none;
-    padding:5px 10px;
-    border-bottom:2px solid transparent;
-    margin-left:4vw;
-    transition:0.4s ease-in-out;
+    /*adds spacing without extra border */
+    margin:2% 1.5% 0%;
+    /* padding for extra underline */
+    padding: 0% 1%;
+    border-bottom:.2rem solid transparent;
+    /* transition:0.4s ease-in-out; */
 }
 #navigation a:hover{
-    border-bottom:2px solid #fff;
+    border-bottom:.2rem solid rgb(255, 44, 90);
 }
-
 
 #top_part {
     width:100%;
@@ -508,7 +513,7 @@ button:focus {
     }
     header {
         width:95%;
-        background:#fff;
+        background-color: #fff;
         padding:2.5% 2.5% !important;
         position:absolute;
     }
@@ -522,11 +527,11 @@ button:focus {
         background-color: rgb(13, 0, 3);
         color: #DCD6D5;
     }
-    .dark-mode #navigation a {
-        color: #DCD6D5;
-    }
     #navigation a {
         color:#000;
+    }
+    .dark-mode #navigation a {
+        color: #DCD6D5;
     }
     /* The following doesnt change the media page tag color for some reason */
     #site-tag a {

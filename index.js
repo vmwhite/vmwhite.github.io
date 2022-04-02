@@ -1,6 +1,6 @@
-var width = $(window).width(); 
+const mediaQuery = window.matchMedia('(min-width: 1000px)')
 window.onscroll = function(){
-if ((width >= 1000)){
+if ((mediaQuery.matches)){
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         $("#logo").css("color", "rgb(255,44,90)"); 
         $("header").css("box-shadow","0% 0% 20% rgba(0,0,0)");
@@ -21,6 +21,8 @@ if ((width >= 1000)){
             $("#navigation a").css("color","#fff");
         }  
     }
+}else{
+    $("header").css("background","solid");
 }
 }
 
@@ -72,8 +74,7 @@ $(document).ready(function(){
     body.className = newClass
     var endDate = new Date();
     endDate.setFullYear(endDate.getFullYear() + 10);
-        
-    if ((width >= 1000)){
+    if ((mediaQuery.matches)){
         if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
             $("#logo").css("color", "rgb(255,44,90)"); 
             $("header").css("box-shadow","0% 0% 20% rgba(0,0,0)");

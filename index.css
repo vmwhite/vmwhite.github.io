@@ -3,11 +3,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    padding:0px;
-    margin:0px;
+    font-size: 1em;
+    padding:0%;
+    margin:0%;
     max-width:100%;
     overflow-x:hidden;
     scroll-behavior: smooth;
+    color: #000;
+    background-color: #fff;
 }
 /* working dark mode..... */
 .dark-mode {
@@ -19,7 +22,7 @@ body {
  /* loading page */
 #loading {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     /* background: white; */
     background:  rgb(13, 0, 3);
@@ -31,12 +34,10 @@ body {
 }
 #spinner {
     animation: rotate 0.56s infinite linear;
-    width:50px;
-    height:50px;
-    /* border:12px solid rgb(255, 44, 90);
-    border-bottom:12px solid #fff; */
-    border:12px solid rgb(255, 77, 118);
-    border-bottom:12px solid #33000b;
+    width:5em; 
+    height:5em;
+    border:1rem solid rgb(255, 77, 118);
+    border-bottom:1rem solid #33000b;
     border-radius:50%;
     margin:0;
 }
@@ -46,7 +47,7 @@ body {
 }
 header {
     width:92%;
-    padding:6vh 4vw;
+    padding:4% 4%;
     position:fixed;
     font-weight:bold;
     background:transparent;
@@ -56,14 +57,12 @@ header {
 }
 header table {
     width:100%;
+    /* display: inline-table; */
 }
 
-#navigation {
-    width:80%;
-}
 #magnify {
     width:100%;
-    height:100vh;
+    height:100%;
     background:rgba(0, 0, 0, 0.92);
     position:fixed;
     z-index:4;
@@ -75,7 +74,7 @@ header table {
     position:absolute;
     top:0;
     right:0;
-    margin:20px 40px;
+    margin:20% 40%;
     color:#fff;
     transition:0.4s ease-in-out;
 }
@@ -88,26 +87,31 @@ header table {
     height:90%;
     background-size:contain !important;
     background-repeat:no-repeat !important;
-    margin:0px auto;
+    margin:0% auto;
 }
 #logo {
-    font-size:26px;
+    font-size:2rem;
     /* color:rgb(255, 44, 90); */
     color: transparent;
+    display: inline-block;
+    font-size: 2.5rem;
 }
 #navigation {
     text-align:right;
+    font-size: 1.5rem;
 }
 #navigation a {
-    color:inherit;
+    color: #fff;
     text-decoration:none;
-    padding:5px 10px;
-    border-bottom:2px solid transparent;
-    margin-left:4vw;
+    /*adds spacing without extra border */
+    margin:2% 1.5% 0%;
+    /* padding for extra underline */
+    padding: 0% 1%;
+    border-bottom:.2rem solid transparent;
     /* transition:0.4s ease-in-out; */
 }
 #navigation a:hover{
-    border-bottom:2px solid #fff;
+    border-bottom:.2rem solid rgb(255, 44, 90);
 }
 #top_part {
     width:100%;
@@ -159,7 +163,7 @@ header table {
 }
 .themetoggle {
     color:rgb(255, 44, 90);
-    font-size:33px;
+    /* font-size:33px; */
     padding:12px 20px;
     border-radius:50%;
     background:transparent;
@@ -314,13 +318,13 @@ header table {
   
 #bio {
     width:92%;
-    padding:6vh 4vw;
+    padding:6% 4%;
     font-weight:bold;
 }
 #bio h1 {
-    padding:5px 0px;
-    border-bottom:4px solid rgb(255, 44, 90);
-    width:5%;
+    padding:1% 3% 0% 0%;
+    border-bottom:.2rem solid rgb(255, 44, 90);
+    display: inline-block;
 }
 #contact {
     width:92%;
@@ -364,16 +368,7 @@ header table {
 }
 body.dark-mode #contact form input {
     color:#DCD6D5;
-    width:96%;
-    margin:20px 1%;
-    background:transparent;
-    border:0px;
     border-bottom:3px solid rgba(255, 44, 90,0.5);
-    padding:8px 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size:18px;
-    transition:0.4s ease-in-out;
-    font-weight:bold;
 }
 #contact form textarea {
     width:96%;
@@ -391,19 +386,8 @@ body.dark-mode #contact form input {
     font-weight:bold;
 }
 body.dark-mode #contact form textarea {
-    width:96%;
-    margin:20px 1%;
-    padding:8px 10px;
-    border:0px;
     border-bottom:3px solid rgba(255, 44, 90,0.5);
-    padding:8px 10px;
-    font-family: 'Poppins', sans-serif;
-    font-size:18px;
-    background:transparent;
-    resize:none;
-    transition:0.4s ease-in-out;
     color:#DCD6D5;
-    font-weight:bold;
 }
 #contact form input:focus {
     outline:none;
@@ -538,7 +522,7 @@ button:focus {
         margin-top:6vh;
     }
     #about h1 {
-        font-size: 10vw;
+        font-size: 2rem;
     }
     #about table tr td {
         text-align:center;
@@ -578,33 +562,35 @@ button:focus {
     #contact h1 {
         width:33%;
     }
-    /* padding on next two changes header thickness */
-    header {
-        width:96vw;
-        background:#fff;
-        padding:2vh 2vw;
-        position:relative;
+    #logo {
+        display: none !important;
     }
-
+    header {
+        width:95%;
+        background-color:#fff;
+        padding:5% 2.5% !important;
+        position:absolute;
+    }
+    #header table tr td {
+        width:100%;
+        /* display:block; */
+        text-align:center;
+        /* padding:5px 0px; */
+    }
     .dark-mode header {
         background-color: rgb(13, 0, 3);
         color: #DCD6D5;
     }
-    
-    #header table tr td { 
-        width:100%;
-        display:block;
-        text-align:center;
-        padding:2px 0px;
+    #navigation {
+        font-size: inherit;
     }
     #navigation a {
         color:#000;
+        margin:2% 1% 0%;
     }
-
     .dark-mode #navigation a {
         color: #DCD6D5;
     }
-
     .socialbig {
         padding:0px 0px;
     }
