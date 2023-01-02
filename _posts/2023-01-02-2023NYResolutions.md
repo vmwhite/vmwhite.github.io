@@ -1,6 +1,7 @@
 ---
 title: 2023 New Year Resolutions    
 tags: New Years Resolutions, Goals
+author: Veronica White
 # need both visible 1 and published false to not publish post
 published: true
 # visible: 0
