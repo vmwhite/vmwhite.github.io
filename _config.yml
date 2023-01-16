@@ -4,6 +4,6 @@ plugins:
   - jekyll-seo-tag
 #how to use this file to set parameters https://carpentries-incubator.github.io/jekyll-pages-novice/starting-jekyll/#:~:text=Jekyll's%20main%20configuration%20options%20are,every%20page%20of%20your%20website.
 #These are global variables
-title: "Veronoica White Blog"
-description: "Welcome to my blog"
-author: "Veronoica White"
+title: "Veronica White's Blog"
+description: "Welcome to my blog! Thank you for taking the time to read my posts. You can always contact me at vmwhite@wisc.edu if you have questions, comments, or suggestions for new posts."
+author: "Veronica White"
