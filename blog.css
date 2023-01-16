@@ -213,6 +213,25 @@ header table {
     background:rgb(255, 44, 90);
     box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
+.btn-RSS {
+    color:rgb(255, 44, 90);
+    font-size:25px;
+    padding:12px 27px;
+    border-radius:50%;
+    background:transparent;
+    transition:0.4s ease-in-out;
+    font-weight:bold;
+    margin:25px 8px;
+    text-align: center;
+    /* width: 350px */
+    width: 50px
+}
+.btn-RSS:hover { 
+    cursor: pointer;
+    color:#fff;
+    background:rgb(255, 44, 90);
+    box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
+}
 .social {
     color:rgb(255, 44, 90);
     font-size:33px;
