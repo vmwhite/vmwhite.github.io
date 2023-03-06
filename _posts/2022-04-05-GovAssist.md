@@ -18,3 +18,9 @@ published: false
     - AAAS Fellowship,2-year
     - NSF,  MSPRF, https://beta.nsf.gov/funding/opportunities/mathematical-sciences-postdoctoral-research-fellowships-msprf 
     - NSF, STEM EP, https://beta.nsf.gov/funding/opportunities/science-technology-engineering-and-mathematics-education-postdoctoral 
+    - Tech Congress
+
+
+Resources for creating figures
+https://www.figma.com/
+https://app.diagrams.net/ 
