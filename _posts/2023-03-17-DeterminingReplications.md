@@ -7,7 +7,7 @@ tags: statistics skill
 published: false
 visible: 1
 ---
-When conducting simulation studies, it can be useful to determine the number of samples you need to achieve a certain level of confidence. 
+When conducting simulation studies, you'll often need to determine the number of samples you need to achieve a certain level of confidence in your resutling analysis or calibration. 
 
 **sample with a replacement for confidence intervals  central limit theorem:**
 https://www.statisticshowto.com/probability-and-statistics/normal-distributions/central-limit-theorem-definition-examples/
@@ -31,10 +31,9 @@ where $\bar{\mu}$ is the sample mean, $Z_{\frac{\alpha}{2}}$ is the Z score, $\s
 
 
 
-
-
-
 The cons of using the Bonferroni correction for larger sample sizes is when we are testing a large number of tests or if those hypotheses are positively correlated, we run the risk of receiving false negatives (i.e., risk not observing statistical significance where it does exisit). Need to increase N to reduce false negatives. 
+
+-------------- Seperate for determining sample size for RCT or social study -------- 
 
 **Sample with out replacement via finaite population correction:**
 https://select-statistics.co.uk/blog/importance-effect-sample-size/
@@ -46,5 +45,8 @@ if you are unsure of the calcualtion use $N=100,000$ since larger values do not 
 
 $n = \frac{\frac{Z^2p(1-p)}{e^2}}{1+\frac{Z^2p(1-p)}{e^2N}}$
 where $Z$ is the Z score, $p$ is the population proportion, $e$ is the margin of error, and $N$ is the population size
+
+
+factor in drop out rate after finding ideal sample adjsut for potential drop out rate so that you still meet desired significance. 
 
 
