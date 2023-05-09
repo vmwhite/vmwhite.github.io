@@ -2,6 +2,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-spaceship
 #how to use this file to set parameters https://carpentries-incubator.github.io/jekyll-pages-novice/starting-jekyll/#:~:text=Jekyll's%20main%20configuration%20options%20are,every%20page%20of%20your%20website.
 #These are global variables
 title: "Veronica White's Blog"
