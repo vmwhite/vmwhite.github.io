@@ -844,7 +844,7 @@ element.style {
     cursor: pointer; 
     display: inline; 
     font-family: -apple-system system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;                                    
-    font-size: 14px; 
+    font-size: 1.3em; 
     font-style: normal; 
     font-weight: 700; 
     height: auto; 
@@ -911,7 +911,7 @@ element.style {
     text-overflow: ellipsis;
 }
 ._f0, ._f1m, ._f2m, ._f3m {
-    font-size: 12px;
+    font-size: 1em;
     line-height: 1.4;
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-weight: 400;
