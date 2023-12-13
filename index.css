@@ -11,6 +11,7 @@ body {
     scroll-behavior: smooth;
     color: #000;
     background-color: #fff;
+    box-sizing: content-box;
 }
 /* working dark mode..... */
 .dark-mode {
@@ -54,6 +55,7 @@ header {
     color:#fff;
     /* transition:0.1s ease-in-out; */
     z-index:9999;
+    box-sizing: content-box;
 }
 header table {
     width:100%;
@@ -128,6 +130,7 @@ header table {
     justify-content:center;
     text-align:left;
     padding:0px 8%;
+    
 }
 #about h1 {
     font-size:45px;
@@ -260,16 +263,19 @@ header table {
     padding:0vh 4vw;
     font-weight:bold;
     text-align: center;
+    box-sizing: content-box;
 }
 #work {
     width:92%;
     padding:6vh 4vw;
     font-weight:bold;
+    box-sizing: content-box;
 }
 #work h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
     width:28%; 
+    box-sizing: content-box;
     /* for when it was just "work"
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
@@ -277,6 +283,7 @@ header table {
 }
 #work h2 {
     text-align: center;
+    box-sizing: content-box;
 }
 #photos {
     width:100%;
@@ -306,6 +313,7 @@ header table {
     width:100%;
     columns:2;
     column-gap:4%;
+    box-sizing: content-box;
 }
 /* #photos img:hover .captions {
     position: absolute;
@@ -320,6 +328,7 @@ header table {
     width:92%;
     padding:6% 4%;
     font-weight:bold;
+    box-sizing: content-box;
 }
 #bio h1 {
     padding:1% 3% 0% 0%;
@@ -329,6 +338,7 @@ header table {
 #contact {
     width:92%;
     padding:6vh 4vw;
+    box-sizing: content-box;
 }
 #contact h1 {
     padding:5px 0px;
@@ -440,7 +450,7 @@ button:focus {
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 30%;
+    width: 33.33%;
     padding: 10px;
   }
   
@@ -599,3 +609,326 @@ button:focus {
         padding: 0px 0px;
     }
 }
+
+/*  Iframe copy  */
+/* element.style {
+    height: 140px;
+    padding-bottom: 0;
+} */
+.iframely-responsive {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    box-sizing: border-box;
+}
+.iframely-responsive>* {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 0;
+    box-sizing: border-box;
+}
+style {
+    display: none;
+}
+/*  from class body */
+element.style {
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,.76);
+}
+/* net chunk */
+.__wc {
+    --pos: 14px;
+    --pop: 8px;
+}
+._lh14 {
+    line-height: 1.4;
+}
+._sc, ._sm {
+    background: var(-dc);
+    border: var(--fbw,0) solid var(--fbc,transparent);
+    border-radius: var(--fbr,0);
+}
+.t, .w, .wf {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
+.w {
+    line-height: 1.4;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.w, .body2 {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: none transparent;
+    text-align: left;
+    background-color: var(--bc);
+}
+._tha {
+    --bc: #000;
+    --dc: #fff;
+    --hc: #fff;
+    --mc: #808080;
+    --wc: #808080;
+    --fbc: #333;
+    --pc: #808080;
+}
+
+/* chunk */
+._lc .wf {
+    flex-direction: row;
+}
+.t, .w, .wf {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* chunk */
+._lc._sm:not(.xd) .wc {
+    min-width: 100px;
+    width: 100px;
+    min-height: 100px;
+}
+
+.wc, .wt {
+    overflow: hidden;
+    
+}
+
+/* e */
+element.style {
+    padding-bottom: 133.8000%;
+}
+.e {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.e {
+    padding-bottom: 133.8%;
+}
+
+/* em */
+.em {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*a chunck  */
+element.style {
+    background-image: url(//iframely.net/mcytOTI/thumbnail);
+}
+
+.c {
+    z-index: 20;
+}
+
+.c {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.c, .co {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* wt */
+._p .wt {
+    position: relative;
+    overflow: initial;
+}
+
+._lc .wt {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.wt {
+    padding: 8px 10px;
+}
+
+.wc, .wt {
+    overflow: hidden;
+}
+.__wc {
+    --pos: 14px;
+    --pop: 8px;
+}
+
+._lh14 {
+    line-height: 1.4;
+}
+._p:not(._rtl) .t {
+    padding-right: var(--pos);
+}
+
+.t {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    color: var(--dc);
+}
+
+.t, .w, .wf {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
+
+/*  */
+._lc._ap:not(._ts)._lh14 .th {
+    max-height: 4.2em;
+}
+
+._lc._ap:not(._ts) .th {
+    -webkit-line-clamp: 3;
+}
+
+._f1p, ._f2p {
+    font-size: 13px;
+}
+
+._fsn {
+    font-style: normal;
+}
+
+._fwb {
+    font-weight: 700;
+}
+
+.tf, .th {
+    margin-bottom: 0.5em;
+    margin-right: 0.8em;
+}
+
+.td, .th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    color: #fff;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.th a{
+    color: var(--hc);
+    text-decoration-color: rgb(255, 255, 255); 
+    text-decoration-line: none; 
+    text-decoration-style: solid; 
+    text-decoration-thickness: auto; 
+    touch-action: manipulation;
+    cursor: pointer; 
+    display: inline; 
+    font-family: -apple-system system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;                                    
+    font-size: 14px; 
+    font-style: normal; 
+    font-weight: 700; 
+    height: auto; 
+    hyphens: auto; 
+    line-height: 1; 
+    overflow: hidden;
+    overflow-wrap: break-word; 
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+/* ts */
+._lc._ap:not(._ts)._lh14 .td {
+    max-height: 2.8em;
+}
+
+._lc._ap:not(._ts) .td {
+    -webkit-line-clamp: 2;
+}
+
+.td {
+    margin-bottom: 0.6em;
+    vertical-align: inherit;
+}
+
+/*  */
+._od .td:last-child, ._od .tf:last-child, ._od .th:last-child {
+    margin-bottom: 0!important;
+}
+
+.tf {
+    display: flex;
+    align-items: center;
+    color: var(--mc);
+}
+
+.tf, .th {
+    margin-bottom: 0.5em;
+}
+
+._fsn {
+    font-style: normal;
+}
+
+._fwn {
+    font-weight: 400;
+}
+
+._ffsa {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+.t {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    color: var(--dc);
+    line-height: 1.4;
+}
+
+.tc {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+._f0, ._f1m, ._f2m, ._f3m {
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight: 400;
+    color: var(--dc);
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.tw {
+    color: var(--wc);
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+
+
