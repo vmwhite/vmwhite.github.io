@@ -5,3 +5,6 @@ tags: OR Resources Decision-making
 published: true
 visible: 0
 ---
+Should I buy a house or an apartment? What job should I look at? should I go to college and/or graduate school? Should we have a destination wedding or a local one? Should I buy a car? 
+
+Many life decisons can seen so messy. You may find youself going bakc adn forth with a million thoughts floating around in your head. 

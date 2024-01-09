@@ -2,7 +2,7 @@
 layout: post
 author: Veronica White
 title: How to File Your US Taxes for Free
-tags: taxes, resources
+tags: taxes resources
 # need both visible 1 and published false to not publish post
 published: true
 visible: 0
