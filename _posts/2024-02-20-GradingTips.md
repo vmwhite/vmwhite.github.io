@@ -19,3 +19,4 @@ how to grade:
 By leaving video feedback https://teacher-totter.blogspot.com/2018/10/four-ideas-to-improve-feedback-for.html , using text expanders https://teacher-totter.blogspot.com/2014/03/using-technology-to-create-learning.html , leveraging one-on-one conferences, and making use of feedback portfolios, I was able to provide feedback that was more than just the sum of the mistakes.
 
 " I stopped giving them their grades with their feedback. Guess what? They stopped paying attention to their grades. This one's easy, but it works wonders." (idea: give them feedback and then have them do somthing with that feedback. )
+

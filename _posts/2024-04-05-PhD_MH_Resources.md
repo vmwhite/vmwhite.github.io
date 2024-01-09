@@ -13,7 +13,7 @@ The number one thing you can do is find a supportive Ph.D. advisor that you feel
 Evidence on why meantal health and diversity are important. 
 
 Other Great reseources if you dont have them already to help you battle the mental health strains that come with doing a Ph.D.
-- Mental health book by  Zoe
+- Mental health book by Dr. Zoe
 - Hidden Curriculum
 - Imposter syndrome resources
 
