@@ -9,3 +9,6 @@ group :jekyll_plugins do
     gem 'jekyll-spaceship'
     gem "github-pages"
 end
+gem "nokogiri", "~> 1.15"
+
+gem "webrick", "~> 1.8"

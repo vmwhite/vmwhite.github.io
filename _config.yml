@@ -3,6 +3,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-spaceship
+#When adding to new computer:
+# 1.)first install Ruby https://jekyllrb.com/docs/installation/windows/
+# 2.) follow https://jekyllrb.com/docs/ except force step three with `jekyll new "pathtosite" --force` then wait to do step 4.
+# 3.) discard any chnages to config file and new pages created. 
+# 4.) navigate to website folder and "bundle add [package]" for anything missing
+# 5.) run "bundle exec jekyll serve" to check what needs to be added until it builds successully. 
 #how to use this file to set parameters https://carpentries-incubator.github.io/jekyll-pages-novice/starting-jekyll/#:~:text=Jekyll's%20main%20configuration%20options%20are,every%20page%20of%20your%20website.
 #These are global variables
 title: "Veronica White's Blog"
