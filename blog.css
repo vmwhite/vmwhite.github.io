@@ -140,6 +140,7 @@ header table {
     margin:0px auto;
 }
 #logo {
+    width: 50vh;
     font-size:2rem;
     /* color:rgb(255, 44, 90); */
     color: transparent;
