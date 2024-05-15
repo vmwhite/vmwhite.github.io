@@ -47,8 +47,8 @@ body {
     100% {transform: rotate(360deg);}
 }
 header {
-    width:92%;
-    padding:4% 4%;
+    width: 100%;
+    padding: 3% 1% 1% 1%;
     position:fixed;
     font-weight:bold;
     background:transparent;
@@ -92,6 +92,7 @@ header table {
     margin:0% auto;
 }
 #logo {
+    width: 100%;
     font-size:2rem;
     /* color:rgb(255, 44, 90); */
     color: transparent;
@@ -99,8 +100,9 @@ header table {
     font-size: 2.5rem;
 }
 #navigation {
-    text-align:right;
-    font-size: 1.5rem;
+    width: 50%;
+    text-align:center;
+    font-size: 1.4rem;
 }
 #navigation a {
     color: #fff;
@@ -123,7 +125,7 @@ header table {
     width:50%;
 }
 #about {
-    width:84% !important;
+    width:100% !important;
     height:95vh;
     display:flex;
     flex-direction:column;
@@ -142,7 +144,7 @@ header table {
     margin-top:4vh;
 }
 #about table tr td {
-    width:20% !important;
+    width:30% !important;
     text-align:left;
 }
 .resume {
@@ -267,7 +269,7 @@ header table {
 }
 #work {
     width:92%;
-    padding:6vh 4vw;
+    padding: 3vh 4vw 0vh;
     font-weight:bold;
     box-sizing: content-box;
 }
@@ -337,7 +339,7 @@ header table {
 }
 #contact {
     width:92%;
-    padding:6vh 4vw;
+    padding: 0vh 4vw 3vh;
     box-sizing: content-box;
 }
 #contact h1 {
@@ -578,7 +580,7 @@ button:focus {
     header {
         width:95%;
         background-color:#fff;
-        padding:5% 2.5% !important;
+        padding:5% 2.5% 1% !important;
         position:absolute;
     }
     #header table tr td {
@@ -929,6 +931,26 @@ element.style {
     box-sizing: border-box;
 }
 
-
-
-
+/* START CITATION STYLE */
+.citation {
+    margin-bottom: 20px;
+}
+.title {
+    font-weight: bold;
+}
+.authors {
+    font-style: italic;
+}
+.journal {
+    font-style: italic;
+}
+.volume {
+    font-weight: bold;
+}
+.pages {
+    font-style: italic;
+}
+.year {
+    font-weight: bold;
+}
+/* END CITATION STYLE */
