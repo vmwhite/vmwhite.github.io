@@ -209,7 +209,7 @@ header table {
     display: block; 
     /* display: none; */
     position: absolute;
-    color:#fff;
+    color:#fff; 
     background-color: #333; /* Background color of dropdown */
     min-width: 160px;
     z-index: 1;
@@ -616,6 +616,15 @@ button:focus {
     }
     #navigation a {
         color:#000;
+    }
+    .dropdown-content {
+        display: block; 
+        /* display: none; */
+        position: absolute;
+        color:#fff; 
+        background-color: #333; /* Background color of dropdown */
+        min-width: 160px;
+        z-index: 1;
     }
     .dark-mode #navigation a {
         color: #DCD6D5;
