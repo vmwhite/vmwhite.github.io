@@ -80,12 +80,10 @@ h2 {
 }
 #spinner {
     animation: rotate 0.56s infinite linear;
-    width:50px;
-    height:50px;
-    /* border:12px solid rgb(255, 44, 90);
-    border-bottom:12px solid #fff; */
-    border:12px solid rgb(255, 77, 118);
-    border-bottom:12px solid #33000b;
+    width:5em; 
+    height:5em;
+    border:1rem solid rgb(255, 77, 118);
+    border-bottom:1rem solid #33000b;
     border-radius:50%;
     margin:0;
 }
@@ -94,25 +92,24 @@ h2 {
     100% {transform: rotate(360deg);}
 }
 header {
-    width:92%;
-    padding:2% 4%;
+    width: 100%;
+    padding: 3% 1% 1% 1%;
     position:fixed;
     font-weight:bold;
     background:transparent;
     color:#fff;
-    transition:0.1s ease-in-out;
-    z-index:2;
+    /* transition:0.1s ease-in-out; */
+    z-index:9999;
+    box-sizing: content-box;
 }
 header table {
     width:100%;
+    /* display: inline-table; */
 }
 
-#navigation {
-    width:80%;
-}
 #magnify {
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
     background:rgba(0, 0, 0, 0.92);
     position:fixed;
     z-index:4;
@@ -124,7 +121,7 @@ header table {
     position:absolute;
     top:0;
     right:0;
-    margin:20px 40px;
+    margin:20% 40%;
     color:#fff;
     transition:0.4s ease-in-out;
 }
@@ -137,10 +134,10 @@ header table {
     height:90%;
     background-size:contain !important;
     background-repeat:no-repeat !important;
-    margin:0px auto;
+    margin:0% auto;
 }
 #logo {
-    width: 50vh;
+    width: 100%;
     font-size:2rem;
     /* color:rgb(255, 44, 90); */
     color: transparent;
@@ -148,8 +145,9 @@ header table {
     font-size: 2.5rem;
 }
 #navigation {
-    text-align:right;
-    font-size: 1.5rem;
+    width: 50%;
+    text-align:center;
+    font-size: 1.4rem;
 }
 #navigation a {
     color: #fff;
@@ -165,10 +163,47 @@ header table {
     border-bottom:.2rem solid rgb(255, 44, 90);
 }
 
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Background color of dropdown */
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(255, 44, 90); /* Change background on hover */
+}
 #top_part {
     width:100%;
-    /* adds border to top */
-    border:0vh solid #fff;
+    /* padding-left:15vh solid #fff; */
 }
 #top_part tr td{
     width:60%;
@@ -185,13 +220,11 @@ header table {
 #about h1 {
     font-size:45px;
     word-wrap:break-word;
-}
-#about h2 {
-    font-size:35px;
+    color:rgb(255, 44, 90);
 }
 #about table {
     width:70%;
-    margin-top:30vh;
+    margin-top:4vh;
 }
 #about table tr td {
     width:20% !important;
@@ -199,7 +232,7 @@ header table {
 }
 .themetoggle {
     color:rgb(255, 44, 90);
-    font-size:33px;
+    /* font-size:33px; */
     padding:12px 20px;
     border-radius:50%;
     background:transparent;
@@ -241,11 +274,12 @@ header table {
     background:transparent;
     transition:0.4s ease-in-out;
     font-weight:bold;
-    margin:0px 8px;
+    margin:0px 0px;
 }
 .social:hover { 
     cursor: pointer;
     color:#fff;
+    border-bottom: 2px solid transparent;
     background:rgb(255, 44, 90);
     box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
 }
@@ -258,6 +292,7 @@ header table {
     transition:0.4s ease-in-out;
     font-weight:bold;
     margin:0px 8px;
+    text-align: center;
 }
 .socialbig:hover { 
     cursor: pointer;
@@ -284,6 +319,11 @@ header table {
     color:#fff;
     background:rgb(255, 44, 90);
 }
+.dark-mode .btn_one{
+    background: #DCD6D5;
+    color:rgb(13, 0, 3);
+    border:3px solid rgb(13, 0, 3);
+}
 #rightImage {
     width:100%;
     height:75vh;
@@ -291,19 +331,48 @@ header table {
     background-size:cover;  
     background-repeat:no-repeat;
 }
-#work {
-    width:92vw;
-    padding:6vh 4vw;
+#profilePic{
+    width:200px;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+#profilePic2 {
+    display: none;
+}
+
+#areas {
+    width:92%;
+    padding:0vh 4vw;
     font-weight:bold;
+    text-align: center;
+    box-sizing: content-box;
+}
+#work {
+    width:92%;
+    padding: 3vh 4vw 0vh;
+    font-weight:bold;
+    box-sizing: content-box;
 }
 #work h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:6%;
+    width:28%; 
+    box-sizing: content-box;
+    /* for when it was just "work"
+    padding:5px 0px;
+    border-bottom:4px solid rgb(255, 44, 90);
+    width:7%; */
+}
+#work h2 {
+    text-align: center;
+    box-sizing: content-box;
 }
 #photos {
     width:100%;
-    columns:3;
+    columns:25vw auto;
     column-gap:4%;
     z-index:1;
     transition:0.4s ease-in-out;
@@ -311,31 +380,55 @@ header table {
 #photos img {
     width:100%;
     height:auto;
-    margin:4.5% 0px;
+    /* margin:4.5% 0px; */
     transition:0.4s ease-in-out;
 }
 #photos img:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
+
+#photos a{
+    margin:0px 20px;
+    display:inline-block;
+    text-decoration:none;
+    text-align: center;
+}  
+#news {
+    width:100%;
+    columns:2;
+    column-gap:4%;
+    box-sizing: content-box;
+}
+/* #photos img:hover .captions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px; 
+    background: rgba(255,255,255,.8);
+    color: red;
+  } */
+  
 #bio {
-    width:92vw;
-    padding:6vh 4vw;
+    width:92%;
+    padding:6% 4%;
     font-weight:bold;
+    box-sizing: content-box;
 }
 #bio h1 {
-    padding:5px 0px;
-    border-bottom:4px solid rgb(255, 44, 90);
-    width:8%;
+    padding:1% 3% 0% 0%;
+    border-bottom:.2rem solid rgb(255, 44, 90);
+    display: inline-block;
 }
 #contact {
-    width:92vw;
-    padding:6vh 4vw;
+    width:92%;
+    padding: 0vh 4vw 3vh;
+    box-sizing: content-box;
 }
 #contact h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(255, 44, 90);
-    width:10%;
+    width:11%;
 }
 #contact table {
     width:100%;
@@ -350,7 +443,7 @@ header table {
     font-weight:bold;
 }
 #inner_table tr td{
-    padding:10px 20px !important;
+    padding:10px 20px;
 }
 #contact form {
     width:100%;
@@ -368,6 +461,10 @@ header table {
     color:#000;
     font-weight:bold;
 }
+body.dark-mode #contact form input {
+    color:#DCD6D5;
+    border-bottom:3px solid rgba(255, 44, 90,0.5);
+}
 #contact form textarea {
     width:96%;
     margin:20px 1%;
@@ -383,6 +480,10 @@ header table {
     color:#000;
     font-weight:bold;
 }
+body.dark-mode #contact form textarea {
+    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    color:#DCD6D5;
+}
 #contact form input:focus {
     outline:none;
     border-bottom:3px solid rgba(255, 44, 90,1);
@@ -395,6 +496,7 @@ header table {
     position:relative;
     top:-25px;
     left:30px;
+    width: 80%;
 }
 #footer {
     border-top: 3px solid rgba(255, 44, 90,0.5);
@@ -409,6 +511,9 @@ header table {
 }
 ::placeholder {
     color:#000;
+}
+body.dark-mode ::placeholder {
+    color:#DCD6D5;
 }
 button:focus {
     outline:none;

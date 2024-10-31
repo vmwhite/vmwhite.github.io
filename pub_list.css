@@ -22,6 +22,7 @@ body {
 }
 .title {
     font-weight: bold;
+    
 }
 .authors {
     font-style: italic;
@@ -164,8 +165,8 @@ header table {
     margin:0px auto;
 }
 #logo {
-    width:45vh;
-    font-size:2rem;
+    width:350%;
+    font-size:1.5rem;
     /* color:rgb(255, 44, 90); */
     color: transparent;
     display: inline-block;
@@ -189,6 +190,46 @@ header table {
     border-bottom:.2rem solid rgb(255, 44, 90);
 }
 
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: block; 
+    /* display: none; */
+    position: absolute;
+    background-color: #333; /* Background color of dropdown */
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(255, 44, 90); /* Change background on hover */
+}
+
 #top_part {
     width:100%;
     /* adds border to top */
@@ -207,7 +248,7 @@ header table {
     padding:0px 8%;
 }
 #about h1 {
-    font-size:45px;
+    font-size:40px;
     word-wrap:break-word;
 }
 #about h2 {
