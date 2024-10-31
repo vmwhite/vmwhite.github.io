@@ -166,6 +166,7 @@ header table {
 /* Dropdown container */
 .dropdown {
     position: relative;
+    min-width: 100px;
     display: inline-block;
 }
 
