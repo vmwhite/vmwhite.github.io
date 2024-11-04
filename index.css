@@ -160,7 +160,8 @@ header table {
 }
 #top_part {
     width:100%;
-    /* padding-left:15vh solid #fff; */
+    /* adds border to top */
+    border:0vh solid #fff;
 }
 #top_part tr td{
     width:50%;
