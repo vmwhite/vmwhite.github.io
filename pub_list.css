@@ -491,12 +491,7 @@ button:focus {
 }
 
 
-  /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 .success {
     color:rgba(255, 44, 90, 0.8);
     text-align: center;
@@ -669,6 +664,13 @@ button:focus {
     width: 31%;
     padding: 10px;
   }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
   
 /* adjusts box containing all blog posts */
 ul {
