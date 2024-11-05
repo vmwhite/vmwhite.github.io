@@ -351,7 +351,7 @@ header table {
 #photos img {
     width:100%;
     height:auto;
-    margin:4.5% 0px;
+    margin:auto auto;
     transition:0.4s ease-in-out;
 }
 #photos img:hover {
