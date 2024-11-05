@@ -355,13 +355,6 @@ header table {
     font-weight:normal;
     width: 94%;
 }
-#LatestPosts h1 {
-    padding:0% 7.5% 0% 0%;
-    border-bottom:.2rem solid rgb(255, 44, 90);
-    /* width:75%; */
-    display: inline-block;
- 
-}
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
@@ -375,11 +368,31 @@ header table {
     display: table;
     clear: both;
 }
+
+#LatestPosts h1 {
+    padding:0% 7.5% 0% 0%;
+    border-bottom:.2rem solid rgb(255, 44, 90);
+    /* width:75%; */
+    display: inline-block;
+}
+#LatestPosts h2 {
+    margin-bottom: -6px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#LatestPosts h3 {
+    margin-bottom: -6px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 #photos img {
     width:75%;
     aspect-ratio: 1/1;
     margin:auto auto;
-    transition:0.4s ease-in-out;
+    /* transition:0.4s ease-in-out; */
 }
 /* #photos img:hover {
     transform: scale(1.1);
