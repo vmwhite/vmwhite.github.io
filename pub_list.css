@@ -349,6 +349,32 @@ header table {
     z-index:1;
     transition:0.4s ease-in-out;
 }
+/* Adding for blog padding for start of posts */
+#LatestPosts {
+    padding:3% 6%;
+    font-weight:normal;
+    width: 94%;
+}
+#LatestPosts h1 {
+    padding:0% 7.5% 0% 0%;
+    border-bottom:.2rem solid rgb(255, 44, 90);
+    /* width:75%; */
+    display: inline-block;
+ 
+}
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 31%;
+    padding: 10px;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 #photos img {
     width:75%;
     aspect-ratio: 1/1;
@@ -581,10 +607,6 @@ button:focus {
     #contact h1 {
         width:33%;
     }
-    #LatestPost {
-        width:100%;
-
-    }
     header {
         width:95%;
         background-color: #fff;
@@ -645,32 +667,7 @@ button:focus {
     /* border-bottom:2px solid #fff; */
     border-bottom:2% solid black ; 
 }
-/* Adding for blog padding for start of posts */
-#LatestPosts {
-    padding:3% 6%;
-    font-weight:normal;
-    width: 94%;
-}
-#LatestPosts h1 {
-    padding:0% 7.5% 0% 0%;
-    border-bottom:.2rem solid rgb(255, 44, 90);
-    /* width:75%; */
-    display: inline-block;
- 
-}
-/* Create three equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 31%;
-    padding: 10px;
-  }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
   
 /* adjusts box containing all blog posts */
 ul {
