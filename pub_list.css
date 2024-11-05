@@ -345,21 +345,20 @@ header table {
 }
 #photos {
     width:100%;
-    columns:3;
-    column-gap:4%;
+    columns:1;
     z-index:1;
     transition:0.4s ease-in-out;
 }
 #photos img {
-    width:100%;
-    height:auto;
+    width:75%;
+    aspect-ratio: 1/1;
     margin:auto auto;
     transition:0.4s ease-in-out;
 }
-#photos img:hover {
+/* #photos img:hover {
     transform: scale(1.1);
     cursor: pointer;
-}
+} */
 #bio {
     width:92vw;
     padding:6vh 4vw;
