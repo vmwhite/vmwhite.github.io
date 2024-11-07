@@ -357,14 +357,14 @@ header table {
 #LatestPosts {
     padding: 3% 6%;
     font-weight: normal;
-    width: 94%;
+    width: 100%;
     box-sizing: border-box;
 }
 
 /* Create three equal columns that float next to each other */
 .column {
     float: left;
-    width: 31%;
+    width: 33.33%;
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
