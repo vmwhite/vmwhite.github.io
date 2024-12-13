@@ -24,3 +24,5 @@ Relavant past work:
     <span class="authors"><strong>V.M. White</strong> and L.A. Albert</span><br>
     <span class="journal">2024 IISE Annual Conference and Expo</span>, <span class="year">2024</span>. <a href="docs/IISE_2024_CARES.pdf">Link to PDF</a>.</div>
 
+Brief Mentoring Philosophy: 
+It is my goal as a faculty member to be a mentor to students from a variety of backgrounds and programs. I promise to provide a safe environment built on mutual respect and understanding, hold you accountable to the goals you set, and provide guidance on what research and meaningful research deliverables are. I aim to build relationships with my students that make them feel supported and valued. I expect you to do your best and communicate quickly when personal and research-related issues arise, especially when they impact your work and progress. I look forward to working with you, learning about what motivates you, and working together to achieve our goals.
