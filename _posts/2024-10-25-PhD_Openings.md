@@ -8,9 +8,7 @@ published: true
 visible: 0
 ---
 Last updated: 10/25/24
-
-I am looking for up to at least <strong>one Ph.D. student to start Fall 2025</strong>. Possible topics include a focus in causal inference modeling, queueing networks, discrete event simulation, and optimization. Relavent past work are referenced below. These methodologies will be applied to the subject areas of crisis response planning, school safety and mental health, and the US court system. Potiental students should have interests and/or relavent training in one or more of the above topic areas and subject areas. Interested students can email me with the subject "FAMU-FSU Potential Ph.D. student for Fall 2025" at vwhite@eng.famu.fsu.edu with their CV, unofficial/offical transcripts, and two to three paragraphs of how their interests and training align with the work that I do. If I feel that this might be a good fit I will set a meeting with you for us both to ask questions. Thank you for considering being apart of my lab and I look forward to hearing from you!
-
+I am looking for a Ph.D. student to start Fall 2025. Possible topics include a focus on causal inference modeling, queueing networks, discrete event simulation, and optimization. I've included some relevant past work below. These methodologies will be applied to crisis response planning, school safety and mental health, and the US court system. Potential students should have interests and/or relevant training in one or more of the above topic areas and subject areas. Interested students can email me with the subject “FAMU-FSU Potential Ph.D. student for Fall 2025” at vwhite@eng.famu.fsu.edu with their CV, unofficial/official transcripts, and two to three paragraphs of how their interests and training align with the work that I do. If I feel that this might be a good fit, I will set a meeting with you for us both to ask questions. Thank you for considering being a part of my lab, and I look forward to hearing from you!
 Relavant past work:
 
 1. <div class="citation">
