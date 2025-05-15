@@ -12,14 +12,17 @@ Watching this scene play out, I couldn't think of something more perfect for wha
 
 Today, we are just about two weeks away from Thanksgiving, in the middle of a pandemic, where much seems uncertain heading into what is sure to be a bleak winter, we are in need of some Christmas level cheer.
 
-Below is a list of songs and resources that I have found uplifting. If you know of something that could make this list even better, send me an email or fill out my contact form with a link to the source.(list updated 3/4/22). 
+Below is a list of songs and resources that I have found uplifting. If you know of something that could make this list even better, send me an email or fill out my contact form with a link to the source.(list updated 5/15/25). 
 
 - [Musical Number: We Need a Little Christmas, Auntie Mame](https://www.youtube.com/watch?v=-UL9rVtRvRI) 
 - [Song: Look up, Joy Oladokun](https://www.youtube.com/watch?v=vLK8sSHDbYs)
 - [Song: High Hopes, Panic at the Disco](https://www.youtube.com/watch?v=GJY8OMJXRAk)
 - [Choral Piece: Carol of the Angels, Eric Barnum](https://soundcloud.com/choral-arts/carol-of-the-angels-eric-1)
+- [Choral Piece: Resilience, Abbie Betinis, Preformed by Justice Choir](https://soundcloud.com/justicechoir/24-resilience-by-abbie-betinis-justice-choir-songbook)
 - [Podcast: The Daily Shine](https://podcasts.apple.com/us/podcast/the-daily-shine/id1507425010)
 - [Podcast: Daily Boost, Scott Smith](https://podcasts.apple.com/us/podcast/daily-boost/id207251905) 
 - [Poem: Still I Rise, Maya Angelou](https://www.youtube.com/watch?v=qviM_GnJbOM)
+- [Blog: Undead & Unbothered: A pep talk blog for the overlooked, the over-it, and the afterlife-adjacent, Destiny Nox](https://destinynox.com/blog)
 - [Book: Factfullness, Hans Rosling](https://www.amazon.com/dp/1250107814?tag=macmillan-20)
 - [Book: Saving Us: A Climate Scientist's Case for Hope and Healing in a Divided World, Katharine Hayhoe](https://www.amazon.com/Saving-Us-Climate-Scientists-Healing/dp/1982143835)
+
