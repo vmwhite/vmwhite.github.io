@@ -77,7 +77,7 @@ title: Blog
     <h1>Latest Posts</h1>
     <ul>
       {% for post in site.posts %}
-        <li>
+        <!-- <li> -->
           <h2><a class="postlink" href="{{ post.url }}">{{ post.title }}</a></h2>
           <p>
             <b>Posted:</b> {{ post.date | date_to_string }}<br>
@@ -88,7 +88,7 @@ title: Blog
             {% endfor %}
           </p>
           {{ post.content }}
-        </li>
+        <!-- </li> -->
       {% endfor %}
     </ul>
   </div>
