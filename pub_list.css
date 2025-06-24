@@ -345,6 +345,7 @@ header table {
 }
 #photos {
     width: 100%;
+    height: auto;
     column-count: 1; /* Corrected property */
     z-index: 1;
     transition: 0.4s ease-in-out;
