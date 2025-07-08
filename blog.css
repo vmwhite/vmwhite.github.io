@@ -736,6 +736,7 @@ body.dark-mode .postlink:visited , body.dark-mode .postlink:link {
   }
 .postlink{
     color: #000000;
+    text-decoration:none;
 
 }
   .postlink:hover{
