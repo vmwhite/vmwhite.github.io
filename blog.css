@@ -739,7 +739,7 @@ body.dark-mode .postlink:visited , body.dark-mode .postlink:link {
 
 }
   .postlink:hover{
-    border-bottom:2.px solid rgb(255, 44, 90);
+    border-bottom:2px solid rgb(255, 44, 90);
 }
 
   /* Style for end of post */
