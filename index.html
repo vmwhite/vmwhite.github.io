@@ -39,26 +39,35 @@
 <body>
     <div id="loading"><div id="spinner"></div></div>
 
-    <header id="header" class="animated slideInDown" style="animation-delay:1s;">
-        <nav>
-            <span id="logo">Veronica M. White</span>
-            <a href="#bio">About</a>
-            <div class="dropdown">
-                <a href="#work" class="dropbtn">Lab</a>
-                <div class="dropdown-content">
-                    <a href="lab_members.html">Members</a>
-                    <a href="pub_list.html">Publications</a>
+    <header id="header" class="animated slideInDown" style="animation-delay: 1s;">
+        <table>
+            <tr>
+                <span id="logo">Veronica M. White</span>
+
+                <a href="#bio">About</a>
+
+                <div class="dropdown">
+                    <a href="#work" class="dropbtn">Lab</a>
+                    <div class="dropdown-content">
+                        <a href="lab_members.html">Members</a>
+                        <a href="pub_list.html">Publications</a>
+                    </div>
                 </div>
-            </div>
-            <a href="blog.html">Blog</a>
-            <a href="#contact">Contact</a>
-            <a class="themetoggle" onclick="themeToggle()"><i class="fas fa-adjust"></i></a>
-        </nav>
+
+                <a href="blog.html">Blog</a>
+                <a href="#contact">Contact</a>
+
+                <button class="themetoggle" onclick="themeToggle()" aria-label="Toggle theme">
+                    <i class="fas fa-adjust"></i>
+                </button>
+            </tr>
+        </table>
     </header>
+    
     <table id="top_part">
         <tr>
-            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
-                <img id="profilePic2" src="/images/Professional_cropped.jpg" alt="">
+            <td id="about" class="animated slideInLeft" style="animation-delay:1s;">
+                <img id="profilePic2" src="/images/images/Screenshot 2025-01-27 155118.png" alt="">
                 <h1>Veronica M. White</h1>
 
                 <h2>Assistant Professor</h2>
@@ -74,16 +83,14 @@
                 <table><tr>
                         <td><a class="socialbig" href="https://www.linkedin.com/in/veronicamwhite/"><i class="fab fa-linkedin"></i></a></td>
                         <td><a class="socialbig" href="https://scholar.google.com/citations?user=E-D8maUAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-1.5x"></i></svg></a></td>
-                        <td><a class="socialbig" href="https://twitter.com/VeronicaMWhite"><i class="fab fa-twitter"></i></a></td> 
+                        <td><a class="socialbig" href="https://bsky.app/profile/veronicawhite.bsky.social"><i class="fab fa-bluesky"></i></a></td> 
+                        <td><a class="socialbig" href="https://twitter.com/VeronicaMWhite"><i class="fab fa-x-twitter"></i></a></td> 
                         <td><div itemscope itemtype="https://schema.org/Person"><a class="socialbig"  href="https://orcid.org/0000-0002-3008-8213"  ><img src="/images/ORCIDiD_iconvector.svg" style="width:1em;" alt="ORCID iD icon"></a></div></td>
-                        <!-- <td><a href="https://orcid.org/0000-0002-3008-8213" class="svg">
-                            <object type="image/svg+xml" data="/images/ORCIDiD_iconbwvector.svg" style="pointer-events: none;" class="logo" width="50px">
-                            </object> </a>
-                        </td> -->
                 </tr></table>
                 <table><tr>
                     <!-- <td><a class="resume" href="/descriptions/Veronica White - Resume - 111023.pdf"> Resume</a></td> -->
                     <td><a class="resume" href="/descriptions/White-Veronica_CV_6_24_25_Full.pdf"> CV</a></td>
+                    <td><div itemscope itemtype="https://schema.org/Person"><a class="socialbig"  href="https://orcid.org/0000-0002-3008-8213"  ><img src="/images/ORCIDiD_iconvector.svg" style="width:1em;" alt="ORCID iD icon"></a></div></td>
                 </tr></table>    
             </td>
             <td id="rightImage" class="animated jackInTheBox" style="animation-delay:0.2s;"><img id="profilePic" src="/images/Professional_cropped.jpg" alt="">
