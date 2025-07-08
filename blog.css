@@ -734,9 +734,12 @@ body.dark-mode .postlink{
 body.dark-mode .postlink:visited , body.dark-mode .postlink:link {
     color: #fff;
   }
+.postlink{
+    color: #000000;
 
-.postlink:hover{
-    border-bottom:2rem solid rgb(255, 44, 90);
+}
+  .postlink:hover{
+    border-bottom:2.px solid rgb(255, 44, 90);
 }
 
   /* Style for end of post */
