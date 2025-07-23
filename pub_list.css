@@ -575,8 +575,8 @@ button:focus {
     }
     #about {
         width:92% !important;
-        height:75%;
-        padding-top:80% !important;
+        height:auto;
+        padding-top:15% !important;
         text-align:center;
         padding:0% 4%;
 	    color: white;
@@ -644,15 +644,6 @@ button:focus {
     #navigation a {
         color:#000;
         margin:2% 1% 0%;
-    }
-    .dropdown-content {
-        display: block; 
-        /* display: none; */
-        position: absolute;
-        color:#fff; 
-        background-color: #333; /* Background color of dropdown */
-        min-width: 160px;
-        z-index: 1;
     }
     .dark-mode #navigation a {
         color: #DCD6D5;

@@ -5,7 +5,7 @@ input_folder = "images/raw"
 output_folder = "images/headshots"
 target_size = (256, 256)   # (width, height)
 target_format = "PNG"     # "PNG" or others
-bg_color = (0, 0, 0)       # black padding
+bg_color = (255, 255, 255)       # black padding
 
 os.makedirs(output_folder, exist_ok=True)
 

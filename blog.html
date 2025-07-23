@@ -35,38 +35,41 @@ title: Blog
 </head>
 
 <body>
-  <div id="loading"><div id="spinner"></div></div>
-
-  <div id="magnify">
+  <div id="loading">
+    <div id="spinner"></div>
+</div>
+<div id="magnify">
     <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
     <div id="img_here"></div>
-  </div>
-
-  <header id="header" class="animated slideInDown" style="animation-delay:1s;">
+</div>
+<header id="header" class="animated slideInDown" style="animation-delay:1s;">
     <table>
-      <tr>
-        <td id="logo">Veronica M. White</td>
-        <td id="navigation">
-          <a href="index.html">Home</a>
-          <div class="dropdown">
-            <a href="index.html#work" class="dropbtn">Lab</a>
-            <div class="dropdown-content">
-              <a href="lab_members.html">Members</a>
-              <a href="pub_list.html">Publications</a>
-            </div>
-          </div>
-          <a href="#footer">Contact</a>
-          <a class="themetoggle" onclick="themeToggle()"><i class="fas fa-adjust"></i></a>
-        </td>
-      </tr>
+        <tr>
+            <td id="logo">Veronica M. White</td>
+            <td id="navigation">
+            <nav>
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="index.html#work" class="dropbtn">Lab</a>
+                    <div class="dropdown-content">
+                        <a href="lab_members.html">Members</a>
+                        <a href="pub_list.html">Publications</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
+                <a href="#footer">Contact</a>
+                <a class="themetoggle" onclick="themeToggle()"><i class="fas fa-adjust"></i></a>
+              </nav>
+              </td>
+        </tr>
     </table>
-  </header>
+</header>
 
   <table id="top_part">
     <tr>
       <td id="about" class="animated slideInLeft">
-        <h1>Veronica's Blog</h1>
-        <h3>A place for thoughts, resources, and inspiration.</h3>
+        <h1>Whiteboard Wanderings</h1>
+        <h3>A space for ideas, tools, and life in academia.</h3>
         <a class="btn-RSS" href="/feed.xml" target="_blank">RSS</a>
       </td>
       <td id="rightImage" class="animated jackInTheBox"></td>
