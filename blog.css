@@ -519,6 +519,15 @@ body.dark-mode #contact form textarea {
     color:rgb(255, 44, 90);
     text-decoration:none;
 }
+#blogline {
+    border-top: 3px solid rgba(255, 44, 90, 0.5);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #333;              /* optional text color */
+    background-color: #fafafa; /* optional light background */
+    box-sizing: border-box;   /* ensure padding doesn't overflow */
+}
 ::placeholder {
     color:#000;
 }
