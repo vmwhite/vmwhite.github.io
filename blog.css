@@ -186,7 +186,7 @@ header table {
     position: absolute;
     top: 100%; /* place right below the dropdown */
     left: 0;
-    color: #fff;
+    color: #fff !important;
     background-color: #333;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -195,7 +195,7 @@ header table {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: #fff;
+    color: #fff !important;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
