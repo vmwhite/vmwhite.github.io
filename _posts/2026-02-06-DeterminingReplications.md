@@ -5,7 +5,7 @@ title: How many samples are needed?
 subtitle: Finding N for Confidence Intervals and Prediction Intervals using the Benforrioni Correction
 tags: statistics skill 
 # need both visible 1 and published false to not publish post
-published: true
+published: false
 visible: 1
 ---
 When conducting simulation studies—or designing empirical analyses more broadly—you will often face the question:
