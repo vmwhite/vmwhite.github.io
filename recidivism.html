@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Predicting Recidivism | Veronica M. White</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script>
+        $(function(){ $("#footer_text").load("descriptions/footer.html"); });
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="pub_list.css">
+    <style>
+        #about h1 { font-size: 28px; }
+        #about h2 { font-size: 17px; font-weight: normal; }
+        #LatestPosts h2 { margin-left: 0; margin-right: 0; text-align: left; }
+    </style>
+</head>
+<body>
+    <div id="loading"><div id="spinner"></div></div>
+
+    <header id="header" class="animated slideInDown" style="animation-delay:1s;">
+        <table>
+            <tr>
+                <td id="logo">Veronica M. White</td>
+                <td id="navigation">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <div class="dropdown">
+                            <a href="index.html#work" class="dropbtn">Lab</a>
+                            <div class="dropdown-content">
+                                <a href="lab_members.html">Members</a>
+                                <a href="pub_list.html">Publications</a>
+                                <a href="projects.html">Projects</a>
+                            </div>
+                        </div>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a class="themetoggle" onclick="themeToggle()"><i class="fas fa-adjust"></i></a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft">
+                <h1>Predicting Recidivism</h1>
+                <h2>Quantitative methods for crime forecasting and recidivism prediction</h2>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox"></td>
+        </tr>
+    </table>
+
+    <div id="LatestPosts">
+
+        <h1>Overview</h1>
+        <p style="font-weight:normal; line-height:1.8;">
+            This project focuses on developing and evaluating data-driven methods for predicting recidivism and measuring the accuracy of crime prediction tools. In collaboration with the National Institute of Justice (NIJ), this work contributed to the NIJ Recidivism Forecasting Challenge—a national competition to advance the state of the science in recidivism prediction—and synthesized findings from winning approaches. A parallel line of research examines hot-spot mapping metrics and crime forecasting indices, proposing improvements to better support evidence-based decision-making by law enforcement and policymakers.
+        </p>
+
+        <a id="post"></a>
+        <h1>Publications</h1>
+
+        <h2>Government Reports</h2>
+        <div class="citation">
+            <span class="title">A Synthesis of the 2021 NIJ Forecasting Challenge Winning Reports</span><br>
+            <span class="authors"><strong>V.M. White</strong>, R. Rief, C.D. Hudgins, M. Pimsler, J. Hunt</span><br>
+            <span class="journal">National Institute of Justice</span>, <span class="year">2025</span>. <a href="https://www.ojp.gov/library/publications/synthesis-2021-nij-forecasting-challenge-winning-reports">NCJ: 309826</a>
+        </div>
+        <div class="citation">
+            <span class="title">Results from the National Institute of Justice Recidivism Forecasting Challenge</span><br>
+            <span class="authors">C.D. Hudgins, <strong>V.M. White</strong>, D.M. Applegarth, and J. Hunt</span><br>
+            <span class="journal">National Institute of Justice</span>, <span class="year">2022</span>. <a href="https://nij.ojp.gov/library/publications/nij-recidivism-forecasting-challenge-contextualizing-results">NCJ: 304110</a>
+        </div>
+        <div class="citation">
+            <span class="title">Sentinel Event Review for Successful Transition and Reentry Together (START) Program in the Eastern District of Wisconsin</span><br>
+            <span class="authors">C.D. Hudgins, <strong>V.M. White</strong>, R. Kane, M. O'Brien</span><br>
+            <span class="journal">National Institute of Justice</span>, <span class="year">2024</span>. <a href="https://nij.ojp.gov/library/publications/sentinel-event-review-successful-transition-and-reentry-together-start-program">NCJ: 307990</a>
+        </div>
+
+        <h2>Journal Papers</h2>
+        <div class="citation">
+            <span class="title">A discussion of current crime forecasting indices and an improvement to the prediction efficiency index for applications</span><br>
+            <span class="authors"><strong>V.M. White</strong>, J. Hunt, and B. Green</span><br>
+            <span class="journal">Security Journal</span>, <span class="year">2024</span>. <a href="https://doi.org/10.1057/s41284-023-00367-4">https://doi.org/10.1057/s41284-023-00367-4</a>
+        </div>
+
+        <h2>Conference Proceedings</h2>
+        <div class="citation">
+            <span class="title">Measuring How Relatively "Good" a Hot-spot Map Is: A Summary of Current Metrics</span><br>
+            <span class="authors"><strong>V.M. White</strong> and J. Hunt</span><br>
+            <span class="journal">2022 IISE Annual Conference and Expo</span>, <span class="year">2022</span>. <a href="https://nij.ojp.gov/library/publications/measuring-how-relatively-good-hot-spot-map-summary-current-metrics">Link to PDF</a>
+        </div>
+
+        <a id="post"></a>
+        <h1>In the News</h1>
+
+        <div class="row">
+            <div class="column">
+                <h3>Corrections Today (pages 12–16)</h3>
+                <iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://user-3imepyw.cld.bz/CT-March-April-2022-Mag-Web/12/"></iframe>
+                <div style="font-size:12px; color:#cccccc; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Verdana,sans-serif; font-weight:100;">
+                    <a href="https://www.aca.org/ACA_Member/ACA/ACA_Member/Publications/CT_Magazine/CorrectionsToday_Home.aspx" title="Corrections Today" target="_blank" style="color:#cccccc; text-decoration:none;">Corrections Today</a> ·
+                    <a href="https://user-3imepyw.cld.bz/CT-March-April-2022-Mag-Web/12/" title="Contextualizing the 2022 NIJ Recidivism Challenge" target="_blank" style="color:#cccccc; text-decoration:none;">Contextualizing the 2022 NIJ Recidivism Challenge</a>
+                </div>
+            </div>
+            <div class="column">
+                <h3>The Capital Times</h3>
+                <div class="iframely-embed"><div class="iframely-responsive" style="height:140px; padding-bottom:0;">
+                    <a href="https://captimes.com/news/local/govt-and-politics/madison-addiction-recovery-program-reduces-six-month-recidivism-odds/article_011663a2-cdcc-5a85-ad8f-c14927b94a60.html" data-iframely-url="//iframely.net/4p00DMW?card=small"></a>
+                </div></div>
+                <script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+                <div style="font-size:12px; color:#cccccc; word-break:normal; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-family:Interstate,Verdana,sans-serif; font-weight:100;">
+                    <a href="https://captimes.com/" title="The Capital Times" target="_blank" style="color:#cccccc; text-decoration:none;">The Capital Times</a> ·
+                    <a href="https://captimes.com/news/local/govt-and-politics/madison-addiction-recovery-program-reduces-six-month-recidivism-odds/article_011663a2-cdcc-5a85-ad8f-c14927b94a60.html" title="Madison addiction recovery program reduces six-month recidivism odds" target="_blank" style="color:#cccccc; text-decoration:none;">Madison addiction recovery program reduces six-month recidivism odds</a>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+
+        <p style="margin-top:40px;">
+            &larr; <a href="projects.html">Back to all projects</a>
+        </p>
+
+    </div>
+
+    <div id="footer_text"></div>
+
+    <script>
+        (function() { setThemeFromCookie(); })();
+    </script>
+</body>
+</html>

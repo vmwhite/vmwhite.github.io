@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emergency & Healthcare Systems | Veronica M. White</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script>
+        $(function(){ $("#footer_text").load("descriptions/footer.html"); });
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="pub_list.css">
+    <style>
+        #about h1 { font-size: 28px; }
+        #about h2 { font-size: 17px; font-weight: normal; }
+        #LatestPosts h2 { margin-left: 0; margin-right: 0; text-align: left; }
+    </style>
+</head>
+<body>
+    <div id="loading"><div id="spinner"></div></div>
+
+    <header id="header" class="animated slideInDown" style="animation-delay:1s;">
+        <table>
+            <tr>
+                <td id="logo">Veronica M. White</td>
+                <td id="navigation">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <div class="dropdown">
+                            <a href="index.html#work" class="dropbtn">Lab</a>
+                            <div class="dropdown-content">
+                                <a href="lab_members.html">Members</a>
+                                <a href="pub_list.html">Publications</a>
+                                <a href="projects.html">Projects</a>
+                            </div>
+                        </div>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a class="themetoggle" onclick="themeToggle()"><i class="fas fa-adjust"></i></a>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft">
+                <h1>Emergency &amp; Healthcare Systems</h1>
+                <h2>Optimization and data science for emergency services and healthcare resource allocation</h2>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox"></td>
+        </tr>
+    </table>
+
+    <div id="LatestPosts">
+
+        <h1>Overview</h1>
+        <p style="font-weight:normal; line-height:1.8;">
+            This project applies stochastic optimization and data-driven modeling to improve the design and operation of emergency and healthcare systems. Current work examines ambulance fleet composition and dispatch strategies under uncertainty, identifying where to locate different ambulance types to minimize response times and improve patient outcomes. Ongoing work extends this to emergency department (ED) utilization patterns, examining how patient flow, resource constraints, and system design interact to drive ED overcrowding and health disparities. Together, these projects aim to give healthcare systems engineers practical tools for more equitable and efficient service delivery.
+        </p>
+
+        <a id="post"></a>
+        <h1>Publications</h1>
+
+        <h2>Journal Papers</h2>
+        <div class="citation">
+            <span class="title">A stochastic programming approach for locating and dispatching two types of ambulances</span><br>
+            <span class="authors">S. Yoon, L.A. Albert, and <strong>V.M. White</strong></span><br>
+            <span class="journal">Transportation Science</span>, <span class="volume">vol. 55</span>, no. 2, pp. 275–296, <span class="year">2021</span>. <a href="https://doi.org/10.1287/trsc.2020.1023">https://doi.org/10.1287/trsc.2020.1023</a>
+        </div>
+        <div class="citation">
+            <span class="title">Classification of opioid usage through semi-supervised learning for total joint replacement patients</span><br>
+            <span class="authors">S. Lee, S. Wei, <strong>V.M. White</strong>, P.A. Bain, C. Baker, and J. Li</span><br>
+            <span class="journal">IEEE Journal of Biomedical and Health Informatics</span>, <span class="volume">vol. 25</span>, no. 1, pp. 189–200, <span class="year">2020</span>. <a href="https://doi.org/10.1109/JBHI.2020.2992973">https://doi.org/10.1109/JBHI.2020.2992973</a>
+        </div>
+
+        <p style="margin-top:40px;">
+            &larr; <a href="projects.html">Back to all projects</a>
+        </p>
+
+    </div>
+
+    <div id="footer_text"></div>
+
+    <script>
+        (function() { setThemeFromCookie(); })();
+    </script>
+</body>
+</html>
