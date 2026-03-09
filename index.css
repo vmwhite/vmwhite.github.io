@@ -329,25 +329,25 @@ header table {
     text-align: center;
     box-sizing: content-box;
 }
-#photos {
+.photos {
     width:100%;
     columns:25vw auto;
     column-gap:4%;
     z-index:1;
     transition:0.4s ease-in-out;
 }
-#photos img {
+.photos img {
     width:100%;
     height:auto;
     /* margin:4.5% 0px; */
     transition:0.4s ease-in-out;
 }
-#photos img:hover {
+.photos img:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-#photos a{
+.photos a{
     margin:0px 20px;
     display:inline-block;
     text-decoration:none;
@@ -520,14 +520,14 @@ button:focus {
       }
     }
 @media screen and (max-width: 1000px){
-    #photos {
+    .photos {
     columns:1;
     column-gap:0%;
     }
-    #photos img {
+    .photos img {
         margin:0% 0px;
     }
-    #photos img:hover {
+    .photos img:hover {
         transform: scale(1);
         cursor: pointer;
     }

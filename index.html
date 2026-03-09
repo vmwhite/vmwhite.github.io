@@ -35,10 +35,82 @@
         gtag('config', 'G-6WX7CGYQ2E');
     </script>
     <style>
-        #photos img {
+        .photos img {
             max-height: 200px;
             width: 100%;
             object-fit: cover;
+        }
+        #areas {
+            padding: 0 6%;
+        }
+        #areas h2.section-label {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        .project-grid-home {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .project-card {
+            border: 2px solid rgba(255, 44, 90, 0.3);
+            border-radius: 8px;
+            padding: 24px 20px;
+            transition: 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            border-color: rgb(255, 44, 90);
+            box-shadow: 0px 8px 24px rgba(255, 44, 90, 0.2);
+            transform: translateY(-4px);
+        }
+        .project-card h3 {
+            border-bottom: 3px solid rgb(255, 44, 90);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .project-card p {
+            font-weight: normal;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .project-card .tags {
+            margin: 12px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .tag {
+            background: rgba(255, 44, 90, 0.1);
+            color: rgb(255, 44, 90);
+            border: 1px solid rgba(255, 44, 90, 0.4);
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .project-card .learn-more {
+            display: inline-block;
+            margin-top: 16px;
+            color: rgb(255, 44, 90);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s ease-in-out;
+            font-size: 0.9rem;
+        }
+        .project-card .learn-more:hover {
+            border-bottom: 2px solid rgb(255, 44, 90);
+        }
+        @media screen and (max-width: 1000px) {
+            .project-grid-home {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -114,24 +186,41 @@
         <object width="1000" height="200" data="descriptions/bio.html" type="text\html"><a href="/descriptions/bio.html">No Support?</a>
         </object>	-->
     </div>
-    <div id ="areas">
-        <h2> Research Areas</h2>
-         <!-- on click option place insife image, onclick="magnify($(this).attr('src'))" -->
-        <div id="row">
-            <div class="column"><div id="photos">
-                <caption> Substance Use Disorder</caption>
-                <img  src="https://images.unsplash.com/photo-1604480132736-44c188fe4d20?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3853&q=80">
-            </div></div>
-            <div class="column"><div id="photos">
-                <caption> Policing and Criminal Justice Decisions </caption>
-                <img  src="https://cdn.pixabay.com/photo/2016/07/20/20/51/car-1531273_1280.jpg">
-            </div></div>
-            <div class="column"><div id="photos">
-                <caption> Community Program Evaluation</caption>
-                <img  src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80">
-            </div></div>
+    <div id="areas">
+        <h2 class="section-label">Featured Projects</h2>
+        <div class="project-grid-home">
+            <div class="project-card">
+                <h3>Arrest Diversion</h3>
+                <p>Evaluating pre-arrest diversion programs that connect individuals with substance use disorder to treatment rather than incarceration. Studies of MARI and CARES demonstrate significant reductions in recidivism, overdose deaths, and incarceration.</p>
+                <div class="tags">
+                    <span class="tag">Substance Use Disorder</span>
+                    <span class="tag">Program Evaluation</span>
+                    <span class="tag">Simulation</span>
+                </div>
+                <a class="learn-more" href="arrest-diversion.html">View publications &amp; coverage &rarr;</a>
+            </div>
+            <div class="project-card">
+                <h3>Predicting Recidivism</h3>
+                <p>Developing and evaluating quantitative methods for forecasting recidivism and assessing crime prediction tools, including the NIJ Recidivism Forecasting Challenge and improvements to hot-spot mapping metrics for evidence-based criminal justice decisions.</p>
+                <div class="tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Crime Forecasting</span>
+                    <span class="tag">NIJ</span>
+                </div>
+                <a class="learn-more" href="recidivism.html">View publications &amp; coverage &rarr;</a>
+            </div>
+            <div class="project-card">
+                <h3>Crisis Response Models</h3>
+                <p>Mathematical modeling of alternative police response frameworks for mental health crisis calls, evaluating co-responder and mobile crisis unit deployments to optimize resource allocation and improve outcomes for individuals in crisis.</p>
+                <div class="tags">
+                    <span class="tag">Simulation</span>
+                    <span class="tag">Mental Health</span>
+                    <span class="tag">Policing</span>
+                </div>
+                <a class="learn-more" href="crisis-response.html">View publications &amp; coverage &rarr;</a>
+            </div>
         </div>
-        
+        <p style="font-weight:normal; margin-bottom: 30px;"><a href="projects.html">See all research projects &rarr;</a></p>
     </div>
     <div id="work">
         <h1>Work</h1>
@@ -249,21 +338,21 @@
     <h2> Impact in Action</h2>
     <div class="row">
             <div class="column">
-                <div id="photos">
-                    <img onclick="magnify($(this).attr('src'))" src="images/FebMARI2020.jpg">
-                    <div class="captions"> Presenting preliminary data analysis of the Madison Addiction Recovery Initative (MARI) to the MARI operations team February 2020. </div>
+                <div class="photos">
+                    <img onclick="magnify($(this).attr('src'))" src="images/FebMARI2020.jpg" alt="Presenting MARI data analysis to the operations team, February 2020">
+                    <div class="captions"> Presenting preliminary data analysis of the Madison Addiction Recovery Initiative (MARI) to the MARI operations team February 2020. </div>
                 </div>
             </div>
             <div class="column">
-                <div id="photos">
-                    <img onclick="magnify($(this).attr('src'))" src="images\IISE2022.jpg">     
+                <div class="photos">
+                    <img onclick="magnify($(this).attr('src'))" src="images/IISE2022.jpg" alt="Presenting hot-spot mapping metrics research at IISE 2022 Annual Conference">
                     <div class="captions"> Presenting work done at NIJ on the Mathematics behind Hot-spot mapping metrics at IISE 2022 Annual Conference </div>
                 </div>
             </div>
             <div class="column">
-                <div id="photos">
-                    <img onclick="magnify($(this).attr('src'))" src="images/IowaCoop.jpg">
-                    <div class="captions"> Teaching Iowa Farmers the VBA label making tool I created for their shipments as apart of the Iowa Food Hub Network Project May 2017. </div>
+                <div class="photos">
+                    <img onclick="magnify($(this).attr('src'))" src="images/IowaCoop.jpg" alt="Teaching Iowa farmers the VBA label making tool, May 2017">
+                    <div class="captions"> Teaching Iowa Farmers the VBA label making tool I created for their shipments as part of the Iowa Food Hub Network Project May 2017. </div>
                 </div>
             </div>
         </div>

@@ -343,7 +343,7 @@ header table {
     border-bottom:4px solid rgb(255, 44, 90);
     width:6%;
 }
-#photos {
+.photos {
     width: 100%;
     height: auto;
     column-count: 1; /* Corrected property */
@@ -389,7 +389,7 @@ header table {
     text-align: center;
 }
 
-#photos img {
+.photos img {
     width: 75%;
     aspect-ratio: 1 / 1;
     margin: auto;
@@ -549,14 +549,14 @@ button:focus {
       }
     }
 @media screen and (max-width: 1000px){
-    #photos {
+    .photos {
     columns:1;
     column-gap:0%;
     }
-    #photos img {
+    .photos img {
         margin:2% 0%;
     }
-    #photos img:hover {
+    .photos img:hover {
         transform: scale(1);
         cursor: pointer;
     }
