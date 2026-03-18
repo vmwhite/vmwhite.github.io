@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tools | VMW Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script>$(function(){ $("#footer_text").load("descriptions/footer.html"); });</script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/170fd78985.js" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/170fd78985.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="pub_list.css">
+    <style>
+        /* ── Layout ── */
+        #tools-page {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        #tools-page h1 {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        #tools-page .subtitle {
+            font-weight: normal;
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-bottom: 40px;
+        }
+
+        /* ── Timer card ── */
+        .timer-card {
+            border: 2px solid rgba(255,44,90,0.3);
+            border-radius: 12px;
+            padding: 36px 32px;
+        }
+        .timer-card h2 {
+            font-size: 1.4rem;
+            border-bottom: 3px solid rgb(255,44,90);
+            padding-bottom: 8px;
+            margin-bottom: 28px;
+            display: inline-block;
+        }
+
+        /* ── Settings grid ── */
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px 24px;
+            margin-bottom: 32px;
+        }
+        .setting-item label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+            margin-bottom: 5px;
+        }
+        .setting-item input[type="number"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1.5px solid rgba(255,44,90,0.35);
+            border-radius: 6px;
+            font-size: 1rem;
+            background: transparent;
+            color: inherit;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+        .setting-item input[type="number"]:focus {
+            outline: none;
+            border-color: rgb(255,44,90);
+        }
+        .setting-item .unit {
+            font-size: 0.75rem;
+            opacity: 0.5;
+            margin-top: 3px;
+        }
+
+        /* ── Ring timer ── */
+        .timer-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0 28px;
+        }
+        .ring-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+        }
+        .ring-container svg {
+            transform: rotate(-90deg);
+        }
+        .ring-bg {
+            fill: none;
+            stroke: rgba(255,44,90,0.12);
+            stroke-width: 10;
+        }
+        .ring-progress {
+            fill: none;
+            stroke: rgb(255,44,90);
+            stroke-width: 10;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 1s linear, stroke 0.4s;
+        }
+        .ring-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 1.2;
+        }
+        .ring-phase {
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+        .ring-time {
+            font-size: 2.4rem;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -1px;
+        }
+        .ring-session {
+            font-size: 0.75rem;
+            opacity: 0.5;
+            margin-top: 4px;
+        }
+
+        /* ── Phase queue strip ── */
+        .phase-queue {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 24px;
+            min-height: 28px;
+        }
+        .phase-pip {
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1.5px solid rgba(255,44,90,0.25);
+            opacity: 0.45;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .phase-pip.active {
+            border-color: rgb(255,44,90);
+            background: rgba(255,44,90,0.12);
+            color: rgb(255,44,90);
+            opacity: 1;
+        }
+        .phase-pip.done {
+            opacity: 0.2;
+            text-decoration: line-through;
+        }
+        .phase-sep {
+            opacity: 0.25;
+            font-size: 0.7rem;
+        }
+
+        /* ── Controls ── */
+        .timer-controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 10px 28px;
+            border: 2px solid rgb(255,44,90);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s ease;
+            letter-spacing: 0.03em;
+        }
+        .btn-primary {
+            background: rgb(255,44,90);
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: rgb(220,20,70);
+            border-color: rgb(220,20,70);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: rgb(255,44,90);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,44,90,0.1);
+        }
+        .btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+
+        /* ── Sound toggle ── */
+        .sound-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 18px;
+            font-size: 0.82rem;
+            opacity: 0.65;
+        }
+        .sound-row input[type="checkbox"] {
+            accent-color: rgb(255,44,90);
+            width: 14px;
+            height: 14px;
+        }
+
+        /* ── Status message ── */
+        .status-msg {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: rgb(255,44,90);
+            min-height: 22px;
+            margin-top: 14px;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Responsive ── */
+        @media screen and (max-width: 620px) {
+            .settings-grid { grid-template-columns: repeat(2, 1fr); }
+            .ring-container { width: 180px; height: 180px; }
+            .ring-time { font-size: 2rem; }
+        }
+        @media screen and (max-width: 420px) {
+            .settings-grid { grid-template-columns: 1fr 1fr; }
+            .timer-card { padding: 24px 16px; }
+        }
+
+        /* Dark mode ring bg */
+        body.dark-mode .ring-bg { stroke: rgba(255,44,90,0.08); }
+        body.dark-mode .setting-item input[type="number"] {
+            background: rgba(255,255,255,0.04);
+        }
+
+        /* ── Time estimates row ── */
+        .time-estimates {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: -12px 0 20px;
+            flex-wrap: wrap;
+        }
+        .time-est-item { text-align: center; }
+        .time-est-item .est-label {
+            opacity: 0.5;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.68rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .time-est-item .est-value {
+            font-size: 0.92rem;
+            font-weight: bold;
+            color: rgb(255,44,90);
+        }
+
+        /* ── Instructions collapsible ── */
+        .instructions-details {
+            margin-bottom: 24px;
+            border: 1.5px solid rgba(255,44,90,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .instructions-details summary {
+            padding: 10px 16px;
+            font-size: 0.82rem;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0.7;
+            user-select: none;
+        }
+        .instructions-details summary::-webkit-details-marker { display: none; }
+        .instructions-details summary::before {
+            content: '▸';
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+            color: rgb(255,44,90);
+        }
+        .instructions-details[open] summary::before { transform: rotate(90deg); }
+        .instructions-details summary:hover { opacity: 1; }
+        .instructions-body {
+            padding: 4px 16px 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 24px;
+        }
+        .instr-item dt {
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgb(255,44,90);
+            margin-bottom: 2px;
+        }
+        .instr-item dd {
+            font-size: 0.8rem;
+            font-weight: normal;
+            opacity: 0.75;
+            margin: 0 0 4px;
+            line-height: 1.5;
+        }
+        @media screen and (max-width: 620px) {
+            .instructions-body { grid-template-columns: 1fr; }
+            .time-estimates { gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading"><div id="spinner"></div></div>
+
+    <header id="header" class="animated slideInDown" style="animation-delay:1s;">
+        <table>
+            <tr>
+                <td id="logo">Veronica M. White</td>
+                <td id="navigation">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <div class="dropdown">
+                            <a href="index.html#work" class="dropbtn">Lab</a>
+                            <div class="dropdown-content">
+                                <a href="lab_members.html">Members</a>
+                                <a href="pub_list.html">Publications</a>
+                                <a href="projects.html">Projects</a>
+                            </div>
+                        </div>
+                        <a href="blog.html">Blog</a>
+                        <a href="index.html#contact">Contact</a>
+                        <button class="themetoggle" onclick="themeToggle()" aria-label="Toggle theme">
+                            <i class="fas fa-adjust"></i>
+                        </button>
+                    </nav>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft">
+                <h1>Lab Tools</h1>
+                <h2 style="font-weight:normal;">Resources for the VMW Lab</h2>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox"></td>
+        </tr>
+    </table>
+
+    <div id="tools-page">
+
+        <div class="timer-card">
+            <h2>Pomodoro Timer</h2>
+
+            <!-- Settings -->
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <label>Planning</label>
+                    <input type="number" id="s-planning" value="5" min="1" max="120">
+                    <div class="unit">minutes</div>
+                </div>
+                <div class="setting-item">
+                    <label>Focus Work</label>
+                    <input type="number" id="s-work" value="28" min="1" max="120">
+                    <div class="unit">minutes</div>
+                </div>
+                <div class="setting-item">
+                    <label>Short Break</label>
+                    <input type="number" id="s-short" value="6" min="1" max="60">
+                    <div class="unit">minutes</div>
+                </div>
+                <div class="setting-item">
+                    <label>Long Break</label>
+                    <input type="number" id="s-long" value="25" min="1" max="120">
+                    <div class="unit">minutes</div>
+                </div>
+                <div class="setting-item">
+                    <label>Wrap Up</label>
+                    <input type="number" id="s-wrapup" value="2" min="1" max="60">
+                    <div class="unit">minutes</div>
+                </div>
+                <div class="setting-item">
+                    <label>Sessions / Long Break</label>
+                    <input type="number" id="s-sessions-long" value="4" min="1" max="20">
+                    <div class="unit">sessions</div>
+                </div>
+                <div class="setting-item" style="grid-column: span 3;">
+                    <label>Total Work Sessions</label>
+                    <input type="number" id="s-total" value="8" min="1" max="50" style="max-width:140px;">
+                    <div class="unit">sessions total</div>
+                </div>
+            </div>
+
+            <!-- Instructions collapsible -->
+            <details class="instructions-details">
+                <summary>Instructions &amp; field descriptions</summary>
+                <div class="instructions-body">
+                    <dl class="instr-item">
+                        <dt>Planning</dt>
+                        <dd>Opens every session. Set your intention: what will you work on, what does "done" look like, and what files/tabs do you need open?</dd>
+                    </dl>
+                    <dl class="instr-item">
+                        <dt>Focus Work</dt>
+                        <dd>Your deep-work window. Eliminate distractions and give full attention to one task. Resist the urge to check messages or multitask.</dd>
+                    </dl>
+                    <dl class="instr-item">
+                        <dt>Wrap Up</dt>
+                        <dd>Closes every session. Jot down what you finished, what comes next, and any blockers. This preserves momentum across breaks.</dd>
+                    </dl>
+                    <dl class="instr-item">
+                        <dt>Short Break</dt>
+                        <dd>A quick reset between sessions. Step away from your screen — stretch, breathe, refill water. Avoid email and social media.</dd>
+                    </dl>
+                    <dl class="instr-item">
+                        <dt>Long Break</dt>
+                        <dd>A deeper rest after every N sessions. Eat something, take a walk, or rest your eyes. 15–30 minutes is typical.</dd>
+                    </dl>
+                    <dl class="instr-item">
+                        <dt>Sessions / Long Break</dt>
+                        <dd>How many focus sessions before you earn a long break. The classic Pomodoro technique uses 4. Increase for longer work blocks.</dd>
+                    </dl>
+                    <dl class="instr-item" style="grid-column: span 2;">
+                        <dt>Total Work Sessions</dt>
+                        <dd>How many focus sessions in your full work block. After the last session's Wrap Up, the timer completes. Each session = Planning + Focus + Wrap Up time. Half-day ≈ 4–6 sessions; full day ≈ 8–12.</dd>
+                    </dl>
+                </div>
+            </details>
+
+            <!-- Ring -->
+            <div class="timer-display">
+                <div class="ring-container">
+                    <svg width="220" height="220" viewBox="0 0 220 220">
+                        <circle class="ring-bg" cx="110" cy="110" r="96"/>
+                        <circle class="ring-progress" id="ring-prog" cx="110" cy="110" r="96"
+                            stroke-dasharray="603.19"
+                            stroke-dashoffset="0"/>
+                    </svg>
+                    <div class="ring-center">
+                        <div class="ring-phase" id="display-phase">Planning</div>
+                        <div class="ring-time" id="display-time">10:00</div>
+                        <div class="ring-session" id="display-session">Session 0 / 8</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time estimates -->
+            <div class="time-estimates" id="time-estimates">
+                <div class="time-est-item">
+                    <span class="est-label">Stage ends</span>
+                    <span class="est-value" id="est-stage">—</span>
+                </div>
+                <div class="time-est-item">
+                    <span class="est-label">All done at</span>
+                    <span class="est-value" id="est-total">—</span>
+                </div>
+            </div>
+
+            <!-- Phase queue -->
+            <div class="phase-queue" id="phase-queue"></div>
+
+            <!-- Controls -->
+            <div class="timer-controls">
+                <button class="btn btn-primary"   id="btn-start" onclick="timerStart()">Start</button>
+                <button class="btn btn-secondary" id="btn-pause" onclick="timerPause()" disabled>Pause</button>
+                <button class="btn btn-secondary" id="btn-skip"  onclick="timerSkip()"  disabled>Skip</button>
+                <button class="btn btn-secondary" id="btn-reset" onclick="timerReset()">Reset</button>
+            </div>
+
+            <div class="sound-row">
+                <input type="checkbox" id="sound-toggle" checked>
+                <label for="sound-toggle">Play sound on phase change</label>
+            </div>
+
+            <div class="status-msg" id="status-msg"></div>
+        </div>
+
+    </div>
+
+    <div id="footer_text"></div>
+
+    <script>
+    (function() { setThemeFromCookie(); })();
+    </script>
+
+    <script>
+    // ── Constants ──────────────────────────────────────────────────────────────
+    const CIRCUMFERENCE = 2 * Math.PI * 96; // 603.19
+
+    const PHASE = {
+        PLANNING:    'planning',
+        WORK:        'work',
+        WRAPUP:      'wrapup',
+        SHORT_BREAK: 'short_break',
+        LONG_BREAK:  'long_break',
+        DONE:        'done'
+    };
+
+    const PHASE_LABEL = {
+        planning:    'Planning',
+        work:        'Focus',
+        wrapup:      'Wrap Up',
+        short_break: 'Short Break',
+        long_break:  'Long Break',
+        done:        'Done!'
+    };
+
+    const PHASE_COLOR = {
+        planning:    'rgb(255,44,90)',
+        work:        'rgb(255,44,90)',
+        wrapup:      'rgb(200,120,60)',
+        short_break: 'rgb(80,180,120)',
+        long_break:  'rgb(60,150,220)',
+        done:        'rgb(120,120,120)'
+    };
+
+    // ── State ──────────────────────────────────────────────────────────────────
+    let settings = readSettings();
+    let state    = buildInitialState();
+    let tickInterval = null;
+
+    // ── Settings helpers ───────────────────────────────────────────────────────
+    function readSettings() {
+        return {
+            planningTime:      parseInt(document.getElementById('s-planning').value)      || 10,
+            workTime:          parseInt(document.getElementById('s-work').value)          || 25,
+            shortBreakTime:    parseInt(document.getElementById('s-short').value)         || 5,
+            longBreakTime:     parseInt(document.getElementById('s-long').value)          || 15,
+            wrapupTime:        parseInt(document.getElementById('s-wrapup').value)        || 5,
+            sessionsBeforeLong:parseInt(document.getElementById('s-sessions-long').value) || 4,
+            totalSessions:     parseInt(document.getElementById('s-total').value)         || 8
+        };
+    }
+
+    function phaseDuration(phase, cfg) {
+        const map = {
+            planning:    cfg.planningTime,
+            work:        cfg.workTime,
+            wrapup:      cfg.wrapupTime,
+            short_break: cfg.shortBreakTime,
+            long_break:  cfg.longBreakTime,
+            done:        0
+        };
+        return (map[phase] || 0) * 60;
+    }
+
+    // ── State builder ──────────────────────────────────────────────────────────
+    function buildInitialState() {
+        const cfg = readSettings();
+        return {
+            phase:            PHASE.PLANNING,
+            sessionsComplete: 0,   // full sessions done (after wrapup)
+            totalDuration:    phaseDuration(PHASE.PLANNING, cfg),
+            secondsLeft:      phaseDuration(PHASE.PLANNING, cfg),
+            running:          false
+        };
+    }
+
+    // ── Phase queue builder ────────────────────────────────────────────────────
+    // Each session = Planning → Work → Wrap Up, then a break (except after last)
+    function buildQueue(cfg) {
+        const q = [];
+        for (let s = 1; s <= cfg.totalSessions; s++) {
+            q.push(PHASE.PLANNING);
+            q.push(PHASE.WORK);
+            q.push(PHASE.WRAPUP);
+            if (s < cfg.totalSessions) {
+                q.push(s % cfg.sessionsBeforeLong === 0 ? PHASE.LONG_BREAK : PHASE.SHORT_BREAK);
+            }
+        }
+        q.push(PHASE.DONE);
+        return q;
+    }
+
+    // ── Next phase logic ───────────────────────────────────────────────────────
+    // Sequence per session:  PLANNING → WORK → WRAPUP → (SHORT/LONG BREAK) → PLANNING …
+    function advancePhase() {
+        let nextPhase;
+        switch (state.phase) {
+            case PHASE.PLANNING:
+                nextPhase = PHASE.WORK;
+                break;
+            case PHASE.WORK:
+                nextPhase = PHASE.WRAPUP;
+                break;
+            case PHASE.WRAPUP:
+                state.sessionsComplete++;
+                if (state.sessionsComplete >= settings.totalSessions) {
+                    nextPhase = PHASE.DONE;
+                } else if (state.sessionsComplete % settings.sessionsBeforeLong === 0) {
+                    nextPhase = PHASE.LONG_BREAK;
+                } else {
+                    nextPhase = PHASE.SHORT_BREAK;
+                }
+                break;
+            case PHASE.SHORT_BREAK:
+            case PHASE.LONG_BREAK:
+                nextPhase = PHASE.PLANNING;
+                break;
+            default:
+                nextPhase = PHASE.DONE;
+        }
+
+        state.phase         = nextPhase;
+        state.totalDuration = phaseDuration(nextPhase, settings);
+        state.secondsLeft   = state.totalDuration;
+
+        if (nextPhase === PHASE.DONE) {
+            stopTimer();
+            playBeep(880, 0.6, 3);
+            setStatus('All done! Great work.');
+        } else {
+            playBeep(660, 0.3, 1);
+            setStatus('');
+        }
+    }
+
+    // ── Timer tick ─────────────────────────────────────────────────────────────
+    function tick() {
+        if (!state.running) return;
+        state.secondsLeft--;
+        if (state.secondsLeft <= 0) {
+            state.secondsLeft = 0;
+            render();
+            advancePhase();
+        }
+        render();
+    }
+
+    function stopTimer() {
+        clearInterval(tickInterval);
+        tickInterval = null;
+        state.running = false;
+    }
+
+    // ── Public controls ────────────────────────────────────────────────────────
+    function timerStart() {
+        if (state.running || state.phase === PHASE.DONE) return;
+        // Lock settings on very first start
+        if (state.sessionsComplete === 0 && state.phase === PHASE.PLANNING
+                && state.secondsLeft === state.totalDuration) {
+            settings = readSettings();
+            state.totalDuration = phaseDuration(PHASE.PLANNING, settings);
+            state.secondsLeft   = state.totalDuration;
+            lockSettings(true);
+        }
+        state.running = true;
+        tickInterval  = setInterval(tick, 1000);
+        setStatus('');
+        render();
+    }
+
+    function timerPause() {
+        if (!state.running) return;
+        stopTimer();
+        setStatus('Paused');
+        render();
+    }
+
+    function timerSkip() {
+        if (!state.running) return;
+        state.secondsLeft = 0;
+        advancePhase();
+        render();
+    }
+
+    function timerReset() {
+        stopTimer();
+        settings = readSettings();
+        state    = buildInitialState();
+        lockSettings(false);
+        setStatus('');
+        render();
+    }
+
+    function lockSettings(lock) {
+        document.querySelectorAll('.settings-grid input').forEach(function(el) {
+            el.disabled = lock;
+        });
+    }
+
+    // ── Time estimate helpers ──────────────────────────────────────────────────
+    // Find the index of the current phase in the full queue
+    function getCurrentQueuePos(q) {
+        let wrapupsSeen = 0;
+        for (let i = 0; i < q.length; i++) {
+            if (q[i] === state.phase && wrapupsSeen === state.sessionsComplete) return i;
+            if (q[i] === PHASE.WRAPUP) wrapupsSeen++;
+        }
+        return 0;
+    }
+
+    // Total seconds remaining in the entire timer from now
+    function calcRemainingSeconds() {
+        if (state.phase === PHASE.DONE) return 0;
+        const cfg = settings;
+        const q   = buildQueue(cfg);
+        const pos = getCurrentQueuePos(q);
+        let total = state.secondsLeft;
+        for (let i = pos + 1; i < q.length; i++) {
+            if (q[i] === PHASE.DONE) break;
+            total += phaseDuration(q[i], cfg);
+        }
+        return total;
+    }
+
+    function formatEndTime(secondsFromNow) {
+        if (secondsFromNow <= 0) return '—';
+        const d = new Date(Date.now() + secondsFromNow * 1000);
+        return d.toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'});
+    }
+
+    // ── Render ─────────────────────────────────────────────────────────────────
+    function render() {
+        const cfg = settings;
+
+        // Time display
+        const m = Math.floor(state.secondsLeft / 60);
+        const s = state.secondsLeft % 60;
+        document.getElementById('display-time').textContent =
+            String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+
+        // Phase label
+        document.getElementById('display-phase').textContent = PHASE_LABEL[state.phase] || '';
+
+        // Session counter — show current session number
+        let sessionNum;
+        if (state.phase === PHASE.DONE) {
+            sessionNum = 'Complete!';
+        } else if (state.phase === PHASE.SHORT_BREAK || state.phase === PHASE.LONG_BREAK) {
+            sessionNum = 'Session ' + state.sessionsComplete + ' / ' + cfg.totalSessions + ' done';
+        } else {
+            sessionNum = 'Session ' + (state.sessionsComplete + 1) + ' / ' + cfg.totalSessions;
+        }
+        document.getElementById('display-session').textContent = sessionNum;
+
+        // Ring progress
+        const ring = document.getElementById('ring-prog');
+        const pct  = state.totalDuration > 0 ? state.secondsLeft / state.totalDuration : 0;
+        ring.style.strokeDashoffset = CIRCUMFERENCE * (1 - pct);
+        ring.style.stroke = PHASE_COLOR[state.phase] || 'rgb(255,44,90)';
+
+        // Buttons
+        document.getElementById('btn-start').disabled = state.running || state.phase === PHASE.DONE;
+        document.getElementById('btn-pause').disabled = !state.running;
+        document.getElementById('btn-skip').disabled  = !state.running || state.phase === PHASE.DONE;
+
+        // Time estimates
+        if (state.phase === PHASE.DONE || !state.running) {
+            document.getElementById('est-stage').textContent = state.phase === PHASE.DONE ? 'Done!' : '—';
+            document.getElementById('est-total').textContent = state.phase === PHASE.DONE ? 'Done!' : '—';
+        } else {
+            document.getElementById('est-stage').textContent = formatEndTime(state.secondsLeft);
+            document.getElementById('est-total').textContent = formatEndTime(calcRemainingSeconds());
+        }
+
+        // Phase queue
+        renderQueue();
+    }
+
+    function renderQueue() {
+        const cfg = settings;
+        const q   = buildQueue(cfg);
+        const container = document.getElementById('phase-queue');
+        container.innerHTML = '';
+
+        // Find active index: count by sessionsComplete and current phase
+        let sessionsSeen = 0;
+        let activeIdx    = 0;
+        for (let i = 0; i < q.length; i++) {
+            if (q[i] === PHASE.WRAPUP) sessionsSeen++;  // each wrapup marks a session boundary
+            if (q[i] === state.phase) {
+                // For PLANNING/WORK/WRAPUP: we're in session (sessionsComplete+1)
+                // For SHORT/LONG BREAK or DONE: after sessionsComplete sessions
+                if (state.phase === PHASE.SHORT_BREAK || state.phase === PHASE.LONG_BREAK || state.phase === PHASE.DONE) {
+                    if (sessionsSeen === state.sessionsComplete) { activeIdx = i; break; }
+                } else {
+                    if (sessionsSeen === state.sessionsComplete) { activeIdx = i; break; }
+                }
+            }
+        }
+
+        const doneCount = activeIdx;
+
+        // Show a window around the active phase
+        const maxVisible = 11;
+        const start = Math.max(0, activeIdx - 3);
+        const end   = Math.min(q.length, start + maxVisible);
+
+        if (start > 0) {
+            const more = document.createElement('span');
+            more.className = 'phase-sep'; more.textContent = '…';
+            container.appendChild(more);
+        }
+
+        for (let i = start; i < end; i++) {
+            if (i > start) {
+                const sep = document.createElement('span');
+                sep.className = 'phase-sep'; sep.textContent = '›';
+                container.appendChild(sep);
+            }
+            const pip = document.createElement('span');
+            pip.className = 'phase-pip';
+            if (i < doneCount)  pip.classList.add('done');
+            if (i === activeIdx) pip.classList.add('active');
+
+            // Session-numbered labels for the three per-session phases
+            let label = PHASE_LABEL[q[i]];
+            if (q[i] === PHASE.PLANNING || q[i] === PHASE.WORK || q[i] === PHASE.WRAPUP) {
+                let sNum = 0;
+                for (let k = 0; k <= i; k++) { if (q[k] === PHASE.PLANNING) sNum++; }
+                label = label + ' ' + sNum;
+            }
+            pip.textContent = label;
+            container.appendChild(pip);
+        }
+
+        if (end < q.length) {
+            const more = document.createElement('span');
+            more.className = 'phase-sep'; more.textContent = '…';
+            container.appendChild(more);
+        }
+    }
+
+    // ── Audio ──────────────────────────────────────────────────────────────────
+    let audioCtx = null;
+
+    function getAudioCtx() {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        return audioCtx;
+    }
+
+    function playBeep(freq, duration, reps) {
+        if (!document.getElementById('sound-toggle').checked) return;
+        try {
+            const ctx = getAudioCtx();
+            for (let i = 0; i < reps; i++) {
+                const osc  = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.type = 'sine';
+                osc.frequency.value = freq;
+                const t = ctx.currentTime + i * (duration + 0.08);
+                gain.gain.setValueAtTime(0.4, t);
+                gain.gain.exponentialRampToValueAtTime(0.001, t + duration);
+                osc.start(t);
+                osc.stop(t + duration);
+            }
+        } catch(e) {}
+    }
+
+    // ── Status ─────────────────────────────────────────────────────────────────
+    function setStatus(msg) {
+        document.getElementById('status-msg').textContent = msg;
+    }
+
+    // ── Settings live update (when not running and not started) ──────────────
+    document.querySelectorAll('.settings-grid input').forEach(function(el) {
+        el.addEventListener('change', function() {
+            if (!state.running) {
+                settings = readSettings();
+                state    = buildInitialState();
+                render();
+            }
+        });
+    });
+
+    // ── Init ───────────────────────────────────────────────────────────────────
+    render();
+    </script>
+</body>
+</html>
