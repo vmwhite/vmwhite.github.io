@@ -864,7 +864,7 @@
                 osc.type = 'sine';
                 osc.frequency.value = freq;
                 const t = ctx.currentTime + i * (duration + 0.08);
-                gain.gain.setValueAtTime(0.4, t);
+                gain.gain.setValueAtTime(1, t);
                 gain.gain.exponentialRampToValueAtTime(0.001, t + duration);
                 osc.start(t);
                 osc.stop(t + duration);
