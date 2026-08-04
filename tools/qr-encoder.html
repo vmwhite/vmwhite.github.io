@@ -1,0 +1,276 @@
+<div class="tool-card">
+    <h2>QR — Link Encoder</h2>
+    <p class="tool-desc">Turn any URL into a downloadable QR code, generated locally in your browser.</p>
+
+    <label class="field-label" for="url-input">Target URL</label>
+    <div class="input-row">
+        <input type="text" id="url-input" placeholder="https://example.com" autocomplete="off" spellcheck="false">
+        <button class="btn btn-primary" id="generate-btn">Generate</button>
+    </div>
+    <div class="error-msg" id="error-msg"></div>
+
+    <div class="options">
+        <div class="option-group">
+            <label class="field-label" for="size-select">Size</label>
+            <select id="size-select">
+                <option value="180">180 px</option>
+                <option value="240" selected>240 px</option>
+                <option value="320">320 px</option>
+                <option value="400">400 px</option>
+            </select>
+        </div>
+        <div class="option-group">
+            <label class="field-label" for="ec-select">Error correction</label>
+            <select id="ec-select">
+                <option value="L">L — 7%</option>
+                <option value="M" selected>M — 15%</option>
+                <option value="Q">Q — 25%</option>
+                <option value="H">H — 30%</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="stage" id="stage">
+        <div class="stage__empty" id="empty-state">
+            <span class="glyph">▦</span>
+            Enter a URL and press Generate<br>to create the QR code.
+        </div>
+        <div id="qrcode" style="display:none;"></div>
+        <div class="scan-line" id="scan-line"></div>
+        <div class="readout" id="readout" style="display:none;">
+            <div class="readout-row"><span>source</span><span id="readout-url"></span></div>
+            <div class="readout-row"><span>size</span><span id="readout-size"></span></div>
+            <div class="readout-row"><span>ec level</span><span id="readout-ec"></span></div>
+        </div>
+        <div class="actions" id="actions">
+            <button class="btn btn-secondary" id="download-btn">Download PNG</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .input-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 6px;
+    }
+    .input-row input[type="text"] {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .options {
+        display: flex;
+        gap: 24px;
+        margin: 18px 0 4px;
+        flex-wrap: wrap;
+    }
+    .option-group .field-label { margin-bottom: 6px; }
+
+    .stage {
+        margin-top: 24px;
+        border: 1.5px dashed rgba(255,44,90,0.25);
+        border-radius: 8px;
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        position: relative;
+        overflow: hidden;
+    }
+    .stage__empty {
+        font-size: 0.85rem;
+        opacity: 0.55;
+        text-align: center;
+        line-height: 1.6;
+    }
+    .stage__empty .glyph {
+        font-size: 28px;
+        display: block;
+        margin-bottom: 10px;
+        color: rgb(255,44,90);
+        opacity: 0.4;
+    }
+
+    #qrcode {
+        position: relative;
+        padding: 16px;
+        background: #fff;
+        border: 1.5px solid rgba(255,44,90,0.3);
+        border-radius: 6px;
+        line-height: 0;
+    }
+    #qrcode img, #qrcode canvas { display: block; }
+
+    .scan-line {
+        position: absolute;
+        left: 0; right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgb(255,44,90), transparent);
+        top: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .scan-line.active {
+        animation: qr-sweep 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes qr-sweep {
+        0%{ opacity:1; top:0; }
+        90%{ opacity:1; }
+        100%{ opacity:0; top:100%; }
+    }
+
+    .readout {
+        margin-top: 16px;
+        width: 100%;
+        max-width: 280px;
+        font-size: 0.78rem;
+        opacity: 0.8;
+        border-top: 1px solid rgba(255,44,90,0.2);
+        padding-top: 10px;
+    }
+    .readout-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 0;
+        gap: 12px;
+    }
+    .readout-row span:first-child {
+        opacity: 0.6;
+        text-transform: uppercase;
+        font-size: 0.68rem;
+        letter-spacing: 0.05em;
+        font-weight: bold;
+    }
+    .readout-row span:last-child {
+        font-weight: bold;
+        color: rgb(255,44,90);
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 180px;
+    }
+
+    .actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.2s ease;
+    }
+    .actions.visible { opacity: 1; max-height: 60px; }
+    .actions .btn { flex: 1; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .scan-line.active { animation: none; }
+    }
+    @media screen and (max-width: 480px) {
+        .options { gap: 16px; }
+        .stage { min-height: 220px; }
+    }
+</style>
+
+<script>
+(function() {
+    const urlInput = document.getElementById('url-input');
+    const generateBtn = document.getElementById('generate-btn');
+    const errorMsg = document.getElementById('error-msg');
+    const sizeSelect = document.getElementById('size-select');
+    const ecSelect = document.getElementById('ec-select');
+    const qrDiv = document.getElementById('qrcode');
+    const emptyState = document.getElementById('empty-state');
+    const scanLine = document.getElementById('scan-line');
+    const readout = document.getElementById('readout');
+    const readoutUrl = document.getElementById('readout-url');
+    const readoutSize = document.getElementById('readout-size');
+    const readoutEc = document.getElementById('readout-ec');
+    const actions = document.getElementById('actions');
+    const downloadBtn = document.getElementById('download-btn');
+
+    function normalizeUrl(value) {
+        const trimmed = value.trim();
+        if (!trimmed) return null;
+        if (!/^https?:\/\//i.test(trimmed)) {
+            return 'https://' + trimmed;
+        }
+        return trimmed;
+    }
+
+    function isValidUrl(value) {
+        try {
+            new URL(value);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function generate() {
+        errorMsg.textContent = '';
+        const raw = urlInput.value;
+        const normalized = normalizeUrl(raw);
+
+        if (!normalized) {
+            errorMsg.textContent = 'Enter a URL first.';
+            return;
+        }
+        if (!isValidUrl(normalized)) {
+            errorMsg.textContent = 'That doesn\'t look like a valid URL.';
+            return;
+        }
+
+        const size = parseInt(sizeSelect.value, 10);
+        const ec = ecSelect.value;
+        const ecMap = { L: QRCode.CorrectLevel.L, M: QRCode.CorrectLevel.M, Q: QRCode.CorrectLevel.Q, H: QRCode.CorrectLevel.H };
+
+        qrDiv.innerHTML = '';
+        qrDiv.style.display = 'inline-block';
+        emptyState.style.display = 'none';
+
+        new QRCode(qrDiv, {
+            text: normalized,
+            width: size,
+            height: size,
+            colorDark: '#14171C',
+            colorLight: '#ffffff',
+            correctLevel: ecMap[ec]
+        });
+
+        scanLine.classList.remove('active');
+        void scanLine.offsetWidth;
+        scanLine.classList.add('active');
+
+        readoutUrl.textContent = normalized;
+        readoutUrl.title = normalized;
+        readoutSize.textContent = size + ' × ' + size + ' px';
+        readoutEc.textContent = ec;
+        readout.style.display = 'block';
+        actions.classList.add('visible');
+    }
+
+    function downloadQr() {
+        const img = qrDiv.querySelector('img');
+        const canvas = qrDiv.querySelector('canvas');
+        const source = img && img.src ? img.src : (canvas ? canvas.toDataURL('image/png') : null);
+        if (!source) return;
+
+        const link = document.createElement('a');
+        link.href = source;
+        link.download = 'qr-code.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    generateBtn.addEventListener('click', generate);
+    downloadBtn.addEventListener('click', downloadQr);
+    urlInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') generate();
+    });
+})();
+</script>
