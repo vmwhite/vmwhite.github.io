@@ -458,7 +458,8 @@
         } else {
             lines.push('Test type: ' + (twoSided ? 'two-sided' : 'one-sided') + '  →  tail probability = ' + tailSymbol + ' = ' + fmt(tailAlpha, 4));
         }
-        lines.push('Z = ' + fmt(z, 4));
+        const zLabel = bonf ? 'Z_(α/m)' : (twoSided ? 'Z_(α/2)' : 'Z_α');
+        lines.push(zLabel + ' = ' + fmt(z, 4));
         if (currentType === 'continuous') {
             lines.push('n₀ = (Z × σ / e)² = (' + fmt(z,4) + ' × ' + sigma + ' / ' + margin + ')² = ' + fmt(n0, 2));
         } else {
