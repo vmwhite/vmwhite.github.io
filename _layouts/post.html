@@ -55,7 +55,8 @@
         <tr>
             <td id="about" class="animated slideInLeft">
                 <h1>{{ page.title }}</h1>
-                <p> <b> Posted:</b> {{ page.date | date_to_string }} 
+                {% if page.subtitle %}<h3 style="font-weight:normal;">{{ page.subtitle }}</h3>{% endif %}
+                <p> <b> Posted:</b> {{ page.date | date_to_string }}
                     <br> <b> Author:</b> {{ page.author }}
                     {{content}}
                 </p>
