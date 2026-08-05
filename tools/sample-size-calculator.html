@@ -1,0 +1,500 @@
+<div class="tool-card">
+    <h2>Sample Size Calculator</h2>
+    <p class="tool-desc">Estimate how many samples (or simulation runs) you need to hit a target confidence interval, for continuous or binary outcomes. Based on the <a href="/2026/08/05/DeterminingReplications-Part1-InfinitePopulations.html">Determining Replications</a> series.</p>
+
+    <label class="field-label">Data Type</label>
+    <div class="ss-type-toggle">
+        <button type="button" class="ss-type-btn active" id="ss-type-continuous" data-type="continuous">Continuous / Integer<span>uses standard deviation</span></button>
+        <button type="button" class="ss-type-btn" id="ss-type-binary" data-type="binary">Binary / Categorical<span>uses proportion</span></button>
+    </div>
+
+    <div class="ss-sided-wrap" id="ss-sided-wrap">
+        <label class="field-label">Test Type</label>
+        <div class="ss-type-toggle">
+            <button type="button" class="ss-type-btn active" id="ss-sided-two" data-sided="two">Two-sided (default)<span>deviation in either direction matters</span></button>
+            <button type="button" class="ss-type-btn" id="ss-sided-one" data-sided="one">One-sided<span>deviation in only one direction matters</span></button>
+        </div>
+    </div>
+
+    <div class="ss-grid">
+        <div class="ss-field" id="ss-field-sigma">
+            <label class="field-label" for="ss-sigma">Standard deviation estimate (&sigma;)</label>
+            <input type="number" id="ss-sigma" min="0" step="any" placeholder="e.g. 10">
+        </div>
+        <div class="ss-field" id="ss-field-p" style="display:none;">
+            <label class="field-label" for="ss-p">Expected proportion (p)</label>
+            <input type="number" id="ss-p" min="0" max="1" step="any" placeholder="e.g. 0.5" value="0.5">
+        </div>
+        <div class="ss-field">
+            <label class="field-label" for="ss-conf">Confidence level (%)</label>
+            <input type="number" id="ss-conf" min="0" max="100" step="any" value="95">
+        </div>
+        <div class="ss-field">
+            <label class="field-label" for="ss-margin" id="ss-margin-label">Margin of error (e) &mdash; data units</label>
+            <input type="number" id="ss-margin" min="0" step="any" placeholder="e.g. 2">
+        </div>
+        <div class="ss-field">
+            <label class="field-label" for="ss-pop">Population size (N) &mdash; optional</label>
+            <input type="number" id="ss-pop" min="2" step="1" placeholder="leave blank if unlimited">
+        </div>
+    </div>
+
+    <div class="ss-bonf-row">
+        <input type="checkbox" id="ss-bonf-toggle">
+        <label for="ss-bonf-toggle">Apply Bonferroni correction for multiple comparisons</label>
+    </div>
+    <div class="ss-bonf-details" id="ss-bonf-details" style="display:none;">
+        <div class="ss-field ss-field-m" id="ss-field-m">
+            <label class="field-label" for="ss-m">Number of hypotheses / comparisons (m)</label>
+            <input type="number" id="ss-m" min="2" step="1" placeholder="e.g. 12">
+        </div>
+    </div>
+
+    <details class="ss-instructions">
+        <summary>Instructions &amp; field descriptions</summary>
+        <div class="ss-instructions-body">
+            <dl class="ss-instr-item">
+                <dt>Data type</dt>
+                <dd><strong>Continuous / Integer:</strong> use when you're estimating a mean or average of a numeric measurement (e.g., runtime, cost, a simulation output) &mdash; this uses a standard deviation estimate to size the sample. <strong>Binary / Categorical:</strong> use when you're estimating the fraction of a population falling into one category (e.g., proportion answering "yes," proportion with an event, pass/fail) &mdash; this uses a proportion estimate instead. Pick whichever matches the quantity you're actually trying to pin down with your confidence interval.</dd>
+            </dl>
+            <dl class="ss-instr-item">
+                <dt>Test type</dt>
+                <dd><strong>Two-sided (default):</strong> use whenever a deviation in either direction from the true value matters &mdash; e.g., "the true mean could be higher or lower than my estimate." This is the standard choice for most confidence intervals and splits your significance level across both tails. <strong>One-sided:</strong> use only when you care about deviation in a single direction &mdash; e.g., confirming a metric is "at least" or "at most" some value. One-sided tests put your entire significance level in one tail, so for the same confidence level they require a smaller Z (and smaller n) than a two-sided test. This choice only applies when Bonferroni correction is off &mdash; see below for what happens when it's on.</dd>
+            </dl>
+            <dl class="ss-instr-item ss-instr-continuous">
+                <dt>Standard deviation (&sigma;)</dt>
+                <dd>Your best estimate of the population standard deviation, in the same units as your measurement. In order of preference: (1) an estimate from pilot data or a comparable prior study, (2) a conservative published estimate for a similar population, (3) as a rough rule of thumb, range &divide; 4 (since ~95% of data falls within 2 standard deviations of the mean). When uncertain, overestimate &mdash; it's the safer failure mode, since underestimating &sigma; yields an interval wider than intended.</dd>
+            </dl>
+            <dl class="ss-instr-item ss-instr-binary" style="display:none;">
+                <dt>Expected proportion (p)</dt>
+                <dd>Your best guess at the fraction of the population that falls into the category of interest (e.g., proportion answering "yes," proportion experiencing an event). If you have no prior estimate, use <strong>p = 0.5</strong> &mdash; the most conservative choice, since p(1&minus;p) is maximized there, giving the largest (safest) required sample size.</dd>
+            </dl>
+            <dl class="ss-instr-item">
+                <dt>Confidence level</dt>
+                <dd>How confident you want to be that the true value falls within your interval. 95% is standard for most analyses; use 99% when errors are costly, or 90% for exploratory work. Higher confidence requires a larger sample.</dd>
+            </dl>
+            <dl class="ss-instr-item ss-instr-continuous">
+                <dt>Margin of error (continuous)</dt>
+                <dd>The half-width of your confidence interval, in the same units as your data &mdash; e.g., a margin of &plusmn;2 means your estimate could plausibly land up to 2 units from the truth in either direction. Set it relative to the scale of what you're measuring; smaller margins always require larger samples.</dd>
+            </dl>
+            <dl class="ss-instr-item ss-instr-binary" style="display:none;">
+                <dt>Margin of error (binary)</dt>
+                <dd>The half-width of your confidence interval, as a decimal proportion &mdash; e.g., 0.05 means your estimate could plausibly land up to 5 percentage points from the truth in either direction. Smaller margins always require larger samples.</dd>
+            </dl>
+            <dl class="ss-instr-item">
+                <dt>Population size (N)</dt>
+                <dd>Leave blank to assume an effectively unlimited population sampled with replacement (typical for simulation studies). If you're sampling without replacement from a known, bounded population (e.g., all patients at a clinic), enter it here &mdash; the finite population correction will reduce the required n once your sample becomes a non-trivial fraction of N.</dd>
+            </dl>
+            <dl class="ss-instr-item">
+                <dt>Bonferroni correction</dt>
+                <dd>If you're testing multiple hypotheses or comparisons simultaneously, the chance of at least one false positive rises. Bonferroni corrects for this by dividing the significance level by the number of tests (m), which increases the Z-score used and therefore the required sample size. <strong>Number of hypotheses (m)</strong> is the total number of tests/comparisons in the family. Enabling Bonferroni replaces the Test Type choice above: <strong>every one of the m tests is assumed to be one-sided</strong>, matching the classic Bonferroni derivation used in the linked blog post, where each test's full significance budget (not half of it) is divided by m. The correction can be overly conservative when m is large or the tests are correlated.</dd>
+            </dl>
+        </div>
+    </details>
+
+    <div class="ss-actions">
+        <button class="btn btn-primary" id="ss-calc-btn">Calculate Sample Size</button>
+        <button class="btn btn-secondary" id="ss-reset-btn">Reset</button>
+    </div>
+    <div class="error-msg" id="ss-error"></div>
+
+    <div class="ss-result" id="ss-result" style="display:none;">
+        <div class="ss-result-value"><span id="ss-result-n">—</span></div>
+        <div class="ss-result-label">samples (runs) needed</div>
+        <div class="ss-calc-panel" id="ss-calc-panel"></div>
+    </div>
+</div>
+
+<style>
+    .ss-label-hint {
+        text-transform: none;
+        font-weight: normal;
+        letter-spacing: 0;
+        opacity: 0.8;
+    }
+
+    /* ── Type toggle ── */
+    .ss-type-toggle {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+    }
+    .ss-type-btn {
+        flex: 1;
+        min-width: 180px;
+        padding: 12px 16px;
+        border: 1.5px solid rgba(255,44,90,0.3);
+        border-radius: 8px;
+        background: transparent;
+        color: inherit;
+        font-family: inherit;
+        cursor: pointer;
+        text-align: left;
+        font-weight: bold;
+        font-size: 0.9rem;
+        transition: 0.2s ease;
+    }
+    .ss-type-btn span {
+        display: block;
+        font-weight: normal;
+        font-size: 0.72rem;
+        opacity: 0.6;
+        margin-top: 3px;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+    .ss-type-btn:hover { border-color: rgb(255,44,90); }
+    .ss-type-btn.active {
+        background: rgba(255,44,90,0.12);
+        border-color: rgb(255,44,90);
+        color: rgb(255,44,90);
+    }
+    .ss-type-btn.active span { opacity: 0.8; }
+
+    /* ── Field grid ── */
+    .ss-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 24px;
+        margin-bottom: 6px;
+    }
+    .ss-field input { width: 100%; }
+    .ss-bonf-details { margin: 4px 0 20px; }
+    .ss-field-m { margin: 4px 0 18px; max-width: calc(50% - 12px); }
+
+    .ss-bonf-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 22px 0 4px;
+        font-size: 0.88rem;
+    }
+    .ss-bonf-row input[type="checkbox"] {
+        accent-color: rgb(255,44,90);
+        width: 15px;
+        height: 15px;
+    }
+
+    /* ── Instructions collapsible ── */
+    .ss-instructions {
+        margin: 22px 0 24px;
+        border: 1.5px solid rgba(255,44,90,0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .ss-instructions summary {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+        font-weight: bold;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        opacity: 0.7;
+        user-select: none;
+    }
+    .ss-instructions summary::-webkit-details-marker { display: none; }
+    .ss-instructions summary::before {
+        content: '▸';
+        font-size: 0.7rem;
+        transition: transform 0.2s;
+        color: rgb(255,44,90);
+    }
+    .ss-instructions[open] summary::before { transform: rotate(90deg); }
+    .ss-instructions summary:hover { opacity: 1; }
+    .ss-instructions-body {
+        padding: 4px 16px 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 24px;
+    }
+    .ss-instr-item dt {
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgb(255,44,90);
+        margin-bottom: 2px;
+    }
+    .ss-instr-item dd {
+        font-size: 0.8rem;
+        font-weight: normal;
+        opacity: 0.75;
+        margin: 0 0 4px;
+        line-height: 1.5;
+    }
+
+    /* ── Actions ── */
+    .ss-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 4px;
+    }
+
+    /* ── Result panel ── */
+    .ss-result {
+        margin-top: 24px;
+        border-top: 2px solid rgba(255,44,90,0.2);
+        padding-top: 22px;
+        text-align: center;
+    }
+    .ss-result-value {
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: rgb(255,44,90);
+        line-height: 1;
+    }
+    .ss-result-label {
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.55;
+        margin-top: 6px;
+    }
+    .ss-calc-panel {
+        margin-top: 20px;
+        text-align: left;
+        background: rgba(255,44,90,0.05);
+        border: 1px solid rgba(255,44,90,0.2);
+        border-radius: 8px;
+        padding: 14px 18px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.8rem;
+        line-height: 1.9;
+        overflow-x: auto;
+    }
+    .ss-calc-panel .ss-calc-line {
+        white-space: pre;
+    }
+    .ss-calc-panel .ss-calc-final {
+        color: rgb(255,44,90);
+        font-weight: bold;
+    }
+
+    body.dark-mode .ss-calc-panel { background: rgba(255,255,255,0.04); }
+
+    @media screen and (max-width: 560px) {
+        .ss-grid { grid-template-columns: 1fr; }
+        .ss-field-m { max-width: 100%; }
+        .ss-instructions-body { grid-template-columns: 1fr; }
+        .ss-type-btn { min-width: 140px; }
+    }
+</style>
+
+<script>
+(function() {
+    let currentType  = 'continuous';
+    let currentSided = 'two';
+
+    const typeContinuousBtn = document.getElementById('ss-type-continuous');
+    const typeBinaryBtn     = document.getElementById('ss-type-binary');
+    const sidedTwoBtn       = document.getElementById('ss-sided-two');
+    const sidedOneBtn       = document.getElementById('ss-sided-one');
+    const fieldSigma        = document.getElementById('ss-field-sigma');
+    const fieldP            = document.getElementById('ss-field-p');
+    const marginLabel       = document.getElementById('ss-margin-label');
+    const marginInput       = document.getElementById('ss-margin');
+    const bonfToggle        = document.getElementById('ss-bonf-toggle');
+    const bonfDetails       = document.getElementById('ss-bonf-details');
+    const sidedWrap         = document.getElementById('ss-sided-wrap');
+    const calcBtn           = document.getElementById('ss-calc-btn');
+    const resetBtn          = document.getElementById('ss-reset-btn');
+    const errorMsg          = document.getElementById('ss-error');
+    const resultBox         = document.getElementById('ss-result');
+    const resultN           = document.getElementById('ss-result-n');
+    const calcPanel         = document.getElementById('ss-calc-panel');
+    const instrContinuous   = document.querySelectorAll('.ss-instr-continuous');
+    const instrBinary       = document.querySelectorAll('.ss-instr-binary');
+
+    // ── Inverse standard normal CDF (Acklam's algorithm, ~1e-9 accuracy) ──
+    function invNorm(p) {
+        if (p <= 0 || p >= 1) return NaN;
+        const a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02,
+                    1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00];
+        const b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02,
+                    6.680131188771972e+01, -1.328068155288572e+01];
+        const c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00,
+                   -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00];
+        const d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+        const plow = 0.02425, phigh = 1 - plow;
+        let q, r;
+        if (p < plow) {
+            q = Math.sqrt(-2 * Math.log(p));
+            return (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) /
+                   ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);
+        } else if (p <= phigh) {
+            q = p - 0.5; r = q*q;
+            return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q /
+                   (((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
+        } else {
+            q = Math.sqrt(-2 * Math.log(1-p));
+            return -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5]) /
+                    ((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1);
+        }
+    }
+
+    // ── Type toggle ──
+    function setType(type) {
+        currentType = type;
+        const isContinuous = type === 'continuous';
+        typeContinuousBtn.classList.toggle('active', isContinuous);
+        typeBinaryBtn.classList.toggle('active', !isContinuous);
+        fieldSigma.style.display = isContinuous ? '' : 'none';
+        fieldP.style.display     = isContinuous ? 'none' : '';
+        marginLabel.innerHTML    = isContinuous
+            ? 'Margin of error (e) &mdash; data units'
+            : 'Margin of error (e) &mdash; decimal proportion';
+        marginInput.placeholder = isContinuous ? 'e.g. 2' : 'e.g. 0.1';
+        instrContinuous.forEach(function(el) { el.style.display = isContinuous ? '' : 'none'; });
+        instrBinary.forEach(function(el)     { el.style.display = isContinuous ? 'none' : ''; });
+        errorMsg.textContent = '';
+        resultBox.style.display = 'none';
+    }
+    typeContinuousBtn.addEventListener('click', function() { setType('continuous'); });
+    typeBinaryBtn.addEventListener('click', function() { setType('binary'); });
+
+    // ── Sided toggle ──
+    function setSided(sided) {
+        currentSided = sided;
+        sidedTwoBtn.classList.toggle('active', sided === 'two');
+        sidedOneBtn.classList.toggle('active', sided === 'one');
+        errorMsg.textContent = '';
+        resultBox.style.display = 'none';
+    }
+    sidedTwoBtn.addEventListener('click', function() { setSided('two'); });
+    sidedOneBtn.addEventListener('click', function() { setSided('one'); });
+
+    bonfToggle.addEventListener('change', function() {
+        bonfDetails.style.display = bonfToggle.checked ? '' : 'none';
+        sidedWrap.style.display   = bonfToggle.checked ? 'none' : '';
+        errorMsg.textContent = '';
+        resultBox.style.display = 'none';
+    });
+
+    function fmt(n, d) {
+        return Number(n).toLocaleString(undefined, { minimumFractionDigits: d, maximumFractionDigits: d });
+    }
+
+    function calculate() {
+        errorMsg.textContent = '';
+        resultBox.style.display = 'none';
+
+        const confPct = parseFloat(document.getElementById('ss-conf').value);
+        const margin  = parseFloat(document.getElementById('ss-margin').value);
+        const bonf    = bonfToggle.checked;
+        const mRaw    = document.getElementById('ss-m').value;
+        const popRaw  = document.getElementById('ss-pop').value.trim();
+
+        if (isNaN(confPct) || confPct <= 0 || confPct >= 100) {
+            errorMsg.textContent = 'Enter a confidence level between 0 and 100 (exclusive).';
+            return;
+        }
+        if (isNaN(margin) || margin <= 0) {
+            errorMsg.textContent = 'Enter a margin of error greater than 0.';
+            return;
+        }
+        let m = 1;
+        if (bonf) {
+            m = parseInt(mRaw, 10);
+            if (isNaN(m) || m < 2) {
+                errorMsg.textContent = 'Enter the number of hypotheses/comparisons (2 or more) for the Bonferroni correction.';
+                return;
+            }
+        }
+        let N = null;
+        if (popRaw !== '') {
+            N = parseFloat(popRaw);
+            if (isNaN(N) || N < 2) {
+                errorMsg.textContent = 'Population size must be a whole number of 2 or more (or left blank).';
+                return;
+            }
+        }
+
+        let sigma, p;
+        if (currentType === 'continuous') {
+            sigma = parseFloat(document.getElementById('ss-sigma').value);
+            if (isNaN(sigma) || sigma <= 0) {
+                errorMsg.textContent = 'Enter a standard deviation estimate greater than 0.';
+                return;
+            }
+        } else {
+            p = parseFloat(document.getElementById('ss-p').value);
+            if (isNaN(p) || p <= 0 || p >= 1) {
+                errorMsg.textContent = 'Enter a proportion strictly between 0 and 1.';
+                return;
+            }
+        }
+
+        const alpha = 1 - confPct / 100;
+        const twoSided = bonf ? false : (currentSided === 'two');
+        const tailAlpha = twoSided ? alpha / 2 : alpha;
+        const tailAlphaUsed = bonf ? tailAlpha / m : tailAlpha;
+        const z = invNorm(1 - tailAlphaUsed);
+
+        let n0;
+        if (currentType === 'continuous') {
+            n0 = Math.pow((z * sigma) / margin, 2);
+        } else {
+            n0 = (z * z * p * (1 - p)) / (margin * margin);
+        }
+
+        let nFinal = n0;
+        const fpcApplied = N !== null;
+        if (fpcApplied) {
+            nFinal = n0 / (1 + (n0 - 1) / N);
+        }
+        const nRounded = Math.ceil(nFinal);
+
+        // ── Build calculation panel ──
+        const tailSymbol = twoSided ? 'α/2' : 'α';
+        const lines = [];
+        lines.push('Confidence level: ' + confPct + '%  →  α = ' + fmt(alpha, 4));
+        if (bonf) {
+            lines.push('Bonferroni assumes all m tests one-sided  →  per-test tail probability = α = ' + fmt(tailAlpha, 4));
+            lines.push('Bonferroni correction (m = ' + m + '):  tail probability = α/m = ' + fmt(tailAlpha, 4) + ' / ' + m + ' = ' + fmt(tailAlphaUsed, 6));
+        } else {
+            lines.push('Test type: ' + (twoSided ? 'two-sided' : 'one-sided') + '  →  tail probability = ' + tailSymbol + ' = ' + fmt(tailAlpha, 4));
+        }
+        lines.push('Z = ' + fmt(z, 4));
+        if (currentType === 'continuous') {
+            lines.push('n₀ = (Z × σ / e)² = (' + fmt(z,4) + ' × ' + sigma + ' / ' + margin + ')² = ' + fmt(n0, 2));
+        } else {
+            lines.push('n₀ = Z² × p(1−p) / e² = ' + fmt(z,4) + '² × ' + p + '(1−' + p + ') / ' + margin + '² = ' + fmt(n0, 2));
+        }
+        if (fpcApplied) {
+            lines.push('Finite population correction (N = ' + N + '):  n = n₀ / (1 + (n₀−1)/N) = ' + fmt(n0,2) + ' / (1 + ' + fmt(n0-1,2) + '/' + N + ') = ' + fmt(nFinal, 2));
+        }
+        lines.push('Rounded up to a whole sample:  n = ' + nRounded);
+
+        calcPanel.innerHTML = lines.map(function(l, i) {
+            const cls = i === lines.length - 1 ? 'ss-calc-line ss-calc-final' : 'ss-calc-line';
+            return '<div class="' + cls + '">' + l + '</div>';
+        }).join('');
+
+        resultN.textContent = nRounded.toLocaleString();
+        resultBox.style.display = 'block';
+    }
+
+    function resetForm() {
+        document.getElementById('ss-sigma').value = '';
+        document.getElementById('ss-p').value = '0.5';
+        document.getElementById('ss-conf').value = '95';
+        document.getElementById('ss-margin').value = '';
+        document.getElementById('ss-pop').value = '';
+        document.getElementById('ss-m').value = '';
+        bonfToggle.checked = false;
+        bonfDetails.style.display = 'none';
+        sidedWrap.style.display = '';
+        errorMsg.textContent = '';
+        resultBox.style.display = 'none';
+        setType('continuous');
+        setSided('two');
+    }
+
+    calcBtn.addEventListener('click', calculate);
+    resetBtn.addEventListener('click', resetForm);
+})();
+</script>
