@@ -6,12 +6,271 @@ X-WR-CALDESC:Auto-updated weekly. 15 FAMU/FSU seminar\, colloquium\, and e
 X-WR-CALNAME:VMW Lab Seminar & Colloquium Calendar
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Dissertation Defense: Ritambhara Dubey
+DTSTART;TZID=America/New_York:20260819T143000
+DTEND;TZID=America/New_York:20260819T163000
+DTSTAMP:20260818T224144Z
+UID:d6b54ca22705d61a3a07b8e34037502331129530@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara
+ -dubey
+URL:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara-dubey
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Lunch & Conversation with President Marva B. Johnso
+ n
+DTSTART;TZID=America/New_York:20260820T113000
+DTEND;TZID=America/New_York:20260820T130000
+DTSTAMP:20260818T224144Z
+UID:04ba8013fe6dd8982645c56e0d3c31043bba5e9c@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/lunch-conversation-president-ma
+ rva-b-johnson
+URL:https://eng.famu.fsu.edu/event/lunch-conversation-president-marva-b-jo
+ hnson
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] New Engineering Faculty Orientation
+DTSTART;TZID=America/New_York:20260821T080000
+DTEND;TZID=America/New_York:20260821T170000
+DTSTAMP:20260818T224144Z
+UID:06c8aa20f9d4af501991481e48ccaa44498619c2@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/new-engineering-faculty-orienta
+ tion-0
+URL:https://eng.famu.fsu.edu/event/new-engineering-faculty-orientation-0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Chemical & Biomedical Engineering Grad Student Semi
+ nar
+DTSTART;TZID=America/New_York:20260904T110000
+DTEND;TZID=America/New_York:20260904T120000
+DTSTAMP:20260818T224144Z
+UID:820bec2c3d1242af11ced8265f75e7797ef623ee@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering
+ -grad-student-seminar
+URL:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering-grad-st
+ udent-seminar
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Joint Management Council Meeting
+DTSTART;TZID=America/New_York:20260909T150000
+DTEND;TZID=America/New_York:20260909T170000
+DTSTAMP:20260818T224144Z
+UID:5816d61a37b790d7eccbfdd4cfb7ce36461d60e8@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council-meetin
+ g-6
+URL:https://eng.famu.fsu.edu/event/joint-management-council-meeting-6
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Joint Management Council
+DTSTART;TZID=America/New_York:20260909T150000
+DTEND;TZID=America/New_York:20260909T160000
+DTSTAMP:20260818T224144Z
+UID:41470d5f5dbf645dc8b1e1cb4b1c4664c953b17f@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council
+URL:https://eng.famu.fsu.edu/event/joint-management-council
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Organizational meeting
+DTSTART;VALUE=DATE:20260825
+DTSTAMP:20260818T224144Z
+UID:87d01b221ea79cf85fe1828240666796ed511c40@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Sanghyun Lee
+DTSTART;VALUE=DATE:20260901
+DTSTAMP:20260818T224144Z
+UID:41c06665a27132760666ba06ad94588396bf1530@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Seungmin Lee
+DTSTART;VALUE=DATE:20260908
+DTSTAMP:20260818T224144Z
+UID:c643621e114d93f198f48ee8d77cb3e24bbccc6a@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Yi-Yung Yang
+DTSTART;VALUE=DATE:20260908
+DTSTAMP:20260818T224144Z
+UID:4e796efe66f83a458b69560968146a9a5bbcd67c@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Seul Lee
+DTSTART;VALUE=DATE:20260915
+DTSTAMP:20260818T224144Z
+UID:bf4f3439f3c470cbfe3eaeeb7556a50d6f183020@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: 09/25 (Fri) Joint Seminar with Data
+  Science and Machine Learning Seminar
+DTSTART;VALUE=DATE:20260925
+DTSTAMP:20260818T224144Z
+UID:d4653ba554744ca39a914361b99422e8bc29976e@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Dmitri Kuzmin
+DTSTART;VALUE=DATE:20260929
+DTSTAMP:20260818T224144Z
+UID:bcfbd751c60383f6144f44084ca04fcc19ed31b1@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Sachin Shanbhag
+DTSTART;VALUE=DATE:20261006
+DTSTAMP:20260818T224144Z
+UID:8391b87cbe6040b4b7254841f4f48e1a18e47a0d@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Kapil Chawla
+DTSTART;VALUE=DATE:20261013
+DTSTAMP:20260818T224144Z
+UID:a445c5a20dfe2c65e6aa040df7586f7dfb7546ad@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Pengjun Wang
+DTSTART;VALUE=DATE:20261013
+DTSTAMP:20260818T224144Z
+UID:6b293946cdab350ed1c7f25a765e606c2ee4f42f@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Chen Liu
+DTSTART;VALUE=DATE:20261020
+DTSTAMP:20260818T224144Z
+UID:19249a18b3086374fb2a6485eef3bf0d7361b2dc@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Teeratorn Kadeethum
+DTSTART;VALUE=DATE:20261027
+DTSTAMP:20260818T224144Z
+UID:0d766fefe2e36a30b8dd0fa37587c8d9e1e14ea5@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Jingqiao Tang
+DTSTART;VALUE=DATE:20261103
+DTSTAMP:20260818T224144Z
+UID:61c3fc2b467ebe4f9c52fa90c3404303e5481ed5@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Zixiang Xiong
+DTSTART;VALUE=DATE:20261103
+DTSTAMP:20260818T224144Z
+UID:dc58e4633fcb533e20b23df50200b0deb8243c32@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Milinda Fernando
+DTSTART;VALUE=DATE:20261201
+DTSTAMP:20260818T224144Z
+UID:c46c4fb7466cfa69220c983ec256af48c84eb8a4@vmwhite.github.io
+DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] ICON-Health Eminent Scholar Seminar Series Co
  mmittee
 DTSTART;VALUE=DATE:20260921
-DTSTAMP:20260818T221823Z
+DTSTAMP:20260818T224144Z
 UID:2aed6c4739d73f31e7366dbb84379c0fb007ea8c@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU CEE] Dean's Distinguished Seminar: Christina Thomas\, Ph
+ .D.
+DTSTART;TZID=America/New_York:20260925T110000
+DTEND;TZID=America/New_York:20260925T121500
+DTSTAMP:20260818T224144Z
+UID:4d3943e20f76174f478de1a3cc707b878172a2d9@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/deans-distinguished-seminar-chr
+ istina-thomas-phd
+URL:https://eng.famu.fsu.edu/event/deans-distinguished-seminar-christina-t
+ homas-phd
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU ECE] Dissertation Defense: Ritambhara Dubey
+DTSTART;TZID=America/New_York:20260819T143000
+DTEND;TZID=America/New_York:20260819T163000
+DTSTAMP:20260818T224144Z
+UID:15752206b1e39c9600f3e13853b5a91e92d1cc97@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara
+ -dubey
+URL:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara-dubey
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU ECE] Lunch & Conversation with President Marva B. Johnso
+ n
+DTSTART;TZID=America/New_York:20260820T113000
+DTEND;TZID=America/New_York:20260820T130000
+DTSTAMP:20260818T224144Z
+UID:fa6506aa854001b5b2ad2b3ed4435f30384973fe@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/lunch-conversation-president-ma
+ rva-b-johnson
+URL:https://eng.famu.fsu.edu/event/lunch-conversation-president-marva-b-jo
+ hnson
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU ECE] New Engineering Faculty Orientation
+DTSTART;TZID=America/New_York:20260821T080000
+DTEND;TZID=America/New_York:20260821T170000
+DTSTAMP:20260818T224144Z
+UID:b6ac087a54b9f03aad87b2178d960da500042fe6@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/new-engineering-faculty-orienta
+ tion-0
+URL:https://eng.famu.fsu.edu/event/new-engineering-faculty-orientation-0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU ECE] Chemical & Biomedical Engineering Grad Student Semi
+ nar
+DTSTART;TZID=America/New_York:20260904T110000
+DTEND;TZID=America/New_York:20260904T120000
+DTSTAMP:20260818T224144Z
+UID:a34de07a5e3505dec5ea969dd198b1258de1fc72@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering
+ -grad-student-seminar
+URL:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering-grad-st
+ udent-seminar
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU ECE] Joint Management Council Meeting
+DTSTART;TZID=America/New_York:20260909T150000
+DTEND;TZID=America/New_York:20260909T170000
+DTSTAMP:20260818T224144Z
+UID:554fee2f75bdbcec18bcfbff42b08244369b38e5@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council-meetin
+ g-6
+URL:https://eng.famu.fsu.edu/event/joint-management-council-meeting-6
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU ECE] Joint Management Council
+DTSTART;TZID=America/New_York:20260909T150000
+DTEND;TZID=America/New_York:20260909T160000
+DTSTAMP:20260818T224144Z
+UID:f3e9ab5b0c2a2c7d65e5687a5beae6326d125fd2@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council
+URL:https://eng.famu.fsu.edu/event/joint-management-council
 END:VEVENT
 END:VCALENDAR
