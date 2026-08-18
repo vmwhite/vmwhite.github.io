@@ -87,10 +87,11 @@ MONTH_NUM.update({
 
 # ---------------------------------------------------------------------------
 # Generic helper: FAMU-FSU College of Engineering department pages
-# (Drupal). IME, CEE, and ECE all share the identical "<Dept> Events"
-# section structure: a heading, then repeating (title link, date line,
-# time line) groups. Confirmed working for IME and CEE; ECE presumed
-# identical since it's the same Drupal site/theme.
+# (Drupal). IME, CEE, and ECE all embed the same "Upcoming Events" grid
+# widget: a heading, then a `.view-events-grid` block containing `.event`
+# cards, each with a `.title a` link, `.event-date` ("August 19, 2026"),
+# and an `.event-time` ("2:30pm-4:30pm"). Confirmed against live markup
+# for IME, CEE, and ECE.
 # ---------------------------------------------------------------------------
 def fetch_famu_fsu_dept_events(path, heading_substr, source_label):
     url = f"https://eng.famu.fsu.edu{path}"
@@ -105,57 +106,51 @@ def fetch_famu_fsu_dept_events(path, heading_substr, source_label):
             log(f"[{source_label}] Could not find '{heading_substr}' heading -- page structure may have changed")
             return events
 
-        def flush(title, link, date_obj, time_match):
-            """Emit one pending event given whatever we've collected so far."""
-            if not (title and date_obj):
-                return None
+        grid = heading.find_next(class_="view-events-grid")
+        cards = grid.select(".event") if grid else []
+        if not cards:
+            log(f"[{source_label}] Could not find event cards -- page structure may have changed")
+            return events
+
+        for card in cards:
+            link_tag = card.select_one(".title a")
+            date_tag = card.select_one(".event-date")
+            time_tag = card.select_one(".event-time")
+            if not link_tag or not date_tag:
+                continue
+            title = link_tag.get_text(strip=True)
+            link = requests.compat.urljoin(url, link_tag.get("href", ""))
+            try:
+                date_obj = dt.datetime.strptime(date_tag.get_text(strip=True), "%B %d, %Y").date()
+            except ValueError:
+                continue
+
             start, end, all_day = None, None, True
-            if time_match:
-                try:
-                    start_t = dt.datetime.strptime(time_match.group(1).upper().replace(" ", ""), "%I:%M%p")
-                    end_t = dt.datetime.strptime(time_match.group(2).upper().replace(" ", ""), "%I:%M%p")
-                    start = dt.datetime.combine(date_obj, start_t.time(), TZ)
-                    end = dt.datetime.combine(date_obj, end_t.time(), TZ)
-                    all_day = False
-                except ValueError:
-                    pass
+            if time_tag:
+                time_match = re.search(
+                    r"(\d{1,2}:\d{2}\s*[ap]m)\s*-\s*(\d{1,2}:\d{2}\s*[ap]m)",
+                    time_tag.get_text(strip=True), re.I,
+                )
+                if time_match:
+                    try:
+                        start_t = dt.datetime.strptime(time_match.group(1).upper().replace(" ", ""), "%I:%M%p")
+                        end_t = dt.datetime.strptime(time_match.group(2).upper().replace(" ", ""), "%I:%M%p")
+                        start = dt.datetime.combine(date_obj, start_t.time(), TZ)
+                        end = dt.datetime.combine(date_obj, end_t.time(), TZ)
+                        all_day = False
+                    except ValueError:
+                        pass
+
             if all_day:
                 if date_obj < TODAY - dt.timedelta(days=1):
-                    return None
-                return {"title": title, "start": date_obj, "end": None,
-                        "all_day": True, "url": link, "source": source_label}
-            if start < NOW - dt.timedelta(days=1):
-                return None
-            return {"title": title, "start": start, "end": end,
-                    "all_day": False, "url": link, "source": source_label}
-
-        node = heading.find_next_sibling()
-        title, link, date_obj, time_match = None, None, None, None
-        while node and node.name not in ("h2", "h3"):
-            text = node.get_text(" ", strip=True)
-            link_tag = node.find("a")
-            if link_tag and link_tag.get_text(strip=True):
-                # A new title link starts the next event -- flush whatever we had.
-                ev = flush(title, link, date_obj, time_match)
-                if ev:
-                    events.append(ev)
-                title = link_tag.get_text(strip=True)
-                link = requests.compat.urljoin(url, link_tag.get("href", ""))
-                date_obj, time_match = None, None
-            elif text and re.search(r"[A-Z][a-z]+ \d{1,2}, \d{4}", text):
-                dm = re.search(r"([A-Z][a-z]+ \d{1,2}, \d{4})", text)
-                try:
-                    date_obj = dt.datetime.strptime(dm.group(1), "%B %d, %Y").date()
-                except ValueError:
-                    date_obj = None
-            elif text and re.search(r"\d{1,2}:\d{2}\s*[ap]m\s*-\s*\d{1,2}:\d{2}\s*[ap]m", text, re.I):
-                time_match = re.search(
-                    r"(\d{1,2}:\d{2}\s*[ap]m)\s*-\s*(\d{1,2}:\d{2}\s*[ap]m)", text, re.I
-                )
-            node = node.find_next_sibling()
-        ev = flush(title, link, date_obj, time_match)
-        if ev:
-            events.append(ev)
+                    continue
+                events.append({"title": title, "start": date_obj, "end": None,
+                                "all_day": True, "url": link, "source": source_label})
+            else:
+                if start < NOW - dt.timedelta(days=1):
+                    continue
+                events.append({"title": title, "start": start, "end": end,
+                                "all_day": False, "url": link, "source": source_label})
     except Exception as e:
         log(f"[{source_label}] fetch failed: {e}")
     log(f"[{source_label}] {len(events)} events")
@@ -212,7 +207,10 @@ def fetch_localist_ics(source_label, dept_slug=None, query=None, base="https://c
 
 # ---------------------------------------------------------------------------
 # FSU Scientific Computing -- seminars + workshops (Joomla site, confirmed
-# NOT on FSU's Localist calendar). Best-effort HTML scrape.
+# NOT on FSU's Localist calendar). It's a paginated article-listing table:
+# each row is a `th.list-title a` (title, linking to the full post, whose
+# title embeds the talk date like "Colloquium with X (2026-04-22)") and a
+# `td.list-date` cell ("April 22 2026" -- no comma).
 # ---------------------------------------------------------------------------
 def fetch_sc_listing(path, source_label):
     url = f"https://www.sc.fsu.edu{path}"
@@ -222,29 +220,23 @@ def fetch_sc_listing(path, source_label):
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        articles = soup.select("article, .item, .blog-item") or soup.find_all(["h2", "h3"])
-        for art in articles:
-            link_tag = art.find("a", href=True) if art.name != "a" else art
-            if not link_tag:
+        table = soup.find("table")
+        rows = table.find_all("tr") if table else []
+        if not rows:
+            log(f"[{source_label}] Could not find listing table -- page structure may have changed")
+            return events
+
+        for row in rows:
+            link_tag = row.select_one(".list-title a") or row.find("a", href=True)
+            date_tag = row.select_one(".list-date")
+            if not link_tag or not date_tag:
                 continue
             title = link_tag.get_text(strip=True)
-            if not title or len(title) < 4:
+            if not title:
                 continue
             href = requests.compat.urljoin(url, link_tag["href"])
-
-            block_text = art.get_text(" ", strip=True)
-            date_match = re.search(
-                rf"(\d{{1,2}})\s*({MONTHS}|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\s*(\d{{4}})",
-                block_text, re.I,
-            )
-            if not date_match:
-                continue
-            day, month_str, year = date_match.groups()
-            month = MONTH_NUM.get(month_str.title()) or MONTH_NUM.get(month_str[:3].title())
-            if not month:
-                continue
             try:
-                date_obj = dt.date(int(year), month, int(day))
+                date_obj = dt.datetime.strptime(date_tag.get_text(strip=True), "%B %d %Y").date()
             except ValueError:
                 continue
             if date_obj < TODAY - dt.timedelta(days=1):
@@ -316,9 +308,9 @@ def fetch_stat_colloquia():
 # NOTE: this is a hand-maintained, semester-specific page
 # (ACM_Seminar_F_2026.html). It will need its URL updated to the new
 # semester's page once Spring 2027 goes up -- see README.
-# Format: a date line like "08/25" or "09/25 (changed date)", followed by
-# one or more <h3> talk-title headings, each followed by an affiliation
-# line, until the next date line.
+# Each week is an `article.seminar-card` with a `.seminar-date` div
+# ("08/25" or "09/25 (changed date)") and one or more `<h3>` headings
+# under `.seminar-main` (multiple on double-header weeks).
 # ---------------------------------------------------------------------------
 def fetch_acm_seminar(url="https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html", assumed_year=2026):
     events = []
@@ -327,30 +319,35 @@ def fetch_acm_seminar(url="https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        schedule_heading = soup.find(lambda tag: tag.name in ("h2", "h3") and "Schedule" in tag.get_text())
-        start_node = schedule_heading or soup.find("body")
-        node = start_node.find_next_sibling() if start_node else None
+        cards = soup.select("article.seminar-card")
+        if not cards:
+            log("[acm] Could not find seminar-card articles -- page structure may have changed")
+            return events
 
-        current_date = None
-        while node:
-            text = node.get_text(" ", strip=True) if hasattr(node, "get_text") else ""
-            date_match = re.match(r"(\d{1,2})/(\d{1,2})", text) if text else None
-            if date_match and len(text) < 40:
-                month, day = int(date_match.group(1)), int(date_match.group(2))
-                try:
-                    current_date = dt.date(assumed_year, month, day)
-                except ValueError:
-                    current_date = None
-            elif node.name == "h3" and current_date:
-                title = node.get_text(strip=True)
-                if title and title.upper() not in ("TBA", "NO SEMINAR"):
-                    if current_date >= TODAY - dt.timedelta(days=1):
-                        events.append({
-                            "title": f"ACM Seminar: {title}", "start": current_date,
-                            "end": None, "all_day": True, "url": url,
-                            "source": "FSU ACM Seminar",
-                        })
-            node = node.find_next_sibling()
+        for card in cards:
+            date_tag = card.select_one(".seminar-date")
+            if not date_tag:
+                continue
+            date_match = re.match(r"(\d{1,2})/(\d{1,2})", date_tag.get_text(strip=True))
+            if not date_match:
+                continue
+            month, day = int(date_match.group(1)), int(date_match.group(2))
+            try:
+                current_date = dt.date(assumed_year, month, day)
+            except ValueError:
+                continue
+            if current_date < TODAY - dt.timedelta(days=1):
+                continue
+
+            for h3 in card.select(".seminar-main h3"):
+                title = h3.get_text(strip=True)
+                if not title or title.upper() in ("TBA", "NO SEMINAR"):
+                    continue
+                events.append({
+                    "title": f"ACM Seminar: {title}", "start": current_date,
+                    "end": None, "all_day": True, "url": url,
+                    "source": "FSU ACM Seminar",
+                })
     except Exception as e:
         log(f"[acm] fetch failed: {e}")
     log(f"[acm] {len(events)} events")
