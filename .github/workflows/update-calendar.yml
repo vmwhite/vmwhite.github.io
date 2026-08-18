@@ -1,0 +1,40 @@
+name: Update seminar calendar
+
+on:
+  schedule:
+    # Every Monday at 08:00 US/Eastern (12:00 UTC during EST, 13:00 during
+    # EDT -- GitHub cron is UTC only, so we run at 12:00 UTC year-round;
+    # that's 7am/8am Eastern depending on daylight saving).
+    - cron: "0 12 * * 1"
+  workflow_dispatch: {}   # lets you click "Run workflow" manually on GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 icalendar
+
+      - name: Build calendar
+        run: python scripts/build_calendar.py
+
+      - name: Commit updated calendar if changed
+        run: |
+          git config user.name "seminar-calendar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/seminars.ics
+          if git diff --cached --quiet; then
+            echo "No changes to seminars.ics"
+          else
+            git commit -m "Auto-update seminar calendar"
+            git push
+          fi
