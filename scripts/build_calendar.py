@@ -162,15 +162,19 @@ def fetch_famu_fsu_dept_events(path, heading_substr, source_label):
 # dept_slug -> department-level feed (confirmed working for Economics).
 # query -> raw querystring appended to /calendar.ics for a filtered feed
 # (e.g. event_types[]=95096 for the "Artificial Intelligence" tag used by
-# FSU AI Events). The filtered form is best-effort/unverified.
+# FSU AI Events). `title_filter` (a compiled regex) keeps only events whose
+# summary matches it -- used against the full unfiltered feed for AI
+# Events, since Localist's `event_types[]=` querystring filter is blocked
+# by the server's WAF (403) and the guessed tag ID (95096) turned out to
+# be wrong anyway (it returned unrelated campus events, not AI talks).
 # ---------------------------------------------------------------------------
-def fetch_localist_ics(source_label, dept_slug=None, query=None, base="https://calendar.fsu.edu"):
+def fetch_localist_ics(source_label, dept_slug=None, query=None, title_filter=None, base="https://calendar.fsu.edu"):
     if dept_slug:
         url = f"{base}/department/{dept_slug}/calendar/ics"
     elif query:
         url = f"{base}/calendar.ics?{query}"
     else:
-        raise ValueError("fetch_localist_ics needs dept_slug or query")
+        url = f"{base}/calendar.ics"
 
     events = []
     try:
@@ -179,6 +183,8 @@ def fetch_localist_ics(source_label, dept_slug=None, query=None, base="https://c
         cal = Calendar.from_ical(r.content)
         for comp in cal.walk("VEVENT"):
             summary = str(comp.get("summary", "Untitled event"))
+            if title_filter and not title_filter.search(summary):
+                continue
             dtstart = comp.get("dtstart").dt
             dtend = comp.get("dtend").dt if comp.get("dtend") else None
             link = str(comp.get("url", "")) or url
@@ -665,21 +671,31 @@ def fetch_math_events():
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        if "no upcoming events" in soup.get_text(" ", strip=True).lower():
-            log("[math] 0 events (page reports none currently scheduled)")
+        title_fields = soup.select(".views-field-title")
+        if not title_fields:
+            log("[math] Could not find event listing -- page structure may have changed")
             return events
 
-        for link_tag in soup.select("main a[href*='/event']"):
+        for title_field in title_fields:
+            link_tag = title_field.find("a", href=True)
+            if not link_tag:
+                continue
             title = link_tag.get_text(strip=True)
             if not title:
                 continue
-            container = link_tag.find_parent(["article", "div", "li"]) or link_tag.parent
-            block_text = container.get_text(" ", strip=True) if container else ""
-            m = re.search(rf"({MONTHS})\s+(\d{{1,2}}),?\s*(\d{{4}})", block_text)
+
+            row = title_field.find_parent(lambda tag: tag.find("div", class_="views-field-field-time-s") is not None)
+            time_field = row.select_one(".views-field-field-time-s .field-content") if row else None
+            if not time_field:
+                continue
+            m = re.search(
+                rf"({MONTHS}|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{{1,2}}),\s*(\d{{4}})",
+                time_field.get_text(strip=True),
+            )
             if not m:
                 continue
             month_str, day_str, year_str = m.groups()
-            month = MONTH_NUM.get(month_str)
+            month = MONTH_NUM.get(month_str) or MONTH_NUM.get(month_str[:3].title())
             try:
                 date_obj = dt.date(int(year_str), month, int(day_str))
             except (ValueError, TypeError):
@@ -743,8 +759,11 @@ def main():
     # 6. FSU Scientific Computing Seminars (+ bonus: Workshops)
     all_events += fetch_sc_listing("/news-and-events/seminars", "FSU Scientific Computing Seminars")
     all_events += fetch_sc_listing("/news-and-events/workshops", "FSU Scientific Computing Workshops")
-    # 7. FSU AI Events (Localist, filtered by tag -- best-effort/unverified slug)
-    all_events += fetch_localist_ics("FSU AI Events", query="event_types%5B%5D=95096")
+    # 7. FSU AI Events (full campus Localist feed, filtered client-side by
+    # title, since the tag-filtered querystring is blocked by the server)
+    all_events += fetch_localist_ics(
+        "FSU AI Events", title_filter=re.compile(r"\bAI\b|artificial intelligence", re.I)
+    )
     # 8. Translational Research Seminar Series
     all_events += fetch_translational_seminar()
     # 9. FAMU CoPPS/IPH News & Events

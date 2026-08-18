@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:[FAMU-FSU IME] Dissertation Defense: Ritambhara Dubey
 DTSTART;TZID=America/New_York:20260819T143000
 DTEND;TZID=America/New_York:20260819T163000
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:d6b54ca22705d61a3a07b8e34037502331129530@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara
  -dubey
@@ -20,7 +20,7 @@ SUMMARY:[FAMU-FSU IME] Lunch & Conversation with President Marva B. Johnso
  n
 DTSTART;TZID=America/New_York:20260820T113000
 DTEND;TZID=America/New_York:20260820T130000
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:04ba8013fe6dd8982645c56e0d3c31043bba5e9c@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/lunch-conversation-president-ma
  rva-b-johnson
@@ -31,7 +31,7 @@ BEGIN:VEVENT
 SUMMARY:[FAMU-FSU IME] New Engineering Faculty Orientation
 DTSTART;TZID=America/New_York:20260821T080000
 DTEND;TZID=America/New_York:20260821T170000
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:06c8aa20f9d4af501991481e48ccaa44498619c2@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/new-engineering-faculty-orienta
  tion-0
@@ -42,7 +42,7 @@ SUMMARY:[FAMU-FSU IME] Chemical & Biomedical Engineering Grad Student Semi
  nar
 DTSTART;TZID=America/New_York:20260904T110000
 DTEND;TZID=America/New_York:20260904T120000
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:820bec2c3d1242af11ced8265f75e7797ef623ee@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering
  -grad-student-seminar
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 SUMMARY:[FAMU-FSU IME] Joint Management Council Meeting
 DTSTART;TZID=America/New_York:20260909T150000
 DTEND;TZID=America/New_York:20260909T170000
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:5816d61a37b790d7eccbfdd4cfb7ce36461d60e8@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council-meetin
  g-6
@@ -63,7 +63,7 @@ BEGIN:VEVENT
 SUMMARY:[FAMU-FSU IME] Joint Management Council
 DTSTART;TZID=America/New_York:20260909T150000
 DTEND;TZID=America/New_York:20260909T160000
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:41470d5f5dbf645dc8b1e1cb4b1c4664c953b17f@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council
 URL:https://eng.famu.fsu.edu/event/joint-management-council
@@ -71,7 +71,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Organizational meeting
 DTSTART;VALUE=DATE:20260825
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:87d01b221ea79cf85fe1828240666796ed511c40@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -79,7 +79,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Sanghyun Lee
 DTSTART;VALUE=DATE:20260901
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:41c06665a27132760666ba06ad94588396bf1530@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -87,7 +87,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Seungmin Lee
 DTSTART;VALUE=DATE:20260908
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:c643621e114d93f198f48ee8d77cb3e24bbccc6a@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -95,7 +95,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Yi-Yung Yang
 DTSTART;VALUE=DATE:20260908
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:4e796efe66f83a458b69560968146a9a5bbcd67c@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -103,7 +103,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Seul Lee
 DTSTART;VALUE=DATE:20260915
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:bf4f3439f3c470cbfe3eaeeb7556a50d6f183020@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -112,7 +112,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: 09/25 (Fri) Joint Seminar with Data
   Science and Machine Learning Seminar
 DTSTART;VALUE=DATE:20260925
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:d4653ba554744ca39a914361b99422e8bc29976e@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -120,7 +120,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Dmitri Kuzmin
 DTSTART;VALUE=DATE:20260929
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:bcfbd751c60383f6144f44084ca04fcc19ed31b1@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -128,7 +128,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Sachin Shanbhag
 DTSTART;VALUE=DATE:20261006
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:8391b87cbe6040b4b7254841f4f48e1a18e47a0d@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -136,7 +136,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Kapil Chawla
 DTSTART;VALUE=DATE:20261013
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:a445c5a20dfe2c65e6aa040df7586f7dfb7546ad@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -144,7 +144,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Pengjun Wang
 DTSTART;VALUE=DATE:20261013
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:6b293946cdab350ed1c7f25a765e606c2ee4f42f@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -152,7 +152,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Chen Liu
 DTSTART;VALUE=DATE:20261020
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:19249a18b3086374fb2a6485eef3bf0d7361b2dc@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -160,7 +160,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Teeratorn Kadeethum
 DTSTART;VALUE=DATE:20261027
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:0d766fefe2e36a30b8dd0fa37587c8d9e1e14ea5@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -168,7 +168,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Jingqiao Tang
 DTSTART;VALUE=DATE:20261103
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:61c3fc2b467ebe4f9c52fa90c3404303e5481ed5@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -176,7 +176,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Zixiang Xiong
 DTSTART;VALUE=DATE:20261103
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:dc58e4633fcb533e20b23df50200b0deb8243c32@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -184,93 +184,160 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Milinda Fernando
 DTSTART;VALUE=DATE:20261201
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:c46c4fb7466cfa69220c983ec256af48c84eb8a4@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[FSU AI Events] AI in Action: Real World Applications\, Hosted by 
+ Citi
+DTSTART:20260928T200000Z
+DTEND:20260928T210000Z
+DTSTAMP:20260818T225303Z
+UID:eb858a68ca1cdf5339bbcc5d62af0c4050ba2188@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/ai-in-action-real-world-applica
+ tions-hosted-by-citi
+URL:https://calendar.fsu.edu/event/ai-in-action-real-world-applications-ho
+ sted-by-citi
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] AI-Powered Tools for Literature Review
+DTSTART:20260930T220000Z
+DTEND:20260930T233000Z
+DTSTAMP:20260818T225303Z
+UID:b2ff0e51439523a20847c60d1b93a04e78754722@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/Fall26-AI-LitReview-Sept30
+URL:https://calendar.fsu.edu/event/Fall26-AI-LitReview-Sept30
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
+DTSTART:20261012T210000Z
+DTEND:20261012T220000Z
+DTSTAMP:20260818T225303Z
+UID:05b1e5a1d319451c7496b3d6804c64b104837159@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
+ for-career-success
+URL:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-for-care
+ er-success
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] AI for Team Science: Working Smarter\, Together
+DTSTART:20261022T121500Z
+DTEND:20261022T134500Z
+DTSTAMP:20260818T225303Z
+UID:c991e3c8a3bd18a6cddb2f2061a84b6e6c6b85cd@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/ai-for-team-science
+URL:https://calendar.fsu.edu/event/ai-for-team-science
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] AI-Powered Tools for Literature Review
+DTSTART:20261102T190000Z
+DTEND:20261102T201500Z
+DTSTAMP:20260818T225303Z
+UID:fb76461088b6952ab2c68925fe81fdbd19b4d0b7@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/Fall26-AILitReview-Nov2
+URL:https://calendar.fsu.edu/event/Fall26-AILitReview-Nov2
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
+DTSTART:20261130T170000Z
+DTEND:20261130T180000Z
+DTSTAMP:20260818T225303Z
+UID:95ca81bdba3fba05aec51dcee2d9ce254443a340@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
+ for-career-success-9199
+URL:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-for-care
+ er-success-9199
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] ICON-Health Eminent Scholar Seminar Series Co
  mmittee
 DTSTART;VALUE=DATE:20260921
-DTSTAMP:20260818T224144Z
+DTSTAMP:20260818T225303Z
 UID:2aed6c4739d73f31e7366dbb84379c0fb007ea8c@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU CEE] Dean's Distinguished Seminar: Christina Thomas\, Ph
- .D.
-DTSTART;TZID=America/New_York:20260925T110000
-DTEND;TZID=America/New_York:20260925T121500
-DTSTAMP:20260818T224144Z
-UID:4d3943e20f76174f478de1a3cc707b878172a2d9@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/deans-distinguished-seminar-chr
- istina-thomas-phd
-URL:https://eng.famu.fsu.edu/event/deans-distinguished-seminar-christina-t
- homas-phd
+SUMMARY:[FSU Mathematics] Harbir Antil\, lecture title TBA
+DTSTART;VALUE=DATE:20260918
+DTSTAMP:20260818T225303Z
+UID:51aabc34ff26d13b97063f23425644122aa75a85@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/harbir-antil-lecture-title-t
+ ba
+URL:https://mathematics.fsu.edu/event/harbir-antil-lecture-title-tba
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU ECE] Dissertation Defense: Ritambhara Dubey
-DTSTART;TZID=America/New_York:20260819T143000
-DTEND;TZID=America/New_York:20260819T163000
-DTSTAMP:20260818T224144Z
-UID:15752206b1e39c9600f3e13853b5a91e92d1cc97@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara
- -dubey
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-ritambhara-dubey
+SUMMARY:[FSU Mathematics] Kasso Okoudjou\, lecture title TBA
+DTSTART;VALUE=DATE:20261009
+DTSTAMP:20260818T225303Z
+UID:a0ad5dcc8972dc17f0faa2b5776300108feaea6a@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/kasso-okoudjou-lecture-title
+ -tba
+URL:https://mathematics.fsu.edu/event/kasso-okoudjou-lecture-title-tba
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU ECE] Lunch & Conversation with President Marva B. Johnso
- n
-DTSTART;TZID=America/New_York:20260820T113000
-DTEND;TZID=America/New_York:20260820T130000
-DTSTAMP:20260818T224144Z
-UID:fa6506aa854001b5b2ad2b3ed4435f30384973fe@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/lunch-conversation-president-ma
- rva-b-johnson
-URL:https://eng.famu.fsu.edu/event/lunch-conversation-president-marva-b-jo
- hnson
+SUMMARY:[FSU Mathematics] Karen Smith\, lecture title TBA
+DTSTART;VALUE=DATE:20261016
+DTSTAMP:20260818T225303Z
+UID:7113dc6173d829ad4311929d50d70fd961b3f266@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/karen-smith-lecture-title-tb
+ a
+URL:https://mathematics.fsu.edu/event/karen-smith-lecture-title-tba
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU ECE] New Engineering Faculty Orientation
-DTSTART;TZID=America/New_York:20260821T080000
-DTEND;TZID=America/New_York:20260821T170000
-DTSTAMP:20260818T224144Z
-UID:b6ac087a54b9f03aad87b2178d960da500042fe6@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/new-engineering-faculty-orienta
- tion-0
-URL:https://eng.famu.fsu.edu/event/new-engineering-faculty-orientation-0
+SUMMARY:[FSU Mathematics] Kresimir Josic\, lecture title TBA
+DTSTART;VALUE=DATE:20261023
+DTSTAMP:20260818T225303Z
+UID:0fa171511078958ef4118ea4bafa7e6c1bc31796@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/kresimir-josic-lecture-title
+ -tba
+URL:https://mathematics.fsu.edu/event/kresimir-josic-lecture-title-tba
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU ECE] Chemical & Biomedical Engineering Grad Student Semi
- nar
-DTSTART;TZID=America/New_York:20260904T110000
-DTEND;TZID=America/New_York:20260904T120000
-DTSTAMP:20260818T224144Z
-UID:a34de07a5e3505dec5ea969dd198b1258de1fc72@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering
- -grad-student-seminar
-URL:https://eng.famu.fsu.edu/event/chemical-biomedical-engineering-grad-st
- udent-seminar
+SUMMARY:[FSU Mathematics] Rongjie Lai\, lecture title TBA
+DTSTART;VALUE=DATE:20261030
+DTSTAMP:20260818T225303Z
+UID:49d93e32e4a123f419af23cc52021d722f28ea67@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/rongjie-lai-lecture-title-tb
+ a
+URL:https://mathematics.fsu.edu/event/rongjie-lai-lecture-title-tba
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU ECE] Joint Management Council Meeting
-DTSTART;TZID=America/New_York:20260909T150000
-DTEND;TZID=America/New_York:20260909T170000
-DTSTAMP:20260818T224144Z
-UID:554fee2f75bdbcec18bcfbff42b08244369b38e5@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council-meetin
- g-6
-URL:https://eng.famu.fsu.edu/event/joint-management-council-meeting-6
+SUMMARY:[FSU Mathematics] Guowei Wei\, lecture title TBA
+DTSTART;VALUE=DATE:20261106
+DTSTAMP:20260818T225303Z
+UID:ecfb0365ff94a0d4d4cbe54c64091fd98a43ddbb@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/guowei-wei-lecture-title-tba
+URL:https://mathematics.fsu.edu/event/guowei-wei-lecture-title-tba
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU ECE] Joint Management Council
-DTSTART;TZID=America/New_York:20260909T150000
-DTEND;TZID=America/New_York:20260909T160000
-DTSTAMP:20260818T224144Z
-UID:f3e9ab5b0c2a2c7d65e5687a5beae6326d125fd2@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/joint-management-council
-URL:https://eng.famu.fsu.edu/event/joint-management-council
+SUMMARY:[FSU Mathematics] Tomasz Mrowka\, lecture title TBA
+DTSTART;VALUE=DATE:20261112
+DTSTAMP:20260818T225303Z
+UID:aa15acc6cfc7aeb8b5ec156b3e2a16bbbda40a47@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/tomasz-mrowka-lecture-title-
+ tba
+URL:https://mathematics.fsu.edu/event/tomasz-mrowka-lecture-title-tba
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU Mathematics] Gigliola Staffilani\, lecture title TBA
+DTSTART;VALUE=DATE:20261113
+DTSTAMP:20260818T225303Z
+UID:bdaeddeeee6e4a54b2d27a122511628172c3e9d4@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/gigliola-staffilani-lecture-
+ title-tba
+URL:https://mathematics.fsu.edu/event/gigliola-staffilani-lecture-title-tb
+ a
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU Mathematics] Anna L. Mazzucato\, lecture title TBA
+DTSTART;VALUE=DATE:20261204
+DTSTAMP:20260818T225303Z
+UID:fffd5d827d535270441440c14e22c7fda2b32f3c@vmwhite.github.io
+DESCRIPTION:https://mathematics.fsu.edu/event/anna-l-mazzucato-lecture-tit
+ le-tba
+URL:https://mathematics.fsu.edu/event/anna-l-mazzucato-lecture-title-tba
 END:VEVENT
 END:VCALENDAR
