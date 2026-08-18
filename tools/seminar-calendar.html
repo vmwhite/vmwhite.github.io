@@ -1,0 +1,92 @@
+<div class="tool-card">
+    <h2>Seminar &amp; Colloquium Calendar</h2>
+    <p class="tool-desc">
+        A combined calendar of upcoming talks from 15 FAMU/FSU sources &mdash;
+        IME, CEE, ECE, Economics, Statistics, Scientific Computing, Mathematics
+        (incl. the ACM Seminar), Criminology, Computer Science, AI@FSU,
+        ICON-Health, the College of Medicine Seminar Series, the Translational
+        Research Seminar Series, and FAMU CoPPS/IPH. Updates automatically
+        every Monday morning.
+    </p>
+
+    <div class="sc-actions">
+        <a class="btn btn-primary" href="webcal://vmwhite.github.io/tools/seminars.ics">Subscribe in Outlook / Apple Calendar</a>
+        <a class="btn btn-secondary" href="https://vmwhite.github.io/tools/seminars.ics">Download .ics</a>
+    </div>
+
+    <details class="sc-instructions">
+        <summary>How to add this to Outlook (once)</summary>
+        <div class="sc-instructions-body">
+            <ol>
+                <li>Copy this link: <code>https://vmwhite.github.io/tools/seminars.ics</code></li>
+                <li>In Outlook (web or desktop), go to <strong>Calendar</strong> &rarr; <strong>Add calendar</strong> &rarr; <strong>Subscribe from web</strong>.</li>
+                <li>Paste the link, give it a name (e.g. "Seminar Calendar"), and save.</li>
+                <li>Outlook will check the link for updates periodically on its own &mdash; no need to redo this.</li>
+            </ol>
+            <p>Tell your students to do the same with that one link, and their calendars will stay in sync automatically.</p>
+        </div>
+    </details>
+</div>
+
+<style>
+    .sc-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 4px 0 8px;
+    }
+    .sc-actions .btn {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .sc-instructions {
+        margin: 22px 0 4px;
+        border: 1.5px solid rgba(255,44,90,0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .sc-instructions summary {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+        font-weight: bold;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        opacity: 0.7;
+        user-select: none;
+    }
+    .sc-instructions summary::-webkit-details-marker { display: none; }
+    .sc-instructions summary::before {
+        content: '▸';
+        font-size: 0.7rem;
+        transition: transform 0.2s;
+        color: rgb(255,44,90);
+    }
+    .sc-instructions[open] summary::before { transform: rotate(90deg); }
+    .sc-instructions summary:hover { opacity: 1; }
+    .sc-instructions-body {
+        padding: 4px 16px 16px;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        opacity: 0.85;
+    }
+    .sc-instructions-body ol {
+        margin: 0 0 10px;
+        padding-left: 22px;
+    }
+    .sc-instructions-body li { margin-bottom: 6px; }
+    .sc-instructions-body code {
+        background: rgba(255,44,90,0.08);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.85em;
+    }
+
+    @media screen and (max-width: 420px) {
+        .sc-actions { flex-direction: column; }
+    }
+</style>
