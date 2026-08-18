@@ -755,10 +755,10 @@ def main():
     all_events += fetch_icon_health_events()
     # 12. College of Medicine Seminar Series
     all_events += fetch_com_seminar_series()
-    # 13. FAMU-FSU CEE
-    all_events += fetch_famu_fsu_dept_events("/cee", "CEE Events", "FAMU-FSU CEE")
-    # 14. FAMU-FSU ECE
-    all_events += fetch_famu_fsu_dept_events("/ece", "ECE Events", "FAMU-FSU ECE")
+    # 13. FAMU-FSU CEE - just copies of IME events
+    #all_events += fetch_famu_fsu_dept_events("/cee", "CEE Events", "FAMU-FSU CEE")
+    # 14. FAMU-FSU ECE - just copies of IME events
+    #all_events += fetch_famu_fsu_dept_events("/ece", "ECE Events", "FAMU-FSU ECE")
     # 15. FSU Mathematics
     all_events += fetch_math_events()
 
