@@ -6,83 +6,68 @@ X-WR-CALDESC:Auto-updated weekly. 15 FAMU/FSU seminar, colloquium, and eve
 X-WR-CALNAME:VMW Lab Seminar & Colloquium Calendar
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Engineering Job & Internship Fair
-DTSTART;TZID=America/New_York:20260922T090000
-DTEND;TZID=America/New_York:20260922T140000
-DTSTAMP:20260921T175428Z
-UID:adc83d927e0ef372d5e29eb29a356e926507829e@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/engineering-job-internship-fair
- -0
-URL:https://eng.famu.fsu.edu/event/engineering-job-internship-fair-0
+SUMMARY:[FAMU-FSU IME] Boeing Campus Visit Tabling
+DTSTART;TZID=America/New_York:20260929T080000
+DTEND;TZID=America/New_York:20260929T140000
+DTSTAMP:20260928T191740Z
+UID:b8a49e77486313b6c1a660daaaec3179344ec6b7@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/boeing-campus-visit-tabling-0
+URL:https://eng.famu.fsu.edu/event/boeing-campus-visit-tabling-0
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] ORNL Undergrad Internship Opportunities
-DTSTART;TZID=America/New_York:20260924T110000
-DTEND;TZID=America/New_York:20260924T120000
-DTSTAMP:20260921T175428Z
-UID:705fedbef4d9745a6fe8dd7a3e875b63f2049570@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/ornl-undergrad-internship-oppor
- tunities
-URL:https://eng.famu.fsu.edu/event/ornl-undergrad-internship-opportunities
+SUMMARY:[FAMU-FSU IME] Owens Corning Industry Connect Tabling
+DTSTART;TZID=America/New_York:20260929T100000
+DTEND;TZID=America/New_York:20260929T160000
+DTSTAMP:20260928T191740Z
+UID:c5feb06ac48dfdae3d990712d67f7b2a4eb162fa@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/owens-corning-industry-connect-
+ tabling
+URL:https://eng.famu.fsu.edu/event/owens-corning-industry-connect-tabling
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] ORNL Grad Student Internship Opportunities
-DTSTART;TZID=America/New_York:20260924T123000
-DTEND;TZID=America/New_York:20260924T133000
-DTSTAMP:20260921T175428Z
-UID:ecc079e5d898d19a500508dd6459ad495608dadf@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/ornl-grad-student-internship-op
- portunities
-URL:https://eng.famu.fsu.edu/event/ornl-grad-student-internship-opportunit
- ies
+SUMMARY:[FAMU-FSU IME] Redline Logic “Blind as a Bat” Hackathon
+DTSTART;TZID=America/New_York:20261001T170000
+DTEND;TZID=America/New_York:20261001T150000
+DTSTAMP:20260928T191740Z
+UID:a35ebfe07508659d7bfec871d0185da526270dc9@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/redline-logic-blind-bat-hackath
+ on
+URL:https://eng.famu.fsu.edu/event/redline-logic-blind-bat-hackathon
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dean's Distinguished Seminar: Christina Thomas\, Ph
- .D.
-DTSTART;TZID=America/New_York:20260925T110000
-DTEND;TZID=America/New_York:20260925T121500
-DTSTAMP:20260921T175428Z
-UID:09c2e322b1dfed1f6ad0259bd4f5ee814b8c7880@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/deans-distinguished-seminar-chr
- istina-thomas-phd
-URL:https://eng.famu.fsu.edu/event/deans-distinguished-seminar-christina-t
- homas-phd
+SUMMARY:[FAMU-FSU IME] Open Lab: Rising Seniors
+DTSTART;TZID=America/New_York:20261002T090000
+DTEND;TZID=America/New_York:20261002T140000
+DTSTAMP:20260928T191740Z
+UID:8874c7b3459601d309fb58030a19c09a6329d55a@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/open-lab-rising-seniors
+URL:https://eng.famu.fsu.edu/event/open-lab-rising-seniors
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] 3D-Printable Geopolymer Concrete Rheology
-DTSTART;TZID=America/New_York:20260925T123000
-DTEND;TZID=America/New_York:20260925T133000
-DTSTAMP:20260921T175428Z
-UID:1d69b840291ab7f72b7bcf0c96f294f260bd4a67@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/3d-printable-geopolymer-concret
- e-rheology
-URL:https://eng.famu.fsu.edu/event/3d-printable-geopolymer-concrete-rheolo
- gy
+SUMMARY:[FAMU-FSU IME] Systems Biomedicine and Pharmaceutics: Multiscale M
+ odeling of Tissue Remodeling and Damage
+DTSTART;TZID=America/New_York:20261002T110000
+DTEND;TZID=America/New_York:20261002T120000
+DTSTAMP:20260928T191740Z
+UID:0d936fc599ceb101bb4dcffda9d2eff169097932@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/systems-biomedicine-and-pharmac
+ eutics-multiscale-modeling-tissue-remodeling-and-damage
+URL:https://eng.famu.fsu.edu/event/systems-biomedicine-and-pharmaceutics-m
+ ultiscale-modeling-tissue-remodeling-and-damage
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] FSU Family Weekend Engineering Open House
-DTSTART;TZID=America/New_York:20260925T150000
-DTEND;TZID=America/New_York:20260925T170000
-DTSTAMP:20260921T175428Z
-UID:1c47e3ff8b57c460afba644325a4f009def55ae6@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/fsu-family-weekend-engineering-
- open-house
-URL:https://eng.famu.fsu.edu/event/fsu-family-weekend-engineering-open-hou
- se
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FSU ACM Seminar] ACM Seminar: 09/25 (Fri) Joint Seminar with Data
-  Science and Machine Learning Seminar
-DTSTART;VALUE=DATE:20260925
-DTSTAMP:20260921T175428Z
-UID:d4653ba554744ca39a914361b99422e8bc29976e@vmwhite.github.io
-DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
-URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+SUMMARY:[FAMU-FSU IME] Introduction to Overleaf
+DTSTART;TZID=America/New_York:20261005T150000
+DTEND;TZID=America/New_York:20261005T161500
+DTSTAMP:20260928T191740Z
+UID:87e0fe7b33e3696df52264d6c0db1dfa95e94a35@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/introduction-overleaf
+URL:https://eng.famu.fsu.edu/event/introduction-overleaf
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Dmitri Kuzmin
 DTSTART;VALUE=DATE:20260929
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:bcfbd751c60383f6144f44084ca04fcc19ed31b1@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -90,7 +75,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Sachin Shanbhag
 DTSTART;VALUE=DATE:20261006
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:8391b87cbe6040b4b7254841f4f48e1a18e47a0d@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -98,7 +83,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Kapil Chawla
 DTSTART;VALUE=DATE:20261013
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:a445c5a20dfe2c65e6aa040df7586f7dfb7546ad@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -106,7 +91,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Pengjun Wang
 DTSTART;VALUE=DATE:20261013
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:6b293946cdab350ed1c7f25a765e606c2ee4f42f@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -114,7 +99,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Chen Liu
 DTSTART;VALUE=DATE:20261020
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:19249a18b3086374fb2a6485eef3bf0d7361b2dc@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -122,7 +107,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Teeratorn Kadeethum
 DTSTART;VALUE=DATE:20261027
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:0d766fefe2e36a30b8dd0fa37587c8d9e1e14ea5@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -130,7 +115,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Jingqiao Tang
 DTSTART;VALUE=DATE:20261103
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:61c3fc2b467ebe4f9c52fa90c3404303e5481ed5@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -138,7 +123,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Zixiang Xiong
 DTSTART;VALUE=DATE:20261103
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:dc58e4633fcb533e20b23df50200b0deb8243c32@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -146,7 +131,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Hemanta Kumar
 DTSTART;VALUE=DATE:20261110
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:656c435dd8987684ab71c5ddcae5e8abaff83941@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -154,38 +139,28 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Milinda Fernando
 DTSTART;VALUE=DATE:20261201
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:c46c4fb7466cfa69220c983ec256af48c84eb8a4@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FSU AI Events] CDPH Brown Bag Seminar: Population Simulation with
-  Generative AI
-DTSTART:20260925T160000Z
-DTEND:20260925T170000Z
-DTSTAMP:20260921T175428Z
-UID:6d3373765206a0443026d33fa94169463cfb2d03@vmwhite.github.io
-DESCRIPTION:https://calendar.fsu.edu/event/cdph-brown-bag-seminar-populati
- on-simulation-with-generative-ai
-URL:https://calendar.fsu.edu/event/cdph-brown-bag-seminar-population-simul
- ation-with-generative-ai
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FSU AI Events] SC AI/ML Seminar
-DTSTART:20260925T160000Z
-DTEND:20260925T170000Z
-DTSTAMP:20260921T175428Z
-UID:cad9eb5cc795177a635b7d0527c7de3d281c2697@vmwhite.github.io
-DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
-URL:https://calendar.fsu.edu/event/sc-ai-seminar
+SUMMARY:[FSU Scientific Computing Seminars] Colloquium with Zlatko Sokolik
+ j (2026-09-30)
+DTSTART;VALUE=DATE:20260930
+DTSTAMP:20260928T191740Z
+UID:49a3f98183ba4f6eaffa9e09cb5a3c0862eb39ca@vmwhite.github.io
+DESCRIPTION:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-w
+ ith-zlatko-sokolikj-2026-09-30
+URL:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-with-zlat
+ ko-sokolikj-2026-09-30
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] AI in Action: Real World Applications\, Hosted by 
  Citi
 DTSTART:20260928T200000Z
 DTEND:20260928T210000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:eb858a68ca1cdf5339bbcc5d62af0c4050ba2188@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/ai-in-action-real-world-applica
  tions-hosted-by-citi
@@ -193,37 +168,53 @@ URL:https://calendar.fsu.edu/event/ai-in-action-real-world-applications-ho
  sted-by-citi
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FSU AI Events] AI-Powered Tools for Literature Review
-DTSTART:20260930T220000Z
-DTEND:20260930T233000Z
-DTSTAMP:20260921T175428Z
-UID:b2ff0e51439523a20847c60d1b93a04e78754722@vmwhite.github.io
-DESCRIPTION:https://calendar.fsu.edu/event/Fall26-AI-LitReview-Sept30
-URL:https://calendar.fsu.edu/event/Fall26-AI-LitReview-Sept30
+SUMMARY:[FSU AI Events] Using AI Tools to Help You Study
+DTSTART:20261001T220000Z
+DTEND:20261001T230000Z
+DTSTAMP:20260928T191740Z
+UID:e18c101424429e6b737074b6b12cb0105b7f2830@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/using-ai-tools-to-help-you-stud
+ y-4322
+URL:https://calendar.fsu.edu/event/using-ai-tools-to-help-you-study-4322
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] ReliaQuest: Agentic Defense in the Age of AI-Drive
+ n Attackers
+DTSTART:20261002T143000Z
+DTEND:20261002T153000Z
+DTSTAMP:20260928T191740Z
+UID:205917661b8f31c9e9b7562d69c7e356bb02d7cd@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/reliaquest-agentic-defense-in-t
+ he-age-of-ai-driven-attackers
+URL:https://calendar.fsu.edu/event/reliaquest-agentic-defense-in-the-age-o
+ f-ai-driven-attackers
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261002T160000Z
 DTEND:20261002T170000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:7689018695d4f15fbaaaad4d275d22de706f4e33@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FSU AI Events] Author Rights\, Licensing\, & Gen AI 
-DTSTART:20261006T160000Z
-DTEND:20261006T170000Z
-DTSTAMP:20260921T175428Z
-UID:3d8c17ebf470caa51ac32fae434deb17bda421cd@vmwhite.github.io
-DESCRIPTION:https://calendar.fsu.edu/event/F26-UAP-Licensing-Oct6
-URL:https://calendar.fsu.edu/event/F26-UAP-Licensing-Oct6
+SUMMARY:[FSU AI Events] AI Unlocked: Decoding Prompt Injection - CrowdStri
+ ke
+DTSTART:20261008T143000Z
+DTEND:20261008T160000Z
+DTSTAMP:20260928T191740Z
+UID:553e8d4065fc79e23c0bb420b64539661fec0ea2@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/ai-unlocked-decoding-prompt-inj
+ ection-crowdstrike
+URL:https://calendar.fsu.edu/event/ai-unlocked-decoding-prompt-injection-c
+ rowdstrike
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261009T160000Z
 DTEND:20261009T170000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:e13c8f6a8279d7b5651e6f8667efe55fb7d7cd4c@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
@@ -232,7 +223,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
 DTSTART:20261012T210000Z
 DTEND:20261012T220000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:05b1e5a1d319451c7496b3d6804c64b104837159@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
  for-career-success
@@ -243,7 +234,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261016T160000Z
 DTEND:20261016T170000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:a009fd99beafd19ebe432dc1899857e471b8f63b@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
@@ -252,7 +243,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] AI for Team Science: Working Smarter\, Together
 DTSTART:20261022T121500Z
 DTEND:20261022T134500Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:c991e3c8a3bd18a6cddb2f2061a84b6e6c6b85cd@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/ai-for-team-science
 URL:https://calendar.fsu.edu/event/ai-for-team-science
@@ -261,7 +252,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Free Speech in the Age of AI
 DTSTART:20261022T170000Z
 DTEND:20261022T213000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:ce0bd99b84c2e1618772e2fd9dfd4b82c49be097@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/free-speech-in-the-age-of-ai
 URL:https://calendar.fsu.edu/event/free-speech-in-the-age-of-ai
@@ -270,16 +261,31 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261023T160000Z
 DTEND:20261023T170000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:bd34e396be7a786d5822b77948f8a014654233fc@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[FSU AI Events] ISL DISTINGUISHED LECTURE: DR. YANSHAN WANG - HEAL
+ THY AGING IN THE ERA OF GENERATIVE AI: FROM SCIENTIFIC ADVANCES TO TRUSTWO
+ RTHY CLINICAL APPLICATIONS
+DTSTART:20261026T140000Z
+DTEND:20261026T170000Z
+DTSTAMP:20260928T191740Z
+UID:45f9ae46fef813504a8ffb5f64c5aad868ad15e4@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/isl-aiaging-distinguished-lectu
+ re-dr-yanshan-wang-healthy-aging-in-the-era-of-generative-ai-from-scientif
+ ic-adnace-to-trustworthy-clinical-applications
+URL:https://calendar.fsu.edu/event/isl-aiaging-distinguished-lecture-dr-ya
+ nshan-wang-healthy-aging-in-the-era-of-generative-ai-from-scientific-adnac
+ e-to-trustworthy-clinical-applications
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261030T160000Z
 DTEND:20261030T170000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:57f6758f5e58d3fb29680cd3ca55d73145795a0e@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
@@ -288,7 +294,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] AI-Powered Tools for Literature Review
 DTSTART:20261102T190000Z
 DTEND:20261102T201500Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:fb76461088b6952ab2c68925fe81fdbd19b4d0b7@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/Fall26-AILitReview-Nov2
 URL:https://calendar.fsu.edu/event/Fall26-AILitReview-Nov2
@@ -297,7 +303,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] AI and Graduate Fellowship and Grants
 DTSTART:20261105T190000Z
 DTEND:20261105T200000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:6aa52856526f9534d79c42d4555d083dbe6e8fcc@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/ai-and-graduate-fellowship-and-
  grants
@@ -307,7 +313,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261106T170000Z
 DTEND:20261106T180000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:2efc9259bb4ba2e1e2c7320f684e9c7007a71e00@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
@@ -316,7 +322,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] AI Tools for Entrepreneurs 🍕
 DTSTART:20261109T220000Z
 DTEND:20261109T233000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:f545f66f261089a98d2d0a82e4db99290dab151c@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/ai-tools-for-entrepreneurs
 URL:https://calendar.fsu.edu/event/ai-tools-for-entrepreneurs
@@ -325,7 +331,7 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Author Rights\, Licensing\, & Gen AI 
 DTSTART:20261110T180000Z
 DTEND:20261110T190000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:8bc411e2b0f1925397efebbc48cd971612fa31ae@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/F26-UAP-Licensing-Nov10
 URL:https://calendar.fsu.edu/event/F26-UAP-Licensing-Nov10
@@ -334,16 +340,27 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261113T170000Z
 DTEND:20261113T180000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:6353e7e9441ce9bd4e82679fa2ba9aeb6bf0dc77@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[FSU AI Events] C-LAW-D: AI\, Law & Leadership in the Claude Era 
+DTSTART:20261120T190000Z
+DTEND:20261120T223000Z
+DTSTAMP:20260928T191740Z
+UID:05cb5d5e393d7e3f1815f574e12c9e078dc3bac7@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/c-law-d-ai-law-leadership-in-th
+ e-claude-era
+URL:https://calendar.fsu.edu/event/c-law-d-ai-law-leadership-in-the-claude
+ -era
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
 DTSTART:20261130T170000Z
 DTEND:20261130T180000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:95ca81bdba3fba05aec51dcee2d9ce254443a340@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
  for-career-success-9199
@@ -354,25 +371,16 @@ BEGIN:VEVENT
 SUMMARY:[FSU AI Events] SC AI/ML Seminar
 DTSTART:20261204T170000Z
 DTEND:20261204T180000Z
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:a205ff9cd9322ba064b9e8d84f8fe5a5b6f522a8@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
 URL:https://calendar.fsu.edu/event/sc-ai-seminar
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[ICON-Health Events] ICON-Health Eminent Scholar Seminar Series Fe
- aturing Herman Pontzer\, PhD
-DTSTART;VALUE=DATE:20260921
-DTSTAMP:20260921T175428Z
-UID:0249d17a32d3a640d33dae3c66e428210479153b@vmwhite.github.io
-DESCRIPTION:https://icon.fsu.edu/events-convenings
-URL:https://icon.fsu.edu/events-convenings
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] October 20\, 12:00-3:30 PM | ICON-Health Disc
  overy Days Event "Blurry Lines: When Does Nutrition Become Medicine?"
 DTSTART;VALUE=DATE:20261020
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:e5eaa343bb91ba0d70d8a6c6f969c503ad231e99@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
@@ -381,7 +389,7 @@ BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] ICON-Health Eminent Scholar Seminar Series Fe
  aturing Bruce Y. Lee\, MD\, MBA
 DTSTART;VALUE=DATE:20261202
-DTSTAMP:20260921T175428Z
+DTSTAMP:20260928T191740Z
 UID:0759ef1320484993c4cf2b96bf6d21603fa754c3@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
