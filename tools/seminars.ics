@@ -6,86 +6,70 @@ X-WR-CALDESC:Auto-updated weekly. 15 FAMU/FSU seminar, colloquium, and eve
 X-WR-CALNAME:VMW Lab Seminar & Colloquium Calendar
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dissertation Defense: Isabel Barnola Mauri
-DTSTART;TZID=America/New_York:20261102T090000
-DTEND;TZID=America/New_York:20261102T103000
-DTSTAMP:20261102T212611Z
-UID:6646ffc16e195345b3b5f6703f9588845bab5a5c@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-isabel-bar
- nola-mauri
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-isabel-barnola-mau
- ri
+SUMMARY:[FAMU-FSU IME] The Division of Research Town Hall
+DTSTART;TZID=America/New_York:20261109T103000
+DTEND;TZID=America/New_York:20261109T113000
+DTSTAMP:20261109T215741Z
+UID:d4343bb30b0b5ca0cc6ab11504f6340cc1146383@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/division-research-town-hall
+URL:https://eng.famu.fsu.edu/event/division-research-town-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dissertation Defense: Davison Tsekeni
-DTSTART;TZID=America/New_York:20261102T100000
-DTEND;TZID=America/New_York:20261102T120000
-DTSTAMP:20261102T212611Z
-UID:457678ca2d4997aa9fc17a06d92fa522bdc9db7a@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-davison-ts
- ekeni
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-davison-tsekeni
+SUMMARY:[FAMU-FSU IME] Dissertation Defense: Zihan Mahmood Nahian
+DTSTART;TZID=America/New_York:20261109T153000
+DTEND;TZID=America/New_York:20261109T170000
+DTSTAMP:20261109T215741Z
+UID:ce3a49cf0b62f3dbe13551c525717e5bba4ff6a1@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-zihan-mahm
+ ood-nahian
+URL:https://eng.famu.fsu.edu/event/dissertation-defense-zihan-mahmood-nahi
+ an
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dissertation Defense: Prince Kadema
-DTSTART;TZID=America/New_York:20261102T120000
-DTEND;TZID=America/New_York:20261102T140000
-DTSTAMP:20261102T212611Z
-UID:a05a70e2c4962fa0c69ba377be5d27d0331c77c3@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-prince-kad
- ema
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-prince-kadema
+SUMMARY:[FAMU-FSU IME] Veterans Day: No Classes
+DTSTART;TZID=America/New_York:20261111T080000
+DTEND;TZID=America/New_York:20261111T235900
+DTSTAMP:20261109T215741Z
+UID:fce30b7f4c9c40914fad617a4d732b356cf649d8@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/veterans-day-no-classes
+URL:https://eng.famu.fsu.edu/event/veterans-day-no-classes
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dissertation Defense: Keyvan Farshad
-DTSTART;TZID=America/New_York:20261102T160000
-DTEND;TZID=America/New_York:20261102T170000
-DTSTAMP:20261102T212611Z
-UID:590cc6b84e5a29840fb8ed8f0746ff2c4eaa5480@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-keyvan-far
- shad
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-keyvan-farshad
+SUMMARY:[FAMU-FSU IME] Federal Research Compliance Town Hall
+DTSTART;TZID=America/New_York:20261112T153000
+DTEND;TZID=America/New_York:20261112T163000
+DTSTAMP:20261109T215741Z
+UID:89ed76f76e63dce695213129d015d128084c83ff@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/federal-research-compliance-tow
+ n-hall
+URL:https://eng.famu.fsu.edu/event/federal-research-compliance-town-hall
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dissertation Defense: Jacob Hackett
-DTSTART;TZID=America/New_York:20261103T130000
-DTEND;TZID=America/New_York:20261103T150000
-DTSTAMP:20261102T212611Z
-UID:2bd1e53578250948f97550aaece6992775b8adb2@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-jacob-hack
- ett
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-jacob-hackett
+SUMMARY:[FAMU-FSU IME] Taming the Quantum Complexity of Strongly Interacti
+ ng Electrons
+DTSTART;TZID=America/New_York:20261113T110000
+DTEND;TZID=America/New_York:20261113T120000
+DTSTAMP:20261109T215741Z
+UID:9e0ea7ae396580b3063ccff98647a585391314ef@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/taming-quantum-complexity-stron
+ gly-interacting-electrons
+URL:https://eng.famu.fsu.edu/event/taming-quantum-complexity-strongly-inte
+ racting-electrons
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Dissertation Defense: Erin Petkus
-DTSTART;TZID=America/New_York:20261104T120000
-DTEND;TZID=America/New_York:20261104T133000
-DTSTAMP:20261102T212611Z
-UID:30dcb43850066bf3a0a7b758dfa149eb9e6fab2d@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/dissertation-defense-erin-petku
- s
-URL:https://eng.famu.fsu.edu/event/dissertation-defense-erin-petkus
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FSU ACM Seminar] ACM Seminar: Jingqiao Tang
-DTSTART;VALUE=DATE:20261103
-DTSTAMP:20261102T212611Z
-UID:61c3fc2b467ebe4f9c52fa90c3404303e5481ed5@vmwhite.github.io
-DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
-URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FSU ACM Seminar] ACM Seminar: Zixiang Xiong
-DTSTART;VALUE=DATE:20261103
-DTSTAMP:20261102T212611Z
-UID:dc58e4633fcb533e20b23df50200b0deb8243c32@vmwhite.github.io
-DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
-URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
+SUMMARY:[FAMU-FSU IME] Quantum Information Seminar Series
+DTSTART;TZID=America/New_York:20261113T120000
+DTEND;TZID=America/New_York:20261113T130000
+DTSTAMP:20261109T215741Z
+UID:1a40e666d80e647442007b39db7991905b449130@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/quantum-information-seminar-ser
+ ies
+URL:https://eng.famu.fsu.edu/event/quantum-information-seminar-series
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Hemanta Kunwar
 DTSTART;VALUE=DATE:20261110
-DTSTAMP:20261102T212611Z
+DTSTAMP:20261109T215741Z
 UID:fbe9d7fe804d152c5ee131993d4dcd0da99e789f@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
@@ -93,47 +77,35 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Milinda Fernando
 DTSTART;VALUE=DATE:20261201
-DTSTAMP:20261102T212611Z
+DTSTAMP:20261109T215741Z
 UID:c46c4fb7466cfa69220c983ec256af48c84eb8a4@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FSU Scientific Computing Seminars] Colloquium with Peter Beerli (
- 2026-11-04)
-DTSTART;VALUE=DATE:20261104
-DTSTAMP:20261102T212611Z
-UID:d2faa12d42327e64a4ad5ef2be3f7d21f82b0f2d@vmwhite.github.io
-DESCRIPTION:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-w
- ith-peter-beerli-2026-11-04
-URL:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-with-pete
- r-beerli-2026-11-04
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FSU AI Events] AI and Graduate Fellowship and Grants
-DTSTART:20261105T190000Z
-DTEND:20261105T200000Z
-DTSTAMP:20261102T212611Z
-UID:6aa52856526f9534d79c42d4555d083dbe6e8fcc@vmwhite.github.io
-DESCRIPTION:https://calendar.fsu.edu/event/ai-and-graduate-fellowship-and-
- grants
-URL:https://calendar.fsu.edu/event/ai-and-graduate-fellowship-and-grants
+SUMMARY:[FSU AI Events] Author Rights\, Licensing\, & Gen AI 
+DTSTART:20261110T180000Z
+DTEND:20261110T190000Z
+DTSTAMP:20261109T215741Z
+UID:8bc411e2b0f1925397efebbc48cd971612fa31ae@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/F26-UAP-Licensing-Nov10
+URL:https://calendar.fsu.edu/event/F26-UAP-Licensing-Nov10
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Using AI Tools to Help You Study
-DTSTART:20261105T230000Z
-DTEND:20261106T000000Z
-DTSTAMP:20261102T212611Z
-UID:c70a19610e1346ca4bbf85b2a8ed109e911c27f8@vmwhite.github.io
+DTSTART:20261116T190000Z
+DTEND:20261117T190000Z
+DTSTAMP:20261109T215741Z
+UID:2edc85c5505856ea31d6b63461057b1b7931c1d8@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/using-ai-tools-to-help-you-stud
- y-3889
-URL:https://calendar.fsu.edu/event/using-ai-tools-to-help-you-study-3889
+ y-2659
+URL:https://calendar.fsu.edu/event/using-ai-tools-to-help-you-study-2659
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] C-LAW-D: AI\, Law & Leadership in the Claude Era 
 DTSTART:20261120T190000Z
 DTEND:20261120T223000Z
-DTSTAMP:20261102T212611Z
+DTSTAMP:20261109T215741Z
 UID:05cb5d5e393d7e3f1815f574e12c9e078dc3bac7@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/c-law-d-ai-law-leadership-in-th
  e-claude-era
@@ -141,10 +113,32 @@ URL:https://calendar.fsu.edu/event/c-law-d-ai-law-leadership-in-the-claude
  -era
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
+DTSTART:20261130T170000Z
+DTEND:20261130T180000Z
+DTSTAMP:20261109T215741Z
+UID:95ca81bdba3fba05aec51dcee2d9ce254443a340@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
+ for-career-success-9199
+URL:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-for-care
+ er-success-9199
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] Virtual Event: Leveraging AI for Career Success
+DTSTART:20270407T160000Z
+DTEND:20270407T170000Z
+DTSTAMP:20261109T215741Z
+UID:320907948cf9d200c9ec1515e707fda45f279f1c@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/virtual-event-leveraging-ai-for
+ -career-success
+URL:https://calendar.fsu.edu/event/virtual-event-leveraging-ai-for-career-
+ success
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] October 20\, 12:00-3:30 PM | ICON-Health Disc
  overy Days Event "Blurry Lines: When Does Nutrition Become Medicine?"
 DTSTART;VALUE=DATE:20271020
-DTSTAMP:20261102T212611Z
+DTSTAMP:20261109T215741Z
 UID:dc9b51cb11599edf752c9c561d71c982b5f54081@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
@@ -153,7 +147,7 @@ BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] ICON-Health Eminent Scholar Seminar Series Fe
  aturing Bruce Y. Lee\, MD\, MBA
 DTSTART;VALUE=DATE:20261202
-DTSTAMP:20261102T212611Z
+DTSTAMP:20261109T215741Z
 UID:0759ef1320484993c4cf2b96bf6d21603fa754c3@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
