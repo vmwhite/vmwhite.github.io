@@ -6,51 +6,10 @@ X-WR-CALDESC:Auto-updated weekly. 15 FAMU/FSU seminar, colloquium, and eve
 X-WR-CALNAME:VMW Lab Seminar & Colloquium Calendar
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] 2nd Neutron Nexus Workshop: Engineering Materials
-DTSTART;TZID=America/New_York:20261116T090000
-DTEND;TZID=America/New_York:20261116T121000
-DTSTAMP:20261116T214000Z
-UID:badde471abffe152484b908e2d42256b44f6ffe3@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/2nd-neutron-nexus-workshop-engi
- neering-materials
-URL:https://eng.famu.fsu.edu/event/2nd-neutron-nexus-workshop-engineering-
- materials
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] FSU Homecoming
-DTSTART;TZID=America/New_York:20261120T080000
-DTEND;TZID=America/New_York:20261120T235900
-DTSTAMP:20261116T214000Z
-UID:cb3bf7b1429e2dacca52b112eea9ca22b477d553@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/fsu-homecoming-0
-URL:https://eng.famu.fsu.edu/event/fsu-homecoming-0
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Civil Sr. Design Day
-DTSTART;TZID=America/New_York:20261120T083000
-DTEND;TZID=America/New_York:20261120T123000
-DTSTAMP:20261116T214000Z
-UID:3252da30fcd7756490e6175b16bb1679d413ed67@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/civil-sr-design-day
-URL:https://eng.famu.fsu.edu/event/civil-sr-design-day
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FAMU-FSU IME] Interdisciplinary Aspects of Environmental Engineer
- ing: Past\, Present\, and Future
-DTSTART;TZID=America/New_York:20261120T123000
-DTEND;TZID=America/New_York:20261120T133000
-DTSTAMP:20261116T214000Z
-UID:c57e7ae77d9b2ed83efdea157a7c8e0c50da735a@vmwhite.github.io
-DESCRIPTION:https://eng.famu.fsu.edu/event/interdisciplinary-aspects-envir
- onmental-engineering-past-present-and-future
-URL:https://eng.famu.fsu.edu/event/interdisciplinary-aspects-environmental
- -engineering-past-present-and-future
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[FAMU-FSU IME] Thanksgiving Holiday
 DTSTART;TZID=America/New_York:20261126T000000
 DTEND;TZID=America/New_York:20261126T235900
-DTSTAMP:20261116T214000Z
+DTSTAMP:20261123T232535Z
 UID:d0da2a019e0eb71d2bcf9203282c6ea87d9e07c4@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/thanksgiving-holiday
 URL:https://eng.famu.fsu.edu/event/thanksgiving-holiday
@@ -59,7 +18,7 @@ BEGIN:VEVENT
 SUMMARY:[FAMU-FSU IME] Fall 2026 Order of the Engineer Launch Ceremony
 DTSTART;TZID=America/New_York:20261201T180000
 DTEND;TZID=America/New_York:20261201T200000
-DTSTAMP:20261116T214000Z
+DTSTAMP:20261123T232535Z
 UID:c0d82b0c014d5b20fba11c2163ed5be171f4a211@vmwhite.github.io
 DESCRIPTION:https://eng.famu.fsu.edu/event/fall-2026-order-engineer-launch
  -ceremony
@@ -67,36 +26,69 @@ URL:https://eng.famu.fsu.edu/event/fall-2026-order-engineer-launch-ceremon
  y
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Take A Paws
+DTSTART;TZID=America/New_York:20261203T133000
+DTEND;TZID=America/New_York:20261203T153000
+DTSTAMP:20261123T232535Z
+UID:8216257088c690c44ab3f7b12b75e1e55d9b6c2e@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/take-paws-1
+URL:https://eng.famu.fsu.edu/event/take-paws-1
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] End of Classes
+DTSTART;TZID=America/New_York:20261204T080000
+DTEND;TZID=America/New_York:20261204T235900
+DTSTAMP:20261123T232535Z
+UID:9a3f478deac1471891f7a2b8dbfa1cc5d1dae7d1@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/end-classes
+URL:https://eng.famu.fsu.edu/event/end-classes
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Flood Vulnerability and Critical  Infrastructure Re
+ silience: From Hazard Mapping to Emergency Planning
+DTSTART;TZID=America/New_York:20261204T123000
+DTEND;TZID=America/New_York:20261204T133000
+DTSTAMP:20261123T232535Z
+UID:9a4d7019a33f2b1da0fc1fa31bd93e275f163c1c@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/flood-vulnerability-and-critica
+ l-infrastructure-resilience-hazard-mapping-emergency-planning
+URL:https://eng.famu.fsu.edu/event/flood-vulnerability-and-critical-infras
+ tructure-resilience-hazard-mapping-emergency-planning
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FAMU-FSU IME] Engineering Faculty/Staff Meeting
+DTSTART;TZID=America/New_York:20261204T130000
+DTEND;TZID=America/New_York:20261204T150000
+DTSTAMP:20261123T232535Z
+UID:06b127c885b452d2e2ee37e90c733000e2fd5bb6@vmwhite.github.io
+DESCRIPTION:https://eng.famu.fsu.edu/event/engineering-facultystaff-meetin
+ g
+URL:https://eng.famu.fsu.edu/event/engineering-facultystaff-meeting
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[FSU ACM Seminar] ACM Seminar: Dr. Milinda Fernando
 DTSTART;VALUE=DATE:20261201
-DTSTAMP:20261116T214000Z
+DTSTAMP:20261123T232535Z
 UID:c46c4fb7466cfa69220c983ec256af48c84eb8a4@vmwhite.github.io
 DESCRIPTION:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 URL:https://www.math.fsu.edu/~lee/ACM_Seminar_F_2026.html
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FSU Criminology Events] College of Criminology and Criminal Justi
- ce to showcase research excellence at ASC's annual conference
-DTSTART;VALUE=DATE:20261116
-DTSTAMP:20261116T214000Z
-UID:ed10405361ce25b84a9c89990abb4aa9892f9db9@vmwhite.github.io
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[FSU Scientific Computing Seminars] Colloquium with Oliver Steinbo
- ck (2026-11-18)
-DTSTART;VALUE=DATE:20261118
-DTSTAMP:20261116T214000Z
-UID:035563a3bd39ecd503d0b7779b60af9fd64c71d0@vmwhite.github.io
+SUMMARY:[FSU Scientific Computing Seminars] Colloquium with Research Compu
+ ting Center (2026-12-02)
+DTSTART;VALUE=DATE:20261202
+DTSTAMP:20261123T232535Z
+UID:e42687516d828b6bce2b109e3cc64a72183453ba@vmwhite.github.io
 DESCRIPTION:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-w
- ith-oliver-steinbock-2026-11-18
-URL:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-with-oliv
- er-steinbock-2026-11-18
+ ith-research-computing-center-2026-12-02
+URL:https://www.sc.fsu.edu/news-and-events/colloquium/colloquium-with-rese
+ arch-computing-center-2026-12-02
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
 DTSTART:20261130T170000Z
 DTEND:20261130T180000Z
-DTSTAMP:20261116T214000Z
+DTSTAMP:20261123T232535Z
 UID:95ca81bdba3fba05aec51dcee2d9ce254443a340@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
  for-career-success-9199
@@ -104,18 +96,28 @@ URL:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-for-care
  er-success-9199
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[FSU AI Events] AI Day in the Capital
-DTSTART;VALUE=DATE:20270122
-DTSTAMP:20261116T214000Z
-UID:ebc82e6c273d1b695e1d7eee28eca219898e9e63@vmwhite.github.io
-DESCRIPTION:https://calendar.fsu.edu/event/ai-day-in-the-capital-6154
-URL:https://calendar.fsu.edu/event/ai-day-in-the-capital-6154
+SUMMARY:[FSU AI Events] SC AI/ML Seminar
+DTSTART:20261204T170000Z
+DTEND:20261204T180000Z
+DTSTAMP:20261123T232535Z
+UID:a205ff9cd9322ba064b9e8d84f8fe5a5b6f522a8@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/sc-ai-seminar
+URL:https://calendar.fsu.edu/event/sc-ai-seminar
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[FSU AI Events] AI-Powered Tools for Literature Review
+DTSTART:20270113T230000Z
+DTEND:20270114T000000Z
+DTSTAMP:20261123T232535Z
+UID:d1067a67d60c0e269eb84432009d36b955394cf5@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/S27-AITools-Jan13
+URL:https://calendar.fsu.edu/event/S27-AITools-Jan13
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[FSU AI Events] Virtual Workshop: Leveraging AI for Career Success
 DTSTART:20270128T220000Z
 DTEND:20270128T230000Z
-DTSTAMP:20261116T214000Z
+DTSTAMP:20261123T232535Z
 UID:fbcbdcc76a90e1bc755b0578e6d24dad82c11e2b@vmwhite.github.io
 DESCRIPTION:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-
  for-career-success-9756
@@ -123,10 +125,19 @@ URL:https://calendar.fsu.edu/event/virtual-workshop-leveraging-ai-for-care
  er-success-9756
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[FSU AI Events] Data at Your Desk Series: Using AI on the HPC
+DTSTART:20270413T190000Z
+DTEND:20270413T200000Z
+DTSTAMP:20261123T232535Z
+UID:6edec638740fb368f8d67dc59b7940ae30c43670@vmwhite.github.io
+DESCRIPTION:https://calendar.fsu.edu/event/S27-AI-HPC-Apr13
+URL:https://calendar.fsu.edu/event/S27-AI-HPC-Apr13
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[ICON-Health Events] ICON-Health Eminent Scholar Seminar Series Fe
  aturing Bruce Y. Lee\, MD\, MBA
 DTSTART;VALUE=DATE:20261202
-DTSTAMP:20261116T214000Z
+DTSTAMP:20261123T232535Z
 UID:0759ef1320484993c4cf2b96bf6d21603fa754c3@vmwhite.github.io
 DESCRIPTION:https://icon.fsu.edu/events-convenings
 URL:https://icon.fsu.edu/events-convenings
